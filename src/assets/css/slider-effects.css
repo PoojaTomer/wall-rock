@@ -1,0 +1,153 @@
+/* .carousel-caption{
+    padding-bottom:100px;
+  } */
+  .rw-words-1 span{
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #f65a3a;
+    font-weight:400 !important;
+    -webkit-animation: rotateWord 18s linear infinite 0s;
+    -ms-animation: rotateWord 18s linear infinite 0s;
+    animation: rotateWord 18s linear infinite 0s;
+  }
+  .rw-words-1 span:nth-child(2) { 
+      -webkit-animation-delay: 3s; 
+    -ms-animation-delay: 3s; 
+    animation-delay: 3s; 
+    color: #0d9b56;
+  }
+  .rw-words-1 span:nth-child(3) { 
+      -webkit-animation-delay: 6s; 
+    -ms-animation-delay: 6s; 
+    animation-delay: 6s; 
+    color: #f65a3a;	
+  }
+  .rw-words-1 span:nth-child(4) { 
+      -webkit-animation-delay: 9s; 
+    -ms-animation-delay: 9s; 
+    animation-delay: 9s; 
+    color:#0d9b56;
+  }
+  @-webkit-keyframes rotateWord {
+      0% { opacity: 0; }
+      2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+      17% { opacity: 1; -webkit-transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+      100% { opacity: 0; }
+  }
+  @-ms-keyframes rotateWord {
+      0% { opacity: 0; }
+      2% { opacity: 0; -ms-transform: translateY(-30px); }
+    5% { opacity: 1; -ms-transform: translateY(0px);}
+      17% { opacity: 1; -ms-transform: translateY(0px); }
+    20% { opacity: 0; -ms-transform: translateY(30px); }
+    80% { opacity: 0; }
+      100% { opacity: 0; }
+  }
+  @keyframes rotateWord {
+      0% { opacity: 0; }
+      2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+      17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+    80% { opacity: 0; }
+      100% { opacity: 0; }
+  }
+  .rw-words{
+    display: inline;
+    text-indent: 10px;
+  }
+  .agileits-banner-info span {
+      color: #fff;
+      font-size: 28px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      text-align: left !important;
+  }
+
+  .agileits_w3layouts_more a {
+      font-size: 1.1em;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background:#0d9b56;
+      padding: .7em 2em;
+      display: inline-block;
+      margin-top: 40px;
+      border-radius:2px;
+  }
+  .agileits_w3layouts_more a:focus{
+    outline:none;
+  }
+  .agileits_w3layouts_more a:hover{
+    background:#f65a3a;
+  }
+  .agileits_w3layouts_more.menu__item {
+      text-align: center;
+  }
+
+  .carousel-fade .carousel-inner .item {
+    opacity: 0;
+    transition-property: opacity;
+  }
+
+  .carousel-fade .carousel-inner .active {
+    opacity: 1;
+  }
+
+  .carousel-fade .carousel-inner .active.left,
+  .carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .carousel-fade .carousel-inner .next.left,
+  .carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+  }
+
+  .carousel-fade .carousel-control {
+    z-index: 2;
+  }
+
+  @media all and (transform-3d), (-webkit-transform-3d) {
+      .carousel-fade .carousel-inner > .item.next,
+      .carousel-fade .carousel-inner > .item.active.right {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      .carousel-fade .carousel-inner > .item.prev,
+      .carousel-fade .carousel-inner > .item.active.left {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+      .carousel-fade .carousel-inner > .item.next.left,
+      .carousel-fade .carousel-inner > .item.prev.right,
+      .carousel-fade .carousel-inner > .item.active {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+  }
+        .carousel-img img{
+            width: 100%;
+            animation-name: zoom;
+            animation-duration: 20s;
+            animation-delay: -4s;
+            -webkit-transition: 10s ease;
+        }   
+        
+        @keyframes zoom {
+  0%   {transform: scale(1);
+            }
+  100% {transform: scale(1.5);
+            }
+}
+.banner .react-multi-carousel-item--active img{-webkit-animation:zoom 20s;animation:zoom 20s}
