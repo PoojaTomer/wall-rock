@@ -1,11 +1,22 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Modal } from 'antd';
-import 'antd/dist/antd.css';
+import { Button, Dialog, DialogContent, DialogTitle, Slide } from '@mui/material';
+import TextField, { TextFieldProps } from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
+import {
+  InputLabel,
+  MenuItem,
+  Select,
+} from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import axios from 'axios';
 import REGX from '../constants/Regx';
 import { useNavigate } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
+  
 const GetAQuote = (props) => {
 const navigate = useNavigate();
     const captchaRef = useRef(null)
@@ -148,12 +159,20 @@ const navigate = useNavigate();
         }
     };
     return (
-        <Modal className="custom-pop" open={props.isModalVisible} onOk={() => props.handleOk()} onCancel={() => props.handleCancel()} footer={null} closable={false}>
-        <button type="button" className="close" onClick={() => props.handleOk()}>
-             <span aria-hidden="true">&times;</span>
-           </button>
-            <div className="form-content">
-            <h3>Let's Talk <br /><span className="highlight">Get In Touch</span></h3>
+        <Dialog
+        className="custom-pop"
+        open={props.isModalVisible}
+        onOk={() => props.handleOk()}
+        footer={null}
+        closable={false}
+        onClose={props.handleClose}
+        TransitionComponent={Transition}
+        >
+      <Button onClick={props.handleCancel} color="error" className='close-popup'>
+          <CloseIcon />
+        </Button>
+        <DialogContent>
+          <DialogTitle id="alert-dialog-slide-title" className="popup-heading mb-3">{"Schedual A Visit"}</DialogTitle>
             <form onSubmit={(e) => submitHandler(e)}>
                        <input type="hidden" className="form-control" name="enquery-form" id="enquery-form3" value="enquery-form" placeholder="Enquery Form" />
                    <ul className="form-list">
@@ -174,7 +193,7 @@ const navigate = useNavigate();
                             })} disabled={GetAQuoteForm.processing} />
                                 <span className='error'>{GetAQuoteForm.mobileError}</span>
                        </li>
-                       <li>
+                       <li  className="cnr-full">
                        <input type="email" name="email" className="form-control" placeholder="Email Address*" value={GetAQuoteForm.email} onChange={e => setGetAQuoteForm({
                             ...GetAQuoteForm,
                             email: e.target.value,
@@ -182,30 +201,7 @@ const navigate = useNavigate();
                         })} disabled={GetAQuoteForm.processing} />
                             <span className='error'>{GetAQuoteForm.emailError}</span>
                        </li>
-                       <li>
-                        <select name="services" className="form-control" value={GetAQuoteForm.services} onChange={e => setGetAQuoteForm({
-                            ...GetAQuoteForm,
-                            services: e.target.value,
-                            servicesError: ""
-                        })} disabled={GetAQuoteForm.processing}>
-                            <option value="-1" selected="">Select Services*</option>
-                            <option value="Search Engine Optimization">Search Engine Optimization</option>
-                            <option value="Social Media Optimization">Social Media Optimization</option>
-                            <option value="Online Reputation Marketing">Online Reputation Marketing</option>
-                            <option value="PPC">PPC</option>
-                            <option value="Social Media Ads">Social Media Ads</option>
-                            <option value="Wordpress Development">Wordpress Development</option>
-                            <option value="Magento Development">Magento Development</option>
-                            <option value="Shopify Development">Shopify Development</option>
-                            <option value="React Development">React Development</option>
-                            <option value="PHP Development">PHP Development</option>
-                            <option value="Mobile App Development">Mobile App Development</option>
-                            <option value="Web Design">Web Design</option>
-                            <option value="Logo Design">Logo Design</option>
-                            
-                           </select>
-                           <span className='error'>{GetAQuoteForm.servicesError}</span>
-                       </li>
+                     
                        <li className="cnr-full">
                            <textarea rows="4" className="form-control" name="message" placeholder="Message*" value={GetAQuoteForm.message} onChange={e => setGetAQuoteForm({
                             ...GetAQuoteForm,
@@ -224,13 +220,13 @@ const navigate = useNavigate();
                         />
                     </li>
                        <li className="cnr-full text-center mt-3">
-                           <input type="submit" value="Submit" className="btn-1" id="your_submit2" />
+                           <input type="submit" value="Submit" className="btn btn-default" id="your_submit2" />
                        </li>
                    </ul>
                </form>
                
-            </div>
-        </Modal>
+            </DialogContent>
+        </Dialog>
     )
 }
 

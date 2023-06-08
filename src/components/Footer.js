@@ -30,7 +30,7 @@ function Footer(props) {
         <div className="top-footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-3">
+                    <div className="col-md-3">
                         <div className="footer-logo">
                             <Link to="/">
                                 <img src={IMAGES.footerImg.FooterLogo} alt="header-logo" className="img-fluid" />
@@ -42,21 +42,22 @@ function Footer(props) {
                             
                         </div>
                     </div>
-                    <div className="col-lg-3">
+
+                    <div className="col-md-2 offset-md-1">
                         <h5>Usefull Links</h5>
                         <div className="quick-links">
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/about">About Us</Link></li>
-                            <li><Link to="/">Upcoming Project YCM</Link></li>
-                            <li><Link to="/">Location</Link></li>
-                            <li><Link to="/">Aishwaryam</Link></li>
+                            <li><Link to="/yamuna-city-mall">Yamuna City Mall</Link></li>
+                            <li><Link to="/aishwaryam">Aishwaryam</Link></li>
+                            <li><Link to="/articels">Real Estate Developer Insights</Link></li>
                             <li><Link to="/contact">Contact Us</Link></li>
                           
                         </ul>
                     </div>
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-md-3">
                         <h5>Follow us</h5>
                         <div className="follow-us">
                         <ul>
@@ -78,7 +79,7 @@ function Footer(props) {
                         </ul>
                     </div>
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-md-3">
                         <h5>Contact  Imformation</h5>
                         <div className="reach-us">
                             <ul> 
@@ -94,34 +95,20 @@ function Footer(props) {
         </div>
         <div className="bottom-footer">
             <div className="container">
-                <p>© 2023 All rights reserved. Designed and Develop by <a href=""><img src={IMAGES.footerImg.NvdLogo} className='img-fluid' alt="nvd logo" /></a></p>  
+                <p>© 2023 All rights reserved. Design and Developed by <a href=""><img src={IMAGES.footerImg.NvdLogo} className='img-fluid' alt="nvd logo" /></a></p>  
             </div>
         </div>  
     </footer>
     <a id="back-to-top" className="btn btn-light btn-lg back-to-top" role="button" style={{display: visible ? 'inline' : 'none'}} onClick={scrollToTop}>  <FaAngleUp /></a>
-    <a
-          href="https://wa.me/+8394038521"
-        data-action="share/whatsapp/share"
-          className="whatsapp_float"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+    <div className="whr">
+        <div className="amppulse"></div>
+        <div className="amppulse"></div>
+        <div className="amppulse"></div>
+        <a href="https://wa.me/+9310786845<?text=" target="_blank" className="whatsapp-info amppulse">
         <FaWhatsapp className="whatsapp-icon" color="#fff" />
         </a>
-        {/* <ul className="social-float">
-        <li className='fb-icon'>
-            <a href={SOCIAL_LINK.FACEBOOK} target="_blank"><FaFacebookF color='#1877f2' /></a>
-        </li>
-        <li className='twitter-icon'>
-            <a href={SOCIAL_LINK.TWITTER} target="_blank"><FaTwitter color='#1da1f2' /></a>
-        </li>
-        <li className='inst-icon'>
-            <a href={SOCIAL_LINK.INSTAGRAM} target="_blank"><FaInstagram color='#E4405F' /></a>
-        </li>
-        <li className='linkedin-icon'>
-            <a href={SOCIAL_LINK.LINKEDIN} target="_blank"><FaLinkedinIn color='#0a66c2' /></a>
-        </li>
-    </ul> */}
+    </div>
+   
     </>
     );
 }

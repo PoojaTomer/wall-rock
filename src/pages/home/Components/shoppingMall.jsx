@@ -50,7 +50,7 @@ export default function ShoppingMall(props) {
         <>
 <section className='shapping-sec'>
 <div className='container-fluid'>
-<div className='row align-items-center'>
+<div className='row'>
     <div className='col-md-6'>
       <div className='biggest-shopping'>
           <h2>yamuna city mall</h2>
@@ -107,13 +107,13 @@ export default function ShoppingMall(props) {
           </Slider>
         </div>
         </div> */}
-        <div class="mall-img">
+        <div className="mall-img">
         <img src={IMAGES.homepage.yamunacityMall} className='img-fluid' alt="yamuna city mall"/>
         </div>
         
     </div>
     <div className='col-md-6'>
-    <div class="mall-img">
+    <div className="mall-img">
     <img src={IMAGES.homepage.aishwaryam} className='img-fluid' alt="Aishwaryam"/>
     </div>
       {/* <div className="slider-wrapper">

@@ -147,8 +147,8 @@ const submitHandler = (e) => {
         <>
              <Helmet>
                 <title>{props.title}</title>
-                <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
-                <meta name="keyword" content="Nvd usa" />
+                {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
+                <meta name="keyword" content="Nvd usa" /> */}
             </Helmet>
             <Breadcrumb Title="Contact Us" Image={IMAGES.homepage.Banner} /> 
             <section className='contact-1'>
@@ -167,11 +167,11 @@ const submitHandler = (e) => {
                            
                         </div>
                         <div className='col-md-7 d-flex align-items-stretch'>
-                        <div class="contact-form">
+                        <div className="contact-form">
                         <form onSubmit={(e) => submitHandler(e)}>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                    <div class="form-group">
+                                <div className="row">
+                                    <div className="col-md-6">
+                                    <div className="form-group">
                                             <input type="text" className='form-control' placeholder="Name" name="name" value={contactForm.fullName} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 fullName: e.target.value,
@@ -182,8 +182,8 @@ const submitHandler = (e) => {
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
-                                    <div class="form-group">
+                                    <div className="col-md-6">
+                                    <div className="form-group">
                                             <input type="text" className='form-control' placeholder="Company" name="Company" value={contactForm.company} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 company: e.target.value,
@@ -192,8 +192,8 @@ const submitHandler = (e) => {
                                                 <span className='error'>{contactForm.companyError}</span>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                    <div class="form-group">
+                                    <div className="col-md-6">
+                                    <div className="form-group">
                                             <input type="email" className='form-control' placeholder="Email" name="Email" value={contactForm.email} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 email: e.target.value,
@@ -202,8 +202,8 @@ const submitHandler = (e) => {
                                                 <span className='error'>{contactForm.emailError}</span>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
+                                    <div className="col-md-6">
+                                        <div className="form-group">
                                             <input type="text" className='form-control' placeholder="Contact no" name="ContactNo" value={contactForm.mobile} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 mobile: e.target.value.slice(0,10),
@@ -213,7 +213,7 @@ const submitHandler = (e) => {
                                         </div>
                                     </div>
                               
-                                <div class="col-md-12">
+                                <div className="col-md-12">
                                     <textarea className='form-control' rows="4" placeholder="Message" name="Message" value={contactForm.message} onChange={e => setContactForm({
                                         ...contactForm,
                                         message: e.target.value,
@@ -228,7 +228,7 @@ const submitHandler = (e) => {
                                     sitekey="6Ldy6IEhAAAAAOnXdArKtwygfu6f3doYCblZQYHi"
                                     size="invisible"
                                  />
-                                <div class="col-md-12 text-center mt-4">
+                                <div className="col-md-12 text-center mt-4">
                                     <button type="submit" className='btn btn-default btn-block' value="Send">Send</button>
                                 </div>
                             </div>

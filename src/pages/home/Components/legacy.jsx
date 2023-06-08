@@ -1,6 +1,5 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import { Parallax } from 'react-scroll-parallax';
 import { IMAGES } from '../../../constants/Image-Constant';
 
 export default function Legacy(props) {
@@ -16,23 +15,24 @@ when an unknown printer took a galley of type and scrambled it to make a type sp
 but also the leap into electronic typesetting, remaining essentially unchanged. 
                 </p>
                 <div className='row mt-5'>
-                    <Parallax  className='col-md-3'  translateX={['-100px', '0px']}
+                    {/* <Parallax  className='col-md-3'  translateX={['-100px', '0px']}
   scale={[0.5, 1]}
   rotate={[-90, 0]}
-  easing="easeInQuad">
+  easing="easeInQuad"> */}
+                        <div className='col-md-3'>
                         <div className='count-box'>
                             <img src={IMAGES.homepage.experienceIcon} className='img-fluid' alt="" />
                             <h4><CountUp end={8} />+ </h4>
                             <p>Years of Experience</p>
                         </div>
-                    </Parallax >
-                    <Parallax  className='col-md-3' >
+                        </div>
+                        <div className='col-md-3'>
                         <div className='count-box'>
                             <img src={IMAGES.homepage.developIcon} className='img-fluid' alt="" />
                             <h4><CountUp end={97.22} />+ </h4>
                             <p>Lac Sq-ft are Developed</p>
                         </div>
-                    </Parallax >
+                    </div>
                     <div className='col-md-3'>
                         <div className='count-box'>
                             <img src={IMAGES.homepage.growthIcon} className='img-fluid' alt="" />

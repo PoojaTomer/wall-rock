@@ -63,7 +63,7 @@ export default function LetestArticles(props) {
                                         <div className='article-content'>
                                             <h4>{value.Title}</h4>
                                             <p>{value.Description}</p>
-                                            <div class="view-article"><div class="view-article-line extend-line"></div><div class="view-article-link"><Link to="/">View Article</Link></div></div>
+                                            {/* <div className="view-article"><div className="view-article-line extend-line"></div><div className="view-article-link"><Link to="/">View Article</Link></div></div> */}
                                         </div>
                                     </div>
                             </>

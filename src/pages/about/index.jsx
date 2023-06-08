@@ -8,8 +8,8 @@ export default function About(props) {
         <>
              <Helmet>
                 <title>{props.title}</title>
-                <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
-                <meta name="keyword" content="Nvd usa" />
+                {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
+                <meta name="keyword" content="Nvd usa" /> */}
             </Helmet>
             <Breadcrumb Title="About Us" Image={IMAGES.homepage.Banner} /> 
             <section className='about-1'>
@@ -26,9 +26,10 @@ export default function About(props) {
                         </div>
                         <div className='col-md-6'>
                             
-                        <h3 className='main-heading mt-5'>About<br/>WALL ROCK DEVELOPERS LLP</h3>
-                        <p>Wall Rock Developers Llp is a Limited Liability Partnership firm incorporated on 20 September 2021. It is registered at Registrar of Companies, Kanpur. Its total obligation of contribution is Rs. 5,000,000.</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6479632254045!2d77.21426897463434!3d28.6403111837289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd475271ed2d%3A0x8a41328b1b03db05!2sWall%20Rock%20Infratech%20Private%20Limited!5e0!3m2!1sen!2sin!4v1685034417985!5m2!1sen!2sin" width="600" height="450" style={{border:0}} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <h3 className='main-heading mt-5'><span className='red-text'>About</span><br/>WALL ROCK DEVELOPERS LLP</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                         </div>
                     </div>
                 </div>
@@ -38,23 +39,23 @@ export default function About(props) {
                 <h3 className='main-heading text-center'>Our Foundation</h3>
                     <div className="row mt-5">
                     <div className='col-md-4'>
-                        <div class="shadow-box">
-                            <img src={IMAGES.homepage.experienceIcon} class="img-fluid" alt="Value" />
+                        <div className="shadow-box">
+                            <img src={IMAGES.homepage.experienceIcon} className="img-fluid" alt="Value" />
                             <h4>Our Values</h4>
                             <p>We are adding and updating information about hundreds of thousands of companies every day</p>
                         </div>
                     </div>
                     <div className='col-md-4'>
-                        <div class="shadow-box">
-                            <img src={IMAGES.homepage.growthIcon} class="img-fluid" alt="Value" />
+                        <div className="shadow-box">
+                            <img src={IMAGES.homepage.growthIcon} className="img-fluid" alt="Value" />
                             <h4>Our Mission</h4>
                             <p>We are adding and updating information about hundreds of thousands of companies every day</p>
                         </div>
                     </div>
 
                     <div className='col-md-4'>
-                        <div class="shadow-box">
-                            <img src={IMAGES.homepage.developIcon} class="img-fluid" alt="Value" />
+                        <div className="shadow-box">
+                            <img src={IMAGES.homepage.developIcon} className="img-fluid" alt="Value" />
                             <h4>Our Vision</h4>
                             <p>We are adding and updating information about hundreds of thousands of companies every day</p>
                         </div>
@@ -68,7 +69,7 @@ export default function About(props) {
                     <div className="row">
                     <div className='col-md-6'>
                         <div className='hover-img'>
-                        <img src={IMAGES.homepage.yamunacityMall} className='img-fluid' alt="" />
+                        <img src={IMAGES.aboutpage.aboutMsg} className='img-fluid' alt="" />
                         </div>
                         </div>
                         <div className='col-md-6'>

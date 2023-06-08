@@ -31,38 +31,32 @@ function Banner(){
         return (
           <section className="banner">
          <Carousel responsive={responsive} infinite autoPlay> 
-          {/* <div className="embed-responsive embed-responsive-16by9">
-          <video id="myVideo" loop autoPlay muted>
-          <source src={Video} type="video/mp4" />
-          <source src={Video} type="video/ogg" />
-      </video>
-      </div> */}
       <div>
-      <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner1" />
-      <div className="content">
-      <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
-        <h1 className="text-white">Wall Rock Developers</h1>
+        <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner1" />
+        <div className="content">
+          <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
+          <h1 className="text-white">Wall Rock Developers</h1>
+          <Link to="/" className="btn btn-secondary">Know More</Link>
+        </div>
+      </div>
+      <div>
+        <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner2" />
+        <div className="content">
+          <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
+          <h1 className="text-white">Wall Rock Developers</h1>
+          <Link to="/" className="btn btn-secondary">Know More</Link>
+        </div>
+      </div>
+      <div>
+        <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner3" />
+        <div className="content">
+          <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
+          <h1 className="text-white">Wall Rock Developers</h1>
           <Link to="/" className="btn btn-secondary">Know More</Link>
       </div>
-      </div>
-      <div>
-      <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner2" />
-      <div className="content">
-      <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
-        <h1 className="text-white">Wall Rock Developers</h1>
-        <Link to="/" className="btn btn-secondary">Know More</Link>
-      </div>
-      </div>
-      <div>
-      <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner3" />
-      <div className="content">
-        <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
-        <h1 className="text-white">Wall Rock Developers</h1>
-        <Link to="/" className="btn btn-secondary">Know More</Link>
-      </div>
-      </div>
-      </Carousel>
-      </section>
+    </div>
+    </Carousel>
+  </section>
       )
 };
 export default Banner;

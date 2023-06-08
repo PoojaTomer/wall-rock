@@ -16,7 +16,7 @@ const NotFound = () =>{
                 <meta name="keywords" content="Career"></meta>
                 <meta name="description" content="Career" />
             </Helmet>
-          <Breadcrumb Title="Not Found" Image={IMAGES.aboutPage.AboutBanner} />
+          <Breadcrumb Title="Not Found" Image={IMAGES.homepage.Banner} />
           {/* <!-- not-found start --> */}
             <div className="not-found-sec">
                 <div className="container">
@@ -25,7 +25,7 @@ const NotFound = () =>{
                             <div className="svr-content">
                                 <h2 className="men-heading">4 <FaFrown /> 4</h2>
                                 <p>The page you were looking for was moved or doesn't exist.<br />Let's get you back.</p>
-                                <NavLink className="nav-link" to="/"><button type="button" className="btn-1">Back to Home</button></NavLink>
+                                <NavLink className="nav-link" to="/"><button type="button" className="btn btn-default">Back to Home</button></NavLink>
                             </div>
                         </div>
                     </div>

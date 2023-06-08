@@ -40,10 +40,10 @@ export default function Home(props) {
         <>
              <Helmet>
                 <title>{props.title}</title>
-                <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
-                <meta name="keyword" content="Nvd usa" />
+                {/* <meta name="description" content="" />
+                <meta name="keyword" content="Nvd usa" /> */}
             </Helmet>
-           <div className='page-wrapper'>
+          
             {/* <Slider/> */}
             <Banner/>
             <Legacy />
@@ -51,7 +51,7 @@ export default function Home(props) {
             <Schedule />
             <LetestArticles AboutSubContent={AboutSubContent} />
             <Testimonials />
-            </div>
+          
         </>
     );
 }

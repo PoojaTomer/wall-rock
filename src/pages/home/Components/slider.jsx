@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import { IMAGES } from '../../../constants/Image-Constant';
 import '../../../assets/css/slider-effects.css';
 
@@ -47,9 +48,19 @@ export default function Slider (props) {
         <div 
             className='each-slide' 
             key={ index } 
+            style={{backgroundImage: `url(${item.eachSlide})`,}}
             // style={{ backgroundImage: item.eachSlide }}
             >
-                <img src={item.eachSlide } />
+                <div className='row align-items-center justify-content-center'>
+                <div className='col-md-4'>
+                <div className='slider-box'>
+                <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
+                <h1 className="text-white">Wall Rock Developers</h1>
+                <Link to="/" className="btn btn-secondary">Know More</Link>
+                </div>
+                </div>
+                </div>
+                {/* <img src={item.eachSlide } /> */}
         </div> 
     ));
 
@@ -108,9 +119,9 @@ export default function Slider (props) {
                 { renderSlides() }
             </div>
             { renderArrows() }
-            <ul className='dots-container'>
+            {/* <ul className='dots-container'>
                 { renderDots() }
-            </ul>
+            </ul> */}
             {/* <button 
                 type='button'
                 className='toggle-play' 

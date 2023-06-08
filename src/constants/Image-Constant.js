@@ -19,6 +19,29 @@ import YamunacityMall from "../assets/images/yamunacity-mall.jpg";
 import Aishwaryam from "../assets/images/aishwaryam.jpg";
 import QuoteLight from "../assets/images/right-quote.png";
 
+// Aboutpage
+import AboutMsg from "../assets/images/about-msg.jpg";
+
+// Aishwaryam Page
+import AishwaryamBanner from "../assets/images/ashiwaryam-banner.jpg";
+import AishwaryamLeft from "../assets/images/aishraryam-banner-left.png";
+import ProjectHighlight from "../assets/images/project-highlight.jpg";
+import AishLayout1 from "../assets/images/layout-1.jpg";
+import AishLayout2 from "../assets/images/layout-2.jpg";
+import AishLayout3 from "../assets/images/layout-3.jpg";
+import AishLayout4 from "../assets/images/layout-4.jpg";
+import AishLayout5 from "../assets/images/layout-5.jpg";
+import AishLayout6 from "../assets/images/layout-6.jpg";
+import AishLayout7 from "../assets/images/layout-7.jpg";
+
+// Yamuna City Mall Page
+import YcmBanner from "../assets/images/ycm-banner.jpg";
+import Award1 from "../assets/images/award-population.jpg";
+import Award2 from "../assets/images/award-developed.jpg";
+import Award3 from "../assets/images/award-gaur.jpg";
+import YcmSecondBanner from "../assets/images/ycm-sec-banner.png";
+
+
 export const IMAGES = {
     headerImg: {
         HeaderLogo: HeaderLogo,
@@ -47,7 +70,31 @@ export const IMAGES = {
     },
     aboutpage:{
         quoteLight:QuoteLight,
+       aboutMsg:AboutMsg,
+    },
+
+    aishwaryamPage:{
+        aishwaryamBanner:AishwaryamBanner,
+        aishwaryamLeft:AishwaryamLeft,
+       projectHighlight:ProjectHighlight,
+       aishlayouts:[AishLayout1, AishLayout2, AishLayout3, AishLayout4, AishLayout5, AishLayout6, AishLayout7],
+       aishLayout1:AishLayout1,
+       aishLayout2:AishLayout2,
+       aishLayout3:AishLayout3,
+       aishLayout4:AishLayout4,
+       aishLayout5:AishLayout5,
+      aishLayout6:AishLayout6,
+      aishLayout7:AishLayout7,
+    },
+
+    ycmPage:{
+        ycmBanner:YcmBanner,
+        award1:Award1,
+        award2:Award2,
+        award3:Award3,
+        ycmSecondBanner:YcmSecondBanner,
     }
+
 
     
 }
