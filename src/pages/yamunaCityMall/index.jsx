@@ -5,6 +5,9 @@ import { IMAGES } from '../../constants/Image-Constant';
 import Banner from './Components/banner';
 import AwardWinning from './Components/awardWinning';
 import GetInTouch from '../../components/GetInTouch';
+import MirajChinema from './Components/mirajChinema';
+import YcmArticle from './Components/YcmArticle';
+import WhyYamunaExpress from './Components/whyYamunaExpress';
 
 const AwardWinningContent =[
     {
@@ -27,6 +30,21 @@ const AwardWinningContent =[
     },
 ]
 
+const YcmArticleSlides =[
+    {
+        Title:"Entertainment Zone",
+        Image:IMAGES.ycmPage.YcmArticle1,
+    },
+    {
+        Title:"Super Market",
+        Image:IMAGES.ycmPage.YcmArticle2,
+    },
+    {
+        Title:"Food Court",
+        Image:IMAGES.ycmPage.YcmArticle3,
+    },
+]
+
 export default function YamunaCityMall(props) {
     return (
         <>
@@ -37,6 +55,13 @@ export default function YamunaCityMall(props) {
             </Helmet>
             <Banner  Title="Yamuna City Mall" Image={IMAGES.ycmPage.ycmBanner}/>
             <AwardWinning awardWinningContent={AwardWinningContent}  />
+            <WhyYamunaExpress />
+            <YcmArticle YcmArticleSlider={YcmArticleSlides} />
+            <MirajChinema 
+            Title="Miraj Cinemas"
+            SubTitle="New Multiplex"
+            Des="Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+             />
             <GetInTouch />
             
         </>

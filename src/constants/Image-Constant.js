@@ -40,6 +40,12 @@ import Award1 from "../assets/images/award-population.jpg";
 import Award2 from "../assets/images/award-developed.jpg";
 import Award3 from "../assets/images/award-gaur.jpg";
 import YcmSecondBanner from "../assets/images/ycm-sec-banner.png";
+import MirajChinema from "../assets/images/miraj-chinema.jpg";
+import MirajChinemaLogo from "../assets/images/miraj-chinema-logo.jpg";
+import YcmArticle1 from "../assets/images/ycm-articel1.jpg";
+import YcmArticle2 from "../assets/images/ycm-articel2.jpg";
+import YcmArticle3 from "../assets/images/ycm-articel3.jpg";
+import WhyYamunaExpressWay from "../assets/images/express-1.png";
 
 
 export const IMAGES = {
@@ -93,6 +99,13 @@ export const IMAGES = {
         award2:Award2,
         award3:Award3,
         ycmSecondBanner:YcmSecondBanner,
+        mirajChinema:MirajChinema,
+        mirajChinemaLogo:MirajChinemaLogo,
+        YcmArticle1:YcmArticle1,
+        YcmArticle2:YcmArticle2,
+        YcmArticle3:YcmArticle3,
+        WhyYamunaExpressWay:WhyYamunaExpressWay,
+
     }
 
 

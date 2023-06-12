@@ -147,7 +147,7 @@ export default function GetInTouch(props) {
        
         <section className="form-cta">
             <div className="row align-items-center">
-                <div className="col-md-6">
+                <div className="col-md-6 pr-0">
                     <div className='form-left'>
                         <h4 data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">GET IN TOUCH</h4>
                         <h2 data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">Make your <br />

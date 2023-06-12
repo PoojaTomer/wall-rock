@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../components/Breadcrumb';
 import { IMAGES } from '../../constants/Image-Constant';
-// import Gallery from './Components/Gallery';
+import Gallery from './Components/Gallery';
 import TestimonialSlider from '../../components/Testimonials';
 import GetInTouch from '../../components/GetInTouch';
 import Layout from './Components/Layout';
@@ -39,7 +39,7 @@ export default function Aishwaryam(props) {
                     
                 </div>
             </section>
-            {/* <Gallery /> */}
+            <Gallery />
             <section className='aish-highlight'>
                     <div className="row">
                         <div className="col-md-6">
