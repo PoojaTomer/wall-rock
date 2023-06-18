@@ -46,6 +46,26 @@ import YcmArticle1 from "../assets/images/ycm-articel1.jpg";
 import YcmArticle2 from "../assets/images/ycm-articel2.jpg";
 import YcmArticle3 from "../assets/images/ycm-articel3.jpg";
 import WhyYamunaExpressWay from "../assets/images/express-1.png";
+import YcmGallery1 from "../assets/images/ycm-gallery1.png";
+import YcmGallery2 from "../assets/images/ycm-gallery2.png";
+import YcmGallery3 from "../assets/images/ycm-gallery3.png";
+import YcmGallery4 from "../assets/images/ycm-gallery4.png";
+import YcmGallery5 from "../assets/images/ycm-gallery5.png";
+import YcmGallery6 from "../assets/images/ycm-gallery6.png";
+import YcmAroplane from "../assets/images/aroplane.png";
+import YcmMinute from "../assets/images/minute.jpg";
+import YcmLoadKrishana from "../assets/images/load-krishna.png";
+import YcmGlobalSchool from "../assets/images/global-school.jpg";
+
+import YcmBrand1 from "../assets/images/brand-1.png";
+import YcmBrand2 from "../assets/images/brand-2.png";
+import YcmBrand3 from "../assets/images/brand-3.png";
+import YcmBrand4 from "../assets/images/brand-4.png";
+import YcmBrand5 from "../assets/images/brand-5.png";
+import YcmBrand6 from "../assets/images/brand-6.png";
+import YcmBrand7 from "../assets/images/brand-7.png";
+import YcmBrand8 from "../assets/images/brand-8.png";
+import Ycmvideo from "../assets/images/ycm-video.mp4";
 
 
 export const IMAGES = {
@@ -105,6 +125,13 @@ export const IMAGES = {
         YcmArticle2:YcmArticle2,
         YcmArticle3:YcmArticle3,
         WhyYamunaExpressWay:WhyYamunaExpressWay,
+       Gallery:[YcmGallery1, YcmGallery2, YcmGallery3, YcmGallery4,YcmGallery5, YcmGallery6],
+       YcmAroplane:YcmAroplane,
+       YcmMinute:YcmMinute,
+       YcmLoadKrishana:YcmLoadKrishana,
+       YcmGlobalSchool:YcmGlobalSchool,
+       YcmBrands:[YcmBrand1, YcmBrand2, YcmBrand3, YcmBrand4, YcmBrand5, YcmBrand6, YcmBrand7, YcmBrand8],
+       Ycmvideo:Ycmvideo,
 
     }
 

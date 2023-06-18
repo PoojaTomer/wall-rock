@@ -132,6 +132,12 @@ export default function WhyYamunaExpress(props) {
         <>
         <section className='expressway-sec'>
             <div className='container'>
+            <div className="col-md-10 offset-md-1 text-center">
+                    <h5 className='video-text'>This project is a testament to Wall Rock Developers<br />
+commitment to creating innovative and world-class commercial spaces
+that meet the needs of today's customers</h5>
+
+                </div>
                 <h2 className='text-center'>Why Yamuna Expressway</h2>
                 <p className='text-center'>
                 Yamuna Expressway offers a billion-dollar infrastructure leap for generations to come, promising an unmatched living experience in NCR's 

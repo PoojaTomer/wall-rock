@@ -77,7 +77,7 @@ function Header(props) {
                         </li>
                         <li className="nav-item">
                             <NavLink to="/articels" className={({ isActive }) => isActive ? "current nav-link" : "nav-link"
-                              } onClick={closeMobileMenu}>Real Estate Developer Insights</NavLink>
+                              } onClick={closeMobileMenu}>Media</NavLink>
                         </li>
                         {/* <li className="nav-item">
                             <NavLink to="/portfolio" className={({ isActive }) => isActive ? "current nav-link" : "nav-link"
