@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -55,7 +55,7 @@ export default function LetestArticles(props) {
                 {
                     props.AboutSubContent.map((value,index)=>{
                         return(
-                            <>
+                            <Fragment key={index}>
                             <div className='article-box'>
                                         <div className='article-img'>
                                             <img src={value.Image} className='img-fluid' />
@@ -66,7 +66,7 @@ export default function LetestArticles(props) {
                                             {/* <div className="view-article"><div className="view-article-line extend-line"></div><div className="view-article-link"><Link to="/">View Article</Link></div></div> */}
                                         </div>
                                     </div>
-                            </>
+                            </Fragment>
                         )}
                     )
                 }

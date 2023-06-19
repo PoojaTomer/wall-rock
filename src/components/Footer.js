@@ -51,7 +51,7 @@ function Footer(props) {
                             <li><Link to="/about">About Us</Link></li>
                             <li><Link to="/yamuna-city-mall">Yamuna City Mall</Link></li>
                             <li><Link to="/aishwaryam">Aishwaryam</Link></li>
-                            <li><Link to="/articels">Real Estate Developer Insights</Link></li>
+                            <li><Link to="/articels">Media</Link></li>
                             <li><Link to="/contact">Contact Us</Link></li>
                           
                         </ul>

@@ -33,6 +33,7 @@ import AishLayout4 from "../assets/images/layout-4.jpg";
 import AishLayout5 from "../assets/images/layout-5.jpg";
 import AishLayout6 from "../assets/images/layout-6.jpg";
 import AishLayout7 from "../assets/images/layout-7.jpg";
+import SoldOut from "../assets/images/sold-out.png";
 
 // Yamuna City Mall Page
 import YcmBanner from "../assets/images/ycm-banner.jpg";
@@ -111,6 +112,7 @@ export const IMAGES = {
        aishLayout5:AishLayout5,
       aishLayout6:AishLayout6,
       aishLayout7:AishLayout7,
+      SoldOut:SoldOut,
     },
 
     ycmPage:{

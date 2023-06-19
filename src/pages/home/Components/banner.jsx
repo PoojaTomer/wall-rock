@@ -31,7 +31,7 @@ function Banner(){
         return (
           <section className="banner">
          <Carousel responsive={responsive} infinite autoPlay> 
-      <div>
+      <div className='slider-content'>
         <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner1" />
         <div className="content">
           <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
@@ -39,7 +39,7 @@ function Banner(){
           <Link to="/" className="btn btn-secondary">Know More</Link>
         </div>
       </div>
-      <div>
+      <div className='slider-content'>
         <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner2" />
         <div className="content">
           <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
@@ -47,7 +47,7 @@ function Banner(){
           <Link to="/" className="btn btn-secondary">Know More</Link>
         </div>
       </div>
-      <div>
+      <div className='slider-content'>
         <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner3" />
         <div className="content">
           <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>

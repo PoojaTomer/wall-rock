@@ -14,9 +14,9 @@ setBrandList(IMAGES.ycmPage.YcmBrands)
          
             <ul>
                 {
-            brandList.map((items)=>{
+            brandList.map((items, index)=>{
                 return(
-                <li className='brand-box'>
+                <li className='brand-box' key={index}>
                     <img src={items} className='img-fluid' alt="client logo" />
                 </li>
                 )

@@ -23,6 +23,7 @@ function Gallery(props) {
         <>
         <section className='aish-gallery'>
             <div className="container">
+            <img src={IMAGES.aishwaryamPage.SoldOut} className="img-fluid sold-out" alt='Sold Out' />
             <ImageGallery
         items={images}
         showPlayButton={false}

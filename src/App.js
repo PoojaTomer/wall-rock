@@ -50,6 +50,7 @@ function App() {
       declineButtonText="Cancel"
       // declineButtonStyle={{ color: "Green", fontSize: "13px", background:"white", }}
       expires={150}
+      SameSite="Lax"
     >
 We use Cookies for a number of reasons such as keeping NVD sites reliable and secure, personalising content and ads, providing social media features and to analyse how our sites are used.
 </CookieConsent>

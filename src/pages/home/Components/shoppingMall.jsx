@@ -51,7 +51,7 @@ export default function ShoppingMall(props) {
 <section className='shapping-sec'>
 <div className='container-fluid'>
 <div className='row'>
-    <div className='col-md-6'>
+    <div className='col-md-6 d-flex align-items-stretch'>
       <div className='biggest-shopping'>
           <h2>yamuna city mall</h2>
           <h4>THE BIGGEST <strong>SHOPPING MALL</strong> IN GAUR YAMUNA CITY</h4>
@@ -59,7 +59,7 @@ export default function ShoppingMall(props) {
           <Link to='/' className='btn btn-secondary'>Know More</Link>
         </div>
     </div>
-    <div className='col-md-6'>
+    <div className='col-md-6 d-flex align-items-stretch'>
       {/* <div className="slider-wrapper">
 
         <Slider
@@ -112,7 +112,7 @@ export default function ShoppingMall(props) {
         </div>
         
     </div>
-    <div className='col-md-6'>
+    <div className='col-md-6 d-flex align-items-stretch'>
     <div className="mall-img">
     <img src={IMAGES.homepage.aishwaryam} className='img-fluid' alt="Aishwaryam"/>
     </div>
@@ -162,7 +162,7 @@ export default function ShoppingMall(props) {
         </div>
         </div> */}
     </div>
-    <div className='col-md-6'>
+    <div className='col-md-6 d-flex align-items-stretch'>
         <div className='mall-content'>
         <img src={IMAGES.homepage.aishwaryamLogo} className='img-fluid' alt="Aishwaryam logo" />
         <h4>450 Apartments Deliverd on time!</h4>

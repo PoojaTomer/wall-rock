@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,8 +57,8 @@ export default  function YcmArticle(props) {
                             props.YcmArticleSlider.map((value, index)=>
                             {
                                 return(
-                                    <>
-                                        <div className='article-box' key={index}>
+                                    <Fragment key={index}>
+                                        <div className='article-box'>
                                             <div className='article-img'>
                                                 <img src={value.Image} className='img-fluid' alt="Article Image" />
                                             </div>
@@ -66,7 +66,7 @@ export default  function YcmArticle(props) {
                                              <h4>{value.Title}</h4>
                                             </div>
                                         </div>
-                                    </>
+                                    </Fragment>
                                 )
                             })
                         }

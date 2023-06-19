@@ -26,6 +26,7 @@ export default function LuxuaryRetail(props) {
                     </div>
                 </div>
               </div>
+              <p className='float-text'>Shopping Centre</p>
 </div>
 </section>
 <section className='load-krishna-sec'>

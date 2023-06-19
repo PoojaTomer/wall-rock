@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { IMAGES } from '../../../constants/Image-Constant';
 
 export default function OurFoundations(props) {
@@ -11,15 +11,15 @@ export default function OurFoundations(props) {
                         {
                             props.foundationList.map((value, index)=>{
                                 return(
-                                    <>
-                                    <div className='col-md-4' key={index}>
+                                    <Fragment key={index}>
+                                    <div className='col-md-4'>
                                         <div className="shadow-box">
                                             <img src={value.Image} className="img-fluid" alt="Value" />
                                             <h4>{value.Title}</h4>
                                             <p>{value.Des}</p>
                                         </div>
                                     </div>
-                                    </>
+                                    </Fragment>
                                 )
                             })
                         }

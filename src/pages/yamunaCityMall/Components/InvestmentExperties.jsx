@@ -47,14 +47,15 @@ export default function InvestmentExperties(props) {
                   </div>
                 </div>
                 </div>
+                <p className='float-text'>Values Of Smart Space</p>
                 </div>
                 <div className="embed-responsive embed-responsive-16by9">
-                    <video ref={videoRef} startTime={100} onClick={(e) => e.target.play()} playsInline loop muted>
+                    <video ref={videoRef} onClick={(e) => e.target.play()} playsInline loop muted>
                         <source src={IMAGES.ycmPage.Ycmvideo} type="video/mp4">
                         </source>
                     </video>
                 </div>
-               
+                
             </section>
         </>
     );

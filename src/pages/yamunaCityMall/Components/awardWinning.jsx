@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { IMAGES } from '../../../constants/Image-Constant';
 import {FaDownload} from 'react-icons/fa';
 
@@ -13,8 +13,8 @@ export default function AwardWinning(props) {
                     {
                        props.awardWinningContent.map((value, index) =>{
                         return(
-                            <>
-                        <div className="col-md-4" key={index}>
+                            <Fragment key={index}>
+                        <div className="col-md-4">
                             <div className='award-box'>
                                 <img src={value.Image} className='img-fluid' />
                                 <div className='info'>
@@ -24,7 +24,7 @@ export default function AwardWinning(props) {
                                 </div>
                             </div>
                         </div>
-                            </>
+                            </Fragment>
                         )
                        })
                     }

@@ -57,7 +57,7 @@ function Layout(props) {
           </div>
         </div>
       </div>
-      <div className="col-md-4">
+      <div className="col-md-4 d-flex align-items-stretch">
         <div className='hover-box'>
           <img src={IMAGES.aishwaryamPage.aishLayout6} className='img-fluid' />
           <div className='info'>
@@ -65,7 +65,7 @@ function Layout(props) {
           </div>
         </div>
       </div>
-      <div className="col-md-4">
+      <div className="col-md-4 d-flex align-items-stretch">
       <div className='hover-box'>
           <img src={IMAGES.aishwaryamPage.aishLayout7} className='img-fluid' />
           <div className='info'>
