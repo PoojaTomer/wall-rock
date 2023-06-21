@@ -1,4 +1,4 @@
-import React, {useState, useRef } from 'react';
+import React, {useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import REGX from '../constants/Regx';
 import { useNavigate } from 'react-router-dom';
@@ -8,22 +8,31 @@ import axios from 'axios';
 export default function GetInTouch(props) {
     const navigate = useNavigate();
     const captchaRef = useRef(null)
-    const [discoveryCallForm, setDiscoveryCallForm] = useState({
+    const [GetAQuoteForm, setGetAQuoteForm] = useState({
         processing: false,
-        firstName: "",
-        firstNameError: "",
-        lastName: "",
-        lastNameError: "",
+        fullName: "",
+        fullNameError: "",
         email: "",
         emailError: "",
         mobile: "",
         mobileError: "",
-        services: "-1",
-        servicesError: "",
         message: "",
         messageError: ""
     });
 
+    useEffect(() => {
+        setGetAQuoteForm({
+            processing: false,
+            fullName: "",
+            fullNameError: "",
+            email: "",
+            emailError: "",
+            mobile: "",
+            mobileError: "",
+            message: "",
+            messageError: ""
+        });
+    }, [props.isModalVisible]);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -31,78 +40,62 @@ export default function GetInTouch(props) {
         captchaRef.current.reset();
         let errorFound = false;
 
-        setDiscoveryCallForm({
-            ...discoveryCallForm,
+        setGetAQuoteForm({
+            ...GetAQuoteForm,
             processing: true
         });
 
-        let DiscoveryCallFormField = { ...discoveryCallForm };
+        let GetAQuoteFormField = { ...GetAQuoteForm };
 
-        if (DiscoveryCallFormField.firstName === "") {
+        if (GetAQuoteFormField.fullName === "") {
             errorFound = true;
-            DiscoveryCallFormField.firstNameError = "this field is required";
-        } else if (!REGX.FULLNAME.test(DiscoveryCallFormField.firstName)) {
+            GetAQuoteFormField.fullNameError = "this field is required";
+        } else if (!REGX.FULLNAME.test(GetAQuoteFormField.fullName)) {
             errorFound = true;
-            DiscoveryCallFormField.firstNameError = "alphabatic only";
+            GetAQuoteFormField.fullNameError = "alphabatic only";
         } else {
-            DiscoveryCallFormField.firstNameError = "";
+            GetAQuoteFormField.fullNameError = "";
         }
-        if (DiscoveryCallFormField.lastName === "") {
+        if (GetAQuoteFormField.email === "") {
             errorFound = true;
-            DiscoveryCallFormField.lastNameError = "this field is required";
-        } else if (!REGX.FULLNAME.test(DiscoveryCallFormField.lastName)) {
+            GetAQuoteFormField.emailError = "this field is required";
+        } else if (!REGX.EMAIL.test(GetAQuoteFormField.email)) {
             errorFound = true;
-            DiscoveryCallFormField.lastNameError = "alphabatic only";
+            GetAQuoteFormField.emailError = "enter valid email";
         } else {
-            DiscoveryCallFormField.lastNameError = "";
+            GetAQuoteFormField.emailError = "";
         }
-        if (DiscoveryCallFormField.email === "") {
+        if (GetAQuoteFormField.mobile === "") {
             errorFound = true;
-            DiscoveryCallFormField.emailError = "this field is required";
-        } else if (!REGX.EMAIL.test(DiscoveryCallFormField.email)) {
+            GetAQuoteFormField.mobileError = "this field is required";
+        } else if (!REGX.MOBILE_NUMBER.test(GetAQuoteFormField.mobile)) {
             errorFound = true;
-            DiscoveryCallFormField.emailError = "enter valid email";
+            GetAQuoteFormField.mobileError = "enter valid phone number";
         } else {
-            DiscoveryCallFormField.emailError = "";
+            GetAQuoteFormField.mobileError = "";
         }
-        if (DiscoveryCallFormField.mobile === "") {
+        if (GetAQuoteFormField.message === "") {
             errorFound = true;
-            DiscoveryCallFormField.mobileError = "this field is required";
-        } else if (!REGX.MOBILE_NUMBER.test(DiscoveryCallFormField.mobile)) {
-            errorFound = true;
-            DiscoveryCallFormField.mobileError = "enter valid phone number";
+            GetAQuoteFormField.messageError = "this field is required";
         } else {
-            DiscoveryCallFormField.mobileError = "";
-        }
-        if (DiscoveryCallFormField.services === "-1") {
-            errorFound = true;
-            DiscoveryCallFormField.servicesError = "this field is required";
-        } else {
-            DiscoveryCallFormField.servicesError = "";
-        }
-
-        if (DiscoveryCallFormField.message === "") {
-            errorFound = true;
-            DiscoveryCallFormField.messageError = "this field is required";
-        } else {
-            DiscoveryCallFormField.messageError = "";
+            GetAQuoteFormField.messageError = "";
         }
 
         if (errorFound) {
-            setDiscoveryCallForm({
-                ...DiscoveryCallFormField,
+            setGetAQuoteForm({
+                ...GetAQuoteFormField,
                 processing: false
             });
 
         } else {
             let formData = new FormData();
-            formData.append("fullName", DiscoveryCallFormField.firstName  +" "+ DiscoveryCallFormField.lastName);
-            formData.append("email", DiscoveryCallFormField.email);
-            formData.append("mobile", DiscoveryCallFormField.mobile);
-            formData.append("service", DiscoveryCallFormField.services);
-            formData.append("message", DiscoveryCallFormField.message);
+            formData.append("fullName", GetAQuoteFormField.fullName);
+            formData.append("email", GetAQuoteFormField.email);
+            formData.append("mobile", GetAQuoteFormField.mobile);
+            formData.append("message", GetAQuoteFormField.message);
+
             axios({
-                url: `https://www.newvisiondigital.co/mails/discovery_call.php`,
+                url: `https://site4clientdemo.com/wall-rock/mails/get_quote.php`,
                 method: "post",
                 responseType: 'json',
                 data: formData,
@@ -111,18 +104,14 @@ export default function GetInTouch(props) {
                 }
             }).then(response => {
                 if (response.data.status === "success") {
-                    setDiscoveryCallForm({
+                    setGetAQuoteForm({
                         processing: false,
-                        firstName: "",
-                        firstNameError: "",
-                        lastName: "",
-                        lastNameError: "",
+                        fullName: "",
+                        fullNameError: "",
                         email: "",
                         emailError: "",
                         mobile: "",
                         mobileError: "",
-                        services: "-1",
-                        servicesError: "",
                         message: "",
                         messageError: ""
                     });
@@ -135,25 +124,35 @@ export default function GetInTouch(props) {
                 console.log("error", error);
                 alert("error");
             });
-            }
         }
-        const preventMinus = (e) => {
-            if (e.code === 'Minus') {
-                e.preventDefault();
-            }
-        };
+    }
+    const preventMinus = (e) => {
+        if (e.code === 'Minus') {
+            e.preventDefault();
+        }
+    };
     return (
         <>
        
         <section className="form-cta">
-            <div className="row align-items-center">
+            <div className="row">
                 <div className="col-md-6 pr-0">
                     <div className='form-left'>
-                        <h4 data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">GET IN TOUCH</h4>
+                        {
+                            props.Title?(
+                                <>
+                                <h4 className='mb-5' data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">{props.Title}</h4>
+                                </>
+                            ):
+                            <>
+                           <h4 data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">GET IN TOUCH</h4>
                         <h2 data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">Make your <br />
                         dreams come <br/>
                         true!</h2>
-                       <Link className='btn btn-secondary'>Know More</Link>
+                            </>
+                        }
+                   
+                       <Link to="/contact" className='btn btn-secondary'>Know More</Link>
                       </div>
                 </div>
                 <div className="col-md-6">
@@ -161,47 +160,51 @@ export default function GetInTouch(props) {
                             <form onSubmit={(e) => submitHandler(e)}>
                             <ul className="form-list">
                                 <li data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">
-                                    <input type="text" className="form-control" placeholder="First Name*" value={discoveryCallForm.firstName} onChange={e => setDiscoveryCallForm({
-                                            ...discoveryCallForm,
-                                            firstName: e.target.value,
-                                            firstNameError: ""
-                                        })} disabled={discoveryCallForm.processing} />
-                                     <span className='error'>{discoveryCallForm.firstNameError}</span>
+                                    <input type="text" className="form-control" placeholder="First Name*" value={GetAQuoteForm.fullName} onChange={e => setGetAQuoteForm({
+                                            ...GetAQuoteForm,
+                                            fullName: e.target.value,
+                                            fullNameError: ""
+                                        })} disabled={GetAQuoteForm.processing} />
+                                     <span className='error'>{GetAQuoteForm.fullNameError}</span>
                                 </li>
-                                {/* <li data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
-                                    <input type="email" className="form-control" placeholder="Email*" value={discoveryCallForm.email} onChange={e => setDiscoveryCallForm({
-                                                ...discoveryCallForm,
-                                                email: e.target.value,
-                                                emailError: ""
-                                            })} disabled={discoveryCallForm.processing} />
-                                    <span className='error'>{discoveryCallForm.emailError}</span>
-                               </li> */}
                                 <li data-aos="fade-up" data-aos-delay="400" data-aos-offset="0"> 
-                                    <input type="number" onKeyPress={preventMinus} className="form-control" placeholder="Phone*" value={discoveryCallForm.mobile} onChange={e => setDiscoveryCallForm({
-                                            ...discoveryCallForm,
+                                    <input type="number" onKeyPress={preventMinus} className="form-control" placeholder="Phone*" value={GetAQuoteForm.mobile} onChange={e => setGetAQuoteForm({
+                                            ...GetAQuoteForm,
                                             mobile: e.target.value.slice(0, 10),
                                             mobileError: ""
-                                        })} disabled={discoveryCallForm.processing} />
-                                    <span className='error'>{discoveryCallForm.mobileError}</span>
+                                        })} disabled={GetAQuoteForm.processing} />
+                                    <span className='error'>{GetAQuoteForm.mobileError}</span>
                                 </li>
+                                <li className="cnr-full" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
+                                    <input type="email" className="form-control" placeholder="Email*" value={GetAQuoteForm.email} onChange={e => setGetAQuoteForm({
+                                                ...GetAQuoteForm,
+                                                email: e.target.value,
+                                                emailError: ""
+                                            })} disabled={GetAQuoteForm.processing} />
+                                    <span className='error'>{GetAQuoteForm.emailError}</span>
+                               </li>
+                               
                               
                                  <li className="cnr-full" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
-                                    <textarea placeholder="Message*" className="form-control" rows="4" value={discoveryCallForm.message} onChange={e => setDiscoveryCallForm({
-                                            ...discoveryCallForm,
+                                    <textarea placeholder="Message*" className="form-control" rows="4" value={GetAQuoteForm.message} onChange={e => setGetAQuoteForm({
+                                            ...GetAQuoteForm,
                                             message: e.target.value,
                                             messageError: ""
                                         })}
-                                            disabled={discoveryCallForm.processing}
+                                            disabled={GetAQuoteForm.processing}
                                         >
                                     </textarea>
-                                    <span className='error'>{discoveryCallForm.messageError}</span>
+                                    <span className='error'>{GetAQuoteForm.messageError}</span>
                                 </li>
                                 <li className="cnr-full"> 
-                                    <ReCAPTCHA ref={captchaRef} sitekey="6Ldy6IEhAAAAAOnXdArKtwygfu6f3doYCblZQYHi"
-                                        size="invisible" />
+                                <ReCAPTCHA
+                                    ref={captchaRef}
+                                    sitekey="6LccULUmAAAAAL50RQKodEjS5sP6v9bExd9eHYBY"
+                                    size="invisible"
+                                    />
                                 </li>
                             <li className="cnr-full" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-                                <button className='btn btn-secondary'>Submit</button>
+                                <button type="submit" className='btn btn-secondary' value="Send">Submit</button>
                             </li>
                         </ul>
                     </form>

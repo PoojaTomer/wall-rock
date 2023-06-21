@@ -51,6 +51,7 @@ export default function LetestArticles(props) {
     return (
         <section className='article-sec'>
             <div className='container'>
+              <h3 className='main-heading text-center mb-4'>Why Choose Wall Rock Developers? </h3>
             <Slider {...settings}>
                 {
                     props.AboutSubContent.map((value,index)=>{

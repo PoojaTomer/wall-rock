@@ -8,11 +8,9 @@ export default function Legacy(props) {
         <section className='legacy'>
             <div className='container text-center'>
                 
-                <h5 className='sub-heading'>Best Real Estate Developer in <span>Delhi NCR</span></h5>
-                <h3 className='main-heading'>LEGACY MOVING FORWARD</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
-but also the leap into electronic typesetting, remaining essentially unchanged. 
+                <h5 className='sub-heading'>Wall Rock Developers</h5>
+                <h3 className='main-heading'>Shaping Today’s Real Estate Landscape</h3>
+                <p>We at Wall Rock Developers pride ourselves in creating exceptional residential and commercial space that redefines luxury and affordability in the real estate world. With our commitment to delivering the highest standard of construction quality in every project, we have earned a reputation to be one of the most trustworthy real estate developers. So, are you ready to embark on a journey towards exceptional living or business success? Get in touch with our team today!
                 </p>
                 <div className='row mt-5'>
                     {/* <Parallax  className='col-md-3'  translateX={['-100px', '0px']}
@@ -22,22 +20,22 @@ but also the leap into electronic typesetting, remaining essentially unchanged.
                         <div className='col-md-3'>
                         <div className='count-box'>
                             <img src={IMAGES.homepage.experienceIcon} className='img-fluid' alt="" />
-                            <h4><CountUp end={8} />+ </h4>
-                            <p>Years of Experience</p>
+                            <h4><CountUp end={9} />+ </h4>
+                            <p>Years Of Experience</p>
                         </div>
                         </div>
                         <div className='col-md-3'>
                         <div className='count-box'>
                             <img src={IMAGES.homepage.developIcon} className='img-fluid' alt="" />
-                            <h4><CountUp end={97.22} />+ </h4>
-                            <p>Lac Sq-ft are Developed</p>
+                            <h4><CountUp end={6.5} /> Lac </h4>
+                            <p>Sq-ft Developed & Delivered</p>
                         </div>
                     </div>
                     <div className='col-md-3'>
                         <div className='count-box'>
                             <img src={IMAGES.homepage.growthIcon} className='img-fluid' alt="" />
-                            <h4><CountUp end={692} />% </h4>
-                            <p>Inverstor’s Growth</p>
+                            <h4><CountUp end={1.5} /> Lac</h4>
+                            <p>Sq-Ft in process</p>
                         </div>
                     </div>
                     <div className='col-md-3'>

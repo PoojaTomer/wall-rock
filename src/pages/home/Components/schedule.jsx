@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Schedule(props) {
     return (
@@ -7,7 +8,7 @@ export default function Schedule(props) {
             <div className='container text-center'>
                 <h5 className='sub-heading'>Book Your <span>Visit Schedule</span></h5>
                 <h3 className='main-heading'>Give a Missed Call @ <a href="tel:703 703 9009">703 703 9009</a></h3>
-                <button className='btn btn-default'>Book Now</button>
+                <Link to="/contact" className='btn btn-default'>Book Now</Link>
             </div>
         </section>
             

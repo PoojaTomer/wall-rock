@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from 'axios';
 import Breadcrumb from '../../components/Breadcrumb';
 import { IMAGES } from '../../constants/Image-Constant';
 import REGX from '../../constants/Regx';
@@ -10,20 +11,20 @@ import REGX from '../../constants/Regx';
 export default function Contact(props) {
     const navigate = useNavigate();
     const captchaRef = useRef(null)
-const [contactForm, setContactForm] = useState({
-    processing: false,
-    fullName: "",
-    fullNameError: "",
-    email:"",
-    emailError: "",
-    company: "",
-    companyError: "",
-    mobile: "",
-    mobileError: "",
-    message: "",
-    messageError: ""
-})
-useEffect(() => {
+    const [contactForm, setContactForm] = useState({
+        processing: false,
+        fullName: "",
+        fullNameError: "",
+        email:"",
+        emailError: "",
+        company: "",
+        companyError: "",
+        mobile: "",
+        mobileError: "",
+        message: "",
+        messageError: ""
+    })
+    useEffect(() => {
     setContactForm({
         processing: false,
         fullName: "",
@@ -79,7 +80,7 @@ const submitHandler = (e) => {
     } else {
         contactFormField.mobileError = "";
     }
-    if (contactFormField.company === "-1") {
+    if (contactFormField.company === "") {
         errorFound = true;
         contactFormField.companyError = "this field is required";
     } else {
@@ -104,11 +105,11 @@ const submitHandler = (e) => {
         formData.append("fullName", contactFormField.fullName);
         formData.append("email", contactFormField.email);
         formData.append("mobile", contactFormField.mobile);
-        formData.append("service", contactFormField.services);
+        formData.append("company", contactFormField.company);
         formData.append("message", contactFormField.message);
 
-        fetch({
-            url: `https://phpstack-281388-2949987.cloudwaysapps.com/mails/get_quote.php`,
+        axios({
+            url: `https://site4clientdemo.com/wall-rock/mails/contact.php`,
             method: "post",
             responseType: 'json',
             data: formData,
@@ -130,7 +131,6 @@ const submitHandler = (e) => {
                     message: "",
                     messageError: ""
                 });
-                props.handleCancel();
                 navigate("/thank-you");
             } else {
                 alert(response.data.message);
@@ -150,7 +150,7 @@ const submitHandler = (e) => {
                 {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
                 <meta name="keyword" content="Nvd usa" /> */}
             </Helmet>
-            <Breadcrumb Title="Contact Us" Image={IMAGES.homepage.Banner} /> 
+            <Breadcrumb Title="Contact Us" Image={IMAGES.aboutpage.ContactBanner} /> 
             <section className='contact-1'>
                 <div className='container'>
                 <h3 className='main-heading text-center'>Get In Touch With Us</h3>
@@ -172,7 +172,7 @@ const submitHandler = (e) => {
                                 <div className="row">
                                     <div className="col-md-6">
                                     <div className="form-group">
-                                            <input type="text" className='form-control' placeholder="Name" name="name" value={contactForm.fullName} onChange={e => setContactForm({
+                                            <input type="text" className='form-control' placeholder="Name" name="fullName" value={contactForm.fullName} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 fullName: e.target.value,
                                                 fullNameError: ""
@@ -184,7 +184,7 @@ const submitHandler = (e) => {
 
                                     <div className="col-md-6">
                                     <div className="form-group">
-                                            <input type="text" className='form-control' placeholder="Company" name="Company" value={contactForm.company} onChange={e => setContactForm({
+                                            <input type="text" className='form-control' placeholder="Company" name="company" value={contactForm.company} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 company: e.target.value,
                                                 companyError: ""
@@ -194,7 +194,7 @@ const submitHandler = (e) => {
                                     </div>
                                     <div className="col-md-6">
                                     <div className="form-group">
-                                            <input type="email" className='form-control' placeholder="Email" name="Email" value={contactForm.email} onChange={e => setContactForm({
+                                            <input type="email" className='form-control' placeholder="Email" name="email" value={contactForm.email} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 email: e.target.value,
                                                 emailError: ""
@@ -204,7 +204,7 @@ const submitHandler = (e) => {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className='form-control' placeholder="Contact no" name="ContactNo" value={contactForm.mobile} onChange={e => setContactForm({
+                                            <input type="text" className='form-control' placeholder="Contact no" name="mobile" value={contactForm.mobile} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 mobile: e.target.value.slice(0,10),
                                                 mobileError: ""
@@ -214,7 +214,7 @@ const submitHandler = (e) => {
                                     </div>
                               
                                 <div className="col-md-12">
-                                    <textarea className='form-control' rows="4" placeholder="Message" name="Message" value={contactForm.message} onChange={e => setContactForm({
+                                    <textarea className='form-control' rows="4" placeholder="Message" name="message" value={contactForm.message} onChange={e => setContactForm({
                                         ...contactForm,
                                         message: e.target.value,
                                         messageError: ""
@@ -225,7 +225,7 @@ const submitHandler = (e) => {
                                 </div>
                                 <ReCAPTCHA
                                     ref={captchaRef}
-                                    sitekey="6Ldy6IEhAAAAAOnXdArKtwygfu6f3doYCblZQYHi"
+                                    sitekey="6LccULUmAAAAAL50RQKodEjS5sP6v9bExd9eHYBY"
                                     size="invisible"
                                  />
                                 <div className="col-md-12 text-center mt-4">

@@ -91,6 +91,7 @@ const responsive = {
     ]
   };
 
+ 
 
   export default function TestimonialSlider(props) {
     return (
@@ -106,70 +107,28 @@ const responsive = {
                                   cssEase= "linear"
                                   dots= {true}
                                   >  */}
-                        <div className="review-con">
-                                <div className="review-details">
-                                <div className="rev-thumb"><img src={IMAGES.homepage.testProfile1} className="img-fluid" /></div>
-                                <div className="rev-info">
-                                    <ul>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                    </ul>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                                    <h6><strong>Mr. Nirbhay Kataria</strong></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="review-con"> 
-                            <div className="review-details">
-                                <div className="rev-thumb"><img src={IMAGES.homepage.testProfile2} className="img-fluid" /></div>
-                                <div className="rev-info">
-                                    <ul>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                    </ul>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. </p>
-                                    <h6><strong>Mr. Ramgopal Kumar</strong></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="review-con">
-                            <div className="review-details">
-                                <div className="rev-thumb"><img src={IMAGES.homepage.testProfile1} className="img-fluid" /></div>
-                                <div className="rev-info">
-                                    <ul>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                    </ul>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                                    <h6><strong>Mr. Harry</strong></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="review-con">
-                            <div className="review-details">
-                                <div className="rev-thumb"><img src={IMAGES.homepage.testProfile2} className="img-fluid" /></div>
-                                <div className="rev-info">
-                                    <ul>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                        <li><FaStar/></li>
-                                    </ul>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                                    <h6><strong>Mr. Owen</strong></h6>
-                                </div>
-                            </div>
-                        </div>
+                                  {
+                                    props.TestiList?.map((value, index)=>{
+                                      return(
+                                        <div className="review-con" key={index}>
+                                                <div className="review-details">
+                                                <div className="rev-thumb"><img src={value.Image} className="img-fluid" /></div>
+                                                <div className="rev-info">
+                                                    <ul>
+                                                        <li><FaStar/></li>
+                                                        <li><FaStar/></li>
+                                                        <li><FaStar/></li>
+                                                        <li><FaStar/></li>
+                                                        <li><FaStar/></li>
+                                                    </ul>
+                                                    <p>{value.Description}</p>
+                                                    <h6><strong>{value.Name}</strong></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      )
+                                    })
+                                  }
                     
                         </Slider>
                     </div>

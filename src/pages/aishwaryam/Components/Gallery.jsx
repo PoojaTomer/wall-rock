@@ -35,7 +35,8 @@ function Gallery(props) {
         //   alert("slideshow is now playing!");
         // }}
       />
-         <p>Whether you're a fitness enthusiast, a sports lover, or someone who likes to relax and unwind, there is something for everyone here. With a basketball court, amphitheatre, and separate swimming pools for adults and kids, you can enjoy a variety of activi- ties within the comfort of your own home. The clubhouse equipped with a billiards table and gymnasium is the perfect place to unwind after a long day.
+         <p>The building features state-of-the-art facilities, including a fully equipped fitness centre, a swimming pool, landscaped gardens, children's play areas, and a dedicated community clubhouse. In fact, the nearby neighbours boast a positive atmosphere with restaurants, malls, and parks just a stone's throw away. So, if you want to secure your future, contact us today!
+
 </p>  
             </div>
         </section>

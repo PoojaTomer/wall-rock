@@ -7,8 +7,8 @@ export default function AwardWinning(props) {
         <>
            <section className='ycm-award'>
             <div className="container">
-                <h5 className='sub-heading text-center'><span>We build. We Craft</span></h5>
-                <h2 className='main-heading text-center'>award winning<br/>architectural design</h2>
+                <h5 className='sub-heading text-center'><span>We Build. We Craft. We Deliver.</span></h5>
+                <h2 className='main-heading text-center'>Award Winning <br/>Architectural Design</h2>
                 <div className="row mt-5">
                     {
                        props.awardWinningContent.map((value, index) =>{
@@ -30,7 +30,7 @@ export default function AwardWinning(props) {
                     }
                   
                 </div>
-                <div className='col-md-12 text-center'><a href="#" className='btn btn-default' >Download E-Brochure <FaDownload /></a></div>
+                <div className='col-md-12 text-center'><a href={IMAGES.ycmPage.YcmBrochure} target='_blank' className='btn btn-default' >Download E-Brochure <FaDownload /></a></div>
                 <p className='float-text'>About  yamuna City Mall</p>
             </div>
            

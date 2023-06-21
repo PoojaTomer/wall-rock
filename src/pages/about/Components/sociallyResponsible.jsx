@@ -6,15 +6,15 @@ export default function SociallyResponsible(props) {
         <>
         <section className='about-3'>
             <div className='container'>
-                    <div className="row">
+                    <div className="row align-items-center">
                     <div className='col-md-6'>
                         <div className='hover-img'>
                         <img src={IMAGES.aboutpage.aboutMsg} className='img-fluid' alt="" />
                         </div>
                         </div>
                         <div className='col-md-6'>
-                            <h3 className='main-heading mt-5'>We Are A Socially Responsible Organisation</h3>
-                            <p>We are adding and updating information about hundreds of thousands of companies every day, and periodically add companies to the queue for being updated. You can ask for a company to be added to the front of the queue for updating, especially useful if the address, directors, or other critical information has changed. Just click on the 'Update Information' button below to start the process.</p>
+                            <h3 className='main-heading'>Believe Us; We are Committed To Shape Future Through Excellence</h3>
+                            <p>At Wall Rock Developers, our values are the foundation of everything we do - from delivering our customers with high-grade construction quality to building brand trust and transparency. So, as leading Real Estate developers, we show an unwavering commitment to excellence and attention to detail. We not only give shape to concrete, but we build a culture where people can live their lifestyles and get every required facility. The key principle for our work process is staying up-to-date with the latest industry trends and technology. This also enables us to include unique ideas in construction and design spaces that are modern and functional. Thank you for choosing Wall Rock Developers as your trusted partner in the real estate journey.</p>
                         </div>
                         
                     </div>

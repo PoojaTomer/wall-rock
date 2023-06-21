@@ -4,7 +4,10 @@ import HeaderLogo from "../assets/images/logo.png";
 // footer 
 import NvdLogo from "../assets/images/nvd-logo.png";
 // Homepage
-import Homepage from "../assets/images/banner-1.jpg";
+import HomeBanner1 from "../assets/images/banner-1.jpg";
+import HomeBanner2 from "../assets/images/banner-2.jpg";
+import HomeBanner3 from "../assets/images/banner-3.jpg";
+import HomeBanner4 from "../assets/images/banner-4.jpg";
 import ExperienceIcon from "../assets/images/experience.png";
 import DevelopIcon from "../assets/images/building.png";
 import GrowthIcon from "../assets/images/growth.png";
@@ -21,6 +24,9 @@ import QuoteLight from "../assets/images/right-quote.png";
 
 // Aboutpage
 import AboutMsg from "../assets/images/about-msg.jpg";
+import AboutBanner from "../assets/images/about-banner.jpg";
+import MediaBanner from "../assets/images/media-banner.jpg";
+import ContactBanner from "../assets/images/contact-banner.jpg";
 
 // Aishwaryam Page
 import AishwaryamBanner from "../assets/images/ashiwaryam-banner.jpg";
@@ -36,12 +42,12 @@ import AishLayout7 from "../assets/images/layout-7.jpg";
 import SoldOut from "../assets/images/sold-out.png";
 
 // Yamuna City Mall Page
-import YcmBanner from "../assets/images/ycm-banner.jpg";
+import YcmBanner from "../assets/images/ycm-banner-1.jpg";
 import Award1 from "../assets/images/award-population.jpg";
 import Award2 from "../assets/images/award-developed.jpg";
 import Award3 from "../assets/images/award-gaur.jpg";
 import YcmSecondBanner from "../assets/images/ycm-sec-banner.png";
-import MirajChinema from "../assets/images/miraj-chinema.jpg";
+import MirajChinema from "../assets/images/miraj.jpg";
 import MirajChinemaLogo from "../assets/images/miraj-chinema-logo.jpg";
 import YcmArticle1 from "../assets/images/ycm-articel1.jpg";
 import YcmArticle2 from "../assets/images/ycm-articel2.jpg";
@@ -67,6 +73,7 @@ import YcmBrand6 from "../assets/images/brand-6.png";
 import YcmBrand7 from "../assets/images/brand-7.png";
 import YcmBrand8 from "../assets/images/brand-8.png";
 import Ycmvideo from "../assets/images/ycm-video.mp4";
+import YcmBrochure from "../assets/images/yamuna-city mall-e-brochure.pdf";
 
 
 export const IMAGES = {
@@ -79,7 +86,10 @@ export const IMAGES = {
        
     },
     homepage :{
-        Banner: Homepage,
+        Banner1: HomeBanner1,
+        Banner2: HomeBanner2,
+        Banner3: HomeBanner3,
+        Banner4: HomeBanner4,
         experienceIcon:ExperienceIcon,
         developIcon:DevelopIcon,
         growthIcon:GrowthIcon,
@@ -98,6 +108,10 @@ export const IMAGES = {
     aboutpage:{
         quoteLight:QuoteLight,
        aboutMsg:AboutMsg,
+       AboutBanner:AboutBanner,
+       MediaBanner:MediaBanner,
+       ContactBanner:ContactBanner,
+
     },
 
     aishwaryamPage:{
@@ -134,6 +148,7 @@ export const IMAGES = {
        YcmGlobalSchool:YcmGlobalSchool,
        YcmBrands:[YcmBrand1, YcmBrand2, YcmBrand3, YcmBrand4, YcmBrand5, YcmBrand6, YcmBrand7, YcmBrand8],
        Ycmvideo:Ycmvideo,
+       YcmBrochure:YcmBrochure,
 
     }
 

@@ -12,15 +12,19 @@ export default function AboutSec(props) {
                                 <img src={IMAGES.homepage.aishwaryam} className="img-fluid" />
                             </div>
                             <div className='our-story'>
-                            <h3 className='main-heading mt-5'>Our Story</h3>
-                            <p>WALL ROCK DEVELOPERS LLP is a Limited Liability Partnership incorporated on 20 September, 2021. Its registered office is at B 33 SECTOR 63, NOIDA, Gautam Buddha Nagar, Uttar Pradesh and capital contribution of INR 50.0 lacs. The company has 2 Designated Partners and 1 other partners.</p>
+                            <h3 className='main-heading mt-5'>Our Philosophy</h3>
+                            <p>We want to redefine excellence in real estate development through our ideology. We work hard to design remarkable spaces that surpass expectations, improve quality of life, and add enduring value. Our initiatives continually produce outstanding results for our clients and stakeholders because of our dedication to quality, trust, and innovation.</p>
                             </div>
                         </div>
                         <div className='col-md-6'>
-                        <h3 className='main-heading mt-5'><span className='red-text'>About</span><br/>WALL ROCK DEVELOPERS LLP</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <h3 className='main-heading mt-5'><span className='red-text'>About</span><br/>Wall Rock Developers LLP</h3>
+                        <p>With over 9 years of experience in the real estate industry, Wall Rock Developers has made its name as a leading commercial and residential property developer. We believe in delivering top-notch construction quality and ensuring the timely completion of our projects. We have a team of experts who comprehensively understand the value of finding your ideal home or the perfect space to start your business. </p>
+
+                       <p>Aishwaryam, one of our completed & delivered projects, stands as a pillar of commitment and hard work. Aishwaryam is a residential apartment complex consisting of 450 flats. We are quite proud of finishing this Project earlier than promised so that our clients could move into their dream houses ASAP. </p>
+
+                       <p>Also, we are currently engaged in our next exciting commercial project, Yamuna City Mall(currently under construction). It is the most awaited Commercial Project that will feature the first multiplex in the Yamuna City Region, making it a perfect investment destination for high returns. Spanning over 5,000 square metres of land, this project is a unique and spacious option that is both reasonably priced and purely elegant. </p>
+
+                       <p>When you choose Wall Rock Developers, you can be certain that you are partnering with a company that is committed to transparency, trust, and customer satisfaction. We believe in developing strong relationships with our clients and encouraging open communication throughout the journey. So, if you're looking for a smooth real estate experience, contact us today.</p>
                         </div>
                     </div>
                 </div>

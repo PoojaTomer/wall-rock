@@ -53,10 +53,10 @@ export default function ShoppingMall(props) {
 <div className='row'>
     <div className='col-md-6 d-flex align-items-stretch'>
       <div className='biggest-shopping'>
-          <h2>yamuna city mall</h2>
-          <h4>THE BIGGEST <strong>SHOPPING MALL</strong> IN GAUR YAMUNA CITY</h4>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-          <Link to='/' className='btn btn-secondary'>Know More</Link>
+          <h2>Yamuna City Mall</h2>
+          <h4>Invest Today,<strong> Stay Financially Secure</strong> Tomorrow.</h4>
+          <p>Continuing our legacy of excellence, we are excited to introduce our ongoing commercial project, Yamuna City Mall (YCM), at Gaur Yamuna City. This meticulously designed commercial complex is an integrated hub for business and entertainment with varying themes. Spanning over 5,000 square meters of land, this project is an impressive and spacious estate that is both reasonably priced and purely elegant. Furthermore, YCM will have a modern facade with enough branding space, serving as an unparalleled opportunity for investors, retailers and entrepreneurs. </p>
+          <Link to='/yamuna-city-mall' className='btn btn-secondary'>Know More</Link>
         </div>
     </div>
     <div className='col-md-6 d-flex align-items-stretch'>
@@ -165,9 +165,9 @@ export default function ShoppingMall(props) {
     <div className='col-md-6 d-flex align-items-stretch'>
         <div className='mall-content'>
         <img src={IMAGES.homepage.aishwaryamLogo} className='img-fluid' alt="Aishwaryam logo" />
-        <h4>450 Apartments Deliverd on time!</h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. it to make a type specimen book. It has survived not only five centuries.</p>
-        <Link to="/" className='btn btn-default'>Know More</Link>
+        <h4>Completed & Delivered Before Time!</h4>
+        <p>Aishwaryam - our flagship residential development, is a result of our dedication to providing residents with comfortable and convenient living that will be cherished for years to come. Located at Noida extensions, Aishwaryam is well connected to Delhi NCR, allowing residents to enjoy a wide range of amenities. This project is mainly designed by keeping Vaastu Shastra in mind consisting of 450 spacious apartments.</p>
+        <Link to="/aishwaryam" className='btn btn-default'>Know More</Link>
         </div>
     </div>
 </div>

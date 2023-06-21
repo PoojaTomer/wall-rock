@@ -50,8 +50,29 @@ export default  function YcmArticle(props) {
     return (
         <>
             <section className='ycmarticle-sec'>
-                {/* <div className='container'> */}
-                    <Slider {...settings} spaceBetween={50}>
+                {/* <div className='container-fluid'> */}
+                  <div className='row'>
+                  {
+                            props.YcmArticleSlider.map((value, index)=>
+                            {
+                                return(
+                                    <Fragment key={index}>
+                                      <div className='col-md-4'>
+                                        <div className='article-box'>
+                                            <div className='article-img'>
+                                                <img src={value.Image} className='img-fluid' alt="Article Image" />
+                                            </div>
+                                            <div className='article-content'>
+                                             <h4>{value.Title}</h4>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </Fragment>
+                                )
+                            })
+                        }
+                  </div>
+                    {/* <Slider {...settings} spaceBetween={50}>
                
                         {
                             props.YcmArticleSlider.map((value, index)=>
@@ -70,7 +91,7 @@ export default  function YcmArticle(props) {
                                 )
                             })
                         }
-                    </Slider>
+                    </Slider> */}
                 {/* </div> */}
             </section>
         </>

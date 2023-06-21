@@ -11,7 +11,7 @@ export default function Articles(props) {
                 {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
                 <meta name="keyword" content="Nvd usa" /> */}
             </Helmet>
-            <Breadcrumb Title="Articles" Image={IMAGES.homepage.Banner} /> 
+            <Breadcrumb Title="Media" Image={IMAGES.aboutpage.MediaBanner} /> 
        
         </>
     );

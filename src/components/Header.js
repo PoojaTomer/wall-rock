@@ -16,7 +16,6 @@ function Header(props) {
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [anchorEl, setAnchorEl] = React.useState(null);
 
     useEffect(() => {
       window.addEventListener("scroll", () => {
@@ -39,9 +38,6 @@ function Header(props) {
         AOS.init();
         AOS.refresh();
       }, []);
-        const handleClose = () => {
-        setAnchorEl(null);
-        }
     return (
         <>
         <header className={headerFixed ? "header-fixed" : ""}>

@@ -10,17 +10,17 @@ const FoundationList = [
     {
         Image:IMAGES.homepage.experienceIcon,
         Title:"Our Values",
-        Des:"We are adding and updating information about hundreds of thousands of companies every day"
+        Des:"Commitment, and communication are the core values that come from our work. We're proud to deliver exceptional results without compromising quality."
     },
     {
         Image:IMAGES.homepage.growthIcon,
         Title:"Our Mission",
-        Des:"We are adding and updating information about hundreds of thousands of companies every day"
+        Des:"Our mission is to deliver the highest grade construction, gain customer trust, and stand tall on the timely delivery of projects. "
     },
     {
         Image:IMAGES.homepage.developIcon,
         Title:"Our Vision",
-        Des:"We are adding and updating information about hundreds of thousands of companies every day"
+        Des:"To become an epitome of excellence in the real estate industry by shaping the future of development through quality construction, satisfaction of end users, and transparent dealing with all the stakeholders. "
     },
 
 ]
@@ -33,7 +33,7 @@ export default function About(props) {
                 {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
                 <meta name="keyword" content="Nvd usa" /> */}
             </Helmet>
-            <Breadcrumb Title="About Us" Image={IMAGES.homepage.Banner} /> 
+            <Breadcrumb Title="About Us" Image={IMAGES.aboutpage.AboutBanner} /> 
             <AboutSec />
             <OurFoundations foundationList={FoundationList} />
             <SociallyResponsible />
@@ -45,7 +45,7 @@ export default function About(props) {
                             <img src={IMAGES.aboutpage.quoteLight} className='img-fluid' alt="" />
                         </div>
                         <div className='col-md-7'>
-                            <h4>We are a team of high-energyindividuals who believe businesspotential lies in human connection</h4>
+                            <h4>We look forward to creating exceptional spaces that fulfil your dreams and exceed your expectations.</h4>
                         </div>
                         </div>
                     </div>

@@ -32,27 +32,35 @@ function Banner(){
           <section className="banner">
          <Carousel responsive={responsive} infinite autoPlay> 
       <div className='slider-content'>
-        <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner1" />
+        <img src={IMAGES.homepage.Banner1} className="img-fluid" alt="Banner1" />
         <div className="content">
           <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
           <h1 className="text-white">Wall Rock Developers</h1>
-          <Link to="/" className="btn btn-secondary">Know More</Link>
+          <Link to="/about" className="btn btn-secondary">Know More</Link>
         </div>
       </div>
       <div className='slider-content'>
-        <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner2" />
+        <img src={IMAGES.homepage.Banner2} className="img-fluid" alt="Banner2" />
         <div className="content">
           <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
           <h1 className="text-white">Wall Rock Developers</h1>
-          <Link to="/" className="btn btn-secondary">Know More</Link>
+          <Link to="/yamuna-city-mall" className="btn btn-secondary">Know More</Link>
         </div>
       </div>
       <div className='slider-content'>
-        <img src={IMAGES.homepage.Banner} className="img-fluid" alt="Banner3" />
+        <img src={IMAGES.homepage.Banner3} className="img-fluid" alt="Banner3" />
         <div className="content">
           <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
           <h1 className="text-white">Wall Rock Developers</h1>
-          <Link to="/" className="btn btn-secondary">Know More</Link>
+          <Link to="/aishwaryam" className="btn btn-secondary">Know More</Link>
+      </div>
+    </div>
+    <div className='slider-content'>
+        <img src={IMAGES.homepage.Banner4} className="img-fluid" alt="Banner3" />
+        <div className="content">
+          <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
+          <h1 className="text-white">Wall Rock Developers</h1>
+          <Link to="/about" className="btn btn-secondary">Know More</Link>
       </div>
     </div>
     </Carousel>

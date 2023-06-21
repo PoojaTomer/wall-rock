@@ -28,8 +28,6 @@ const navigate = useNavigate();
         emailError: "",
         mobile: "",
         mobileError: "",
-        services: "-1",
-        servicesError: "",
         message: "",
         messageError: ""
     });
@@ -43,8 +41,6 @@ const navigate = useNavigate();
             emailError: "",
             mobile: "",
             mobileError: "",
-            services: "-1",
-            servicesError: "",
             message: "",
             messageError: ""
         });
@@ -90,13 +86,6 @@ const navigate = useNavigate();
         } else {
             GetAQuoteFormField.mobileError = "";
         }
-        if (GetAQuoteFormField.services === "-1") {
-            errorFound = true;
-            GetAQuoteFormField.servicesError = "this field is required";
-        } else {
-            GetAQuoteFormField.servicesError = "";
-        }
-
         if (GetAQuoteFormField.message === "") {
             errorFound = true;
             GetAQuoteFormField.messageError = "this field is required";
@@ -115,11 +104,10 @@ const navigate = useNavigate();
             formData.append("fullName", GetAQuoteFormField.fullName);
             formData.append("email", GetAQuoteFormField.email);
             formData.append("mobile", GetAQuoteFormField.mobile);
-            formData.append("service", GetAQuoteFormField.services);
             formData.append("message", GetAQuoteFormField.message);
 
             axios({
-                url: `https://phpstack-281388-2949987.cloudwaysapps.com/mails/get_quote.php`,
+                url: `https://site4clientdemo.com/wall-rock/mails/get_quote.php`,
                 method: "post",
                 responseType: 'json',
                 data: formData,
@@ -136,8 +124,6 @@ const navigate = useNavigate();
                         emailError: "",
                         mobile: "",
                         mobileError: "",
-                        services: "-1",
-                        servicesError: "",
                         message: "",
                         messageError: ""
                     });
@@ -177,7 +163,7 @@ const navigate = useNavigate();
                        <input type="hidden" className="form-control" name="enquery-form" id="enquery-form3" value="enquery-form" placeholder="Enquery Form" />
                    <ul className="form-list">
                        <li>
-                           <input type="text" name="name" className="form-control" placeholder="Full Name*" value={GetAQuoteForm.fullName} onChange={e => setGetAQuoteForm({
+                           <input type="text" name="fullName" className="form-control" placeholder="Full Name*" value={GetAQuoteForm.fullName} onChange={e => setGetAQuoteForm({
                             ...GetAQuoteForm,
                             fullName: e.target.value,
                             fullNameError: ""
@@ -186,7 +172,7 @@ const navigate = useNavigate();
                             <span className='error'>{GetAQuoteForm.fullNameError}</span>
                        </li>
                        <li>
-                           <input type="number" name="phone" onKeyPress={preventMinus} className="form-control" placeholder="Phone Number*" value={GetAQuoteForm.mobile} onChange={e => setGetAQuoteForm({
+                           <input type="number" name="mobile" onKeyPress={preventMinus} className="form-control" placeholder="Phone Number*" value={GetAQuoteForm.mobile} onChange={e => setGetAQuoteForm({
                                 ...GetAQuoteForm,
                                 mobile: e.target.value.slice(0,10),
                                 mobileError: ""
@@ -215,7 +201,7 @@ const navigate = useNavigate();
                        <li>
                     <ReCAPTCHA
                         ref={captchaRef}
-                        sitekey="6Ldy6IEhAAAAAOnXdArKtwygfu6f3doYCblZQYHi"
+                        sitekey="6LccULUmAAAAAL50RQKodEjS5sP6v9bExd9eHYBY"
                         size="invisible"
                         />
                     </li>

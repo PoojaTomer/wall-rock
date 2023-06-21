@@ -7,7 +7,7 @@ export default function LuxuaryRetail(props) {
         <>
         <section className='luxiary-retail'>
             <div className='container'>
-                <h2 className='main-heading text-center'>IT'S TIME TO FIND YOUR<br/><span>luxury retail space</span></h2>
+                <h2 className='main-heading text-center'>It’s Time To Embrace Your Perfect <br/><span>Luxury Retail Space</span></h2>
                 <div className='col-md-10 offset-md-1 text-center'>
                 <p className='subtitle'>{props.subTitle}</p>
                 </div>

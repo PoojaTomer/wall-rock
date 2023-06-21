@@ -138,11 +138,9 @@ commitment to creating innovative and world-class commercial spaces
 that meet the needs of today's customers</h5>
 
                 </div>
-                <h2 className='text-center'>Why Yamuna Expressway</h2>
+                <h2 className='text-center'>Why Yamuna Expressway?</h2>
                 <p className='text-center'>
-                Yamuna Expressway offers a billion-dollar infrastructure leap for generations to come, promising an unmatched living experience in NCR's 
-fast- est-growing real estate market With its prime location & exceptional connectivity, it has emerged as a preferred destination for developers, investors, and home buyers a like This is an excellent opportunity to invest in the future of real estate and secure a 
-prosperous future for yourself and your family </p>
+                The Yamuna Expressway is a state-of-art expressway that has significantly improved connectivity between Greater Noida and Agra. It is a 166 KM long access-controlled expressway that reduces travel time between cities. With the approved Noida International Airport, people living in many cities of western UP will save approximately 2 hours of time travelling to Delhi Airport. Furthermore, the Airport will increase the area's density, making the place more advantageous for home buyers. Apart from this, the Airport will bring out many jobs, resulting in more employment to grow the market eventually.  </p>
 
 <Slider {...settings}>
 {

@@ -12,7 +12,7 @@ export default function OurFoundations(props) {
                             props.foundationList.map((value, index)=>{
                                 return(
                                     <Fragment key={index}>
-                                    <div className='col-md-4'>
+                                    <div className='col-md-4 d-flex align-items-stretch'>
                                         <div className="shadow-box">
                                             <img src={value.Image} className="img-fluid" alt="Value" />
                                             <h4>{value.Title}</h4>
