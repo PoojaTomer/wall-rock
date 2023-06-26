@@ -8,7 +8,7 @@ var settings = {
     dots: true,
     arrows:false,
     infinite: false,
-    speed: 3000,
+    speed: 1000,
     autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,

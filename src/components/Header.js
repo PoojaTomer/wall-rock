@@ -16,6 +16,7 @@ function Header(props) {
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [dropdown, setDropdown] = useState(false);
 
     useEffect(() => {
       window.addEventListener("scroll", () => {
@@ -38,9 +39,26 @@ function Header(props) {
         AOS.init();
         AOS.refresh();
       }, []);
+   
+      const onMouseEnter = () => {
+        if (window.innerWidth <= 960) {
+          setDropdown(false);
+        } else {
+          setDropdown(true);
+        }
+      };
+    
+      const onMouseLeave = () => {
+        if (window.innerWidth <= 960) {
+          setDropdown(false);
+        } else {
+          setDropdown(false);
+        }
+      };
+
     return (
         <>
-        <header className={headerFixed ? "header-fixed" : ""}>
+        <header className={headerFixed ? "header-fixed" : ""}  id="headerPanel">
         <div className="container">
             
                 <nav className="navbar navbar-expand-lg navbar-light fixed-top navbar-scroll shadow-5-strong">
@@ -71,14 +89,28 @@ function Header(props) {
                             <NavLink to="/aishwaryam" className={({ isActive }) => isActive ? "current nav-link" : "nav-link"
                               } onClick={closeMobileMenu}>Aishwaryam</NavLink>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <NavLink to="/articels" className={({ isActive }) => isActive ? "current nav-link" : "nav-link"
                               } onClick={closeMobileMenu}>Media</NavLink>
-                        </li>
-                        {/* <li className="nav-item">
-                            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "current nav-link" : "nav-link"
-                              } onClick={closeMobileMenu}>Latest Articles</NavLink>
                         </li> */}
+                        <li className="nav-item"
+                          // onMouseEnter={onMouseEnter}
+                          // onMouseLeave={onMouseLeave}
+                          onClick={()=>setDropdown(!dropdown)}
+                          >
+                      <NavLink className="nav-link  dropdown-toggle">
+                      Media
+                      </NavLink>
+                      {dropdown && 
+
+                      <ul className="dropdown-menu">
+                      <li><NavLink className="dropdown-item" to="/blog" onClick={closeMobileMenu}>Blog</NavLink></li>
+                      <li><NavLink className="dropdown-item" to="/articles" onClick={closeMobileMenu}>Articles</NavLink></li>
+                      </ul>
+                      }
+                      
+                    </li>
+                    
                         <li className="nav-item">
                             <NavLink to="/contact" className={({ isActive }) => isActive ? "current nav-link" : "nav-link"
                               } onClick={closeMobileMenu}>Contact Us</NavLink>

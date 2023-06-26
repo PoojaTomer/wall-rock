@@ -4,12 +4,15 @@ body{
     border:0;
     outline:0;
 }
+
+.page-loader{margin-top: 7rem;}
 .load-wrapper {
+    padding-top: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.75);
+    height: 50vh;
+    background: transparent;
 }
 
 .load-spinner * {
@@ -64,7 +67,7 @@ body{
     top: 0;
     border: 0;
     bottom: 0;
-    background-color: #7b7474a3;
+    background-color: transparent;
   }
 
   .spinner-border {

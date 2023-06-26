@@ -22,47 +22,69 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1
+    items: 1,
+    arrows:false,
   }
 };
 
-function Banner(){
+function Banner(props){
     
         return (
           <section className="banner">
          <Carousel responsive={responsive} infinite autoPlay> 
       <div className='slider-content'>
-        <img src={IMAGES.homepage.Banner1} className="img-fluid" alt="Banner1" />
+        {
+          props.mobileScreen?
+          <img src={IMAGES.homepage.homeMonileBanner1} className="img-fluid" alt="Banner1" />
+          :
+          <img src={IMAGES.homepage.Banner1} className="img-fluid" alt="Banner1" />
+        }
+      
         <div className="content">
-          <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
+          <h5 className='sub-heading'>Building Upon A Tradition Of <strong>Trust And Excellence</strong></h5>
           <h1 className="text-white">Wall Rock Developers</h1>
           <Link to="/about" className="btn btn-secondary">Know More</Link>
         </div>
       </div>
       <div className='slider-content'>
-        <img src={IMAGES.homepage.Banner2} className="img-fluid" alt="Banner2" />
+      {
+          props.mobileScreen?
+          <img src={IMAGES.homepage.homeMonileBanner2} className="img-fluid" alt="Banner2" />
+          :
+          <img src={IMAGES.homepage.Banner2} className="img-fluid" alt="Banner2" />
+        }
         <div className="content">
-          <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
-          <h1 className="text-white">Wall Rock Developers</h1>
+          <h5 className='sub-heading'>Small Investments, Big Returns</h5>
+          <h1 className="text-white">Yamuna City Mall</h1>
           <Link to="/yamuna-city-mall" className="btn btn-secondary">Know More</Link>
         </div>
       </div>
       <div className='slider-content'>
-        <img src={IMAGES.homepage.Banner3} className="img-fluid" alt="Banner3" />
+      {
+          props.mobileScreen?
+          <img src={IMAGES.homepage.homeMonileBanner3} className="img-fluid" alt="Banner3" />
+          :
+          <img src={IMAGES.homepage.Banner3} className="img-fluid" alt="Banner3" />
+        }
         <div className="content">
-          <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
-          <h1 className="text-white">Wall Rock Developers</h1>
+          <h5 className='sub-heading'>Not Just A Home, But An Exceptional Living Experience </h5>
+          <h1 className="text-white">2bhk & 3bhk Apartments</h1>
           <Link to="/aishwaryam" className="btn btn-secondary">Know More</Link>
       </div>
     </div>
-    <div className='slider-content'>
-        <img src={IMAGES.homepage.Banner4} className="img-fluid" alt="Banner3" />
+    {/* <div className='slider-content'>
+    {
+          props.mobileScreen?
+          <img src={IMAGES.homepage.homeMonileBanner4} className="img-fluid" alt="Banner4" />
+          :
+          <img src={IMAGES.homepage.Banner4} className="img-fluid" alt="Banner4" />
+        }
         <div className="content">
-          <h5 className='sub-heading'>Committed to <strong>build</strong> a better world</h5>
-          <h1 className="text-white">Wall Rock Developers</h1>
-          <Link to="/about" className="btn btn-secondary">Know More</Link>
+          <h5 className='sub-heading'>Delivering State-of-the-art Real Estate Projects</h5>
+          <h1 className="text-white">Wallrock Developers</h1>
+          <Link to="/contact" className="btn btn-secondary">Know More</Link>
       </div>
-    </div>
+    </div> */}
     </Carousel>
   </section>
       )

@@ -75,6 +75,7 @@ export default function YamunaCityMall(props) {
                 {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
                 <meta name="keyword" content="Nvd usa" /> */}
             </Helmet>
+            
             <Banner  Title="Yamuna City Mall" Image={IMAGES.ycmPage.ycmBanner}/>
             <AwardWinning awardWinningContent={AwardWinningContent}  />
             <YcmGallery />
@@ -95,7 +96,7 @@ export default function YamunaCityMall(props) {
             Des="A well-known name in the entertainment sector, Miraj Cinemas, has unveiled its new multiplex, providing moviegoers with a cutting-edge cinematic experience. The newest multiplex from Miraj Cinemas has the latest amenities and technology to guarantee a fantastic experience. As you enter the theatre, you are welcomed by a contemporary and stylish environment, which sets the scene for an immersive movie experience. The multiplex also hosts exclusive screenings, premieres, and special events, providing a platform for film enthusiasts to come together and celebrate the magic of cinema. Every movie lover will have an unmatched audiovisual experience because of the theatre's comfortable seats, large auditoriums, and cutting-edge sound equipment.
             "
              />
-            <GetInTouch />
+            <GetInTouch message="I request Wall Rock Developers to contact me for sales enquiry and share all the relevent details" />
             
         </>
     );

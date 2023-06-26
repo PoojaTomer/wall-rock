@@ -32,7 +32,7 @@ const AboutSubContent = [
     {
         Title:"Industry Experts",
         Description:"With 9+ years of experience in the real estate landscape, our goal is to deliver exceptional projects. ",
-        Image:IMAGES.homepage.article1,
+        Image:IMAGES.homepage.article4,
     },
 ]
 
@@ -84,7 +84,7 @@ export default function Home(props) {
             </Helmet>
           
             {/* <Slider/> */}
-            <Banner/>
+            <Banner mobileScreen={props.mobileScreen} />
             <Legacy />
             <ShoppingMall />
             <Schedule />

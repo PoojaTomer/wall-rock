@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link} from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsappSquare, FaWhatsapp, FaMapMarkedAlt, FaPhone, FaEnvelope, FaAngleUp, FaPhoneAlt, FaMarker, FaMapMarker, FaYoutube, FaMapMarkerAlt } from "react-icons/fa";
-
+import { useLocation } from 'react-router-dom';
 import { SOCIAL_LINK } from '../constants/Constants';
 import { IMAGES } from '../constants/Image-Constant';
 
@@ -24,6 +24,16 @@ function Footer(props) {
       });
     };
     window.addEventListener('scroll', toggleVisible);
+
+    const { pathname } = useLocation();
+    useEffect(() =>{
+        // console.log("pathname",pathname);
+        // window.scrollTo(0,0);
+        var element = document.getElementById("headerPanel");
+        element.scrollIntoView();
+        return props.children;
+    }, [pathname])
+
     return (
         <>
         <footer>
@@ -37,14 +47,14 @@ function Footer(props) {
                             </Link>
                         </div>
                         <div className="footer-con">
-                            <p>Wall Rock is one of the most promising real estate companies in North India. Promoters of this company are young, experienced, highly educated and enlightened new-age entepreneurs.</p>
+                            <p>With an experience of 9 years, Wall Rock Developers stand tall in the industry as renowned commercial & residential property developers. From luxurious to affordable, our commercial & residential spaces are curated for every segment.</p>
                            
                             
                         </div>
                     </div>
 
                     <div className="col-md-2 offset-md-1">
-                        <h5>Usefull Links</h5>
+                        <h5>Useful Links</h5>
                         <div className="quick-links">
                         <ul>
                             <li><Link to="/">Home</Link></li>
@@ -65,17 +75,18 @@ function Footer(props) {
                                 <a href={SOCIAL_LINK.FACEBOOK} target="_blank"><FaFacebookF /></a>
                             </li>
                             <li>
-                                <a href={SOCIAL_LINK.TWITTER} target="_blank"><FaTwitter /></a>
+                                <a href={SOCIAL_LINK.YOUTUBE} target="_blank"><FaYoutube /></a>
                             </li>
                             <li>
                                 <a href={SOCIAL_LINK.INSTAGRAM} target="_blank"><FaInstagram /></a>
                             </li>
-                            <li>
+
+                            {/* <li>
                                 <a href={SOCIAL_LINK.LINKEDIN} target="_blank"><FaLinkedinIn /></a>
                             </li>
                             <li>
-                                <a href={SOCIAL_LINK.LINKEDIN} target="_blank"><FaYoutube /></a>
-                            </li>
+                                <a href={SOCIAL_LINK.TWITTER} target="_blank"><FaTwitter /></a>
+                            </li> */}
                         </ul>
                     </div>
                     </div>
@@ -83,9 +94,9 @@ function Footer(props) {
                         <h5>Contact  Imformation</h5>
                         <div className="reach-us">
                             <ul> 
-                                <li><FaPhoneAlt /> <a href="tel:+91-9310786845">+91-9310786845</a></li>
-                                <li><FaEnvelope /> <a href="mailto:info@yamunacitymall.co.in">info@yamunacitymall.co.in</a></li>
-                                <li><FaMapMarkerAlt /> C-14, Gaur Yamuna City, Yamuna Expressway</li>
+                                <li><FaPhoneAlt /> <a href="tel:7037039009">70370 39009</a></li>
+                                <li><FaEnvelope /> <a href="mailto:sales@wallrock.in">sales@wallrock.in</a></li>
+                                <li><FaMapMarkerAlt /> <a href="https://goo.gl/maps/zdPqVfX3tnB6fNL96" target='_blank'>B-33, Sector 63, Noida , Uttar Pradesh 201303</a></li>
                              
                             </ul>
                         </div>
@@ -104,7 +115,8 @@ function Footer(props) {
         <div className="amppulse"></div>
         <div className="amppulse"></div>
         <div className="amppulse"></div>
-        <a href="https://wa.me/+9310786845<?text=" target="_blank" className="whatsapp-info amppulse">
+        
+        <a href={`https://wa.me/7037039009`} data-action="share/whatsapp/share"  target="_blank" className="whatsapp-info amppulse" rel="noopener noreferrer">
         <FaWhatsapp className="whatsapp-icon" color="#fff" />
         </a>
     </div>

@@ -4,7 +4,7 @@ import { IMAGES } from '../../../constants/Image-Constant';
 import GetAQuoteButton from '../../../components/GetAQuoteButton';
 
 export default function InvestmentExperties(props) {
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
     const videoRef = useRef();
     const togglePlaying = () => {
         setIsPlaying(!isPlaying);
@@ -28,8 +28,7 @@ export default function InvestmentExperties(props) {
                     <div className="row">
                     <div className='col-md-8'></div>
                    <div className='col-md-4'>
-                   <div className='videoplay-button'>
-                    {/* <img onClick={togglePlaying} src={playVideo} /> */}
+                   {/* <div className='videoplay-button'>
                     <span  onClick={togglePlaying}>
                     {
                         isPlaying ? (
@@ -46,13 +45,16 @@ export default function InvestmentExperties(props) {
                         )
                     }
                    </span>
-                  </div>
+                  </div> */}
                 </div>
                 </div>
                 <p className='float-text'>Values Of Smart Space</p>
                 </div>
                 <div className="embed-responsive embed-responsive-16by9">
-                    <video ref={videoRef} onClick={(e) => e.target.play()} playsInline loop muted>
+                    <video 
+                    ref={videoRef}
+                    onClick={(e) => e.target.play()}
+                    playsInline autoPlay={true} loop muted>
                         <source src={IMAGES.ycmPage.Ycmvideo} type="video/mp4">
                         </source>
                     </video>

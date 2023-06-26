@@ -16,7 +16,7 @@ export default function LuxuaryRetail(props) {
               <div className='minute-10'>
                 <div className='row'>
                     <div className='col-md-6'>
-                        <h2 className='main-heading'>10 minute Drive <br />From the upcoming <br />Noida International<br/><span><b>Airport At Jewar</b></span></h2>
+                        <h2 className='main-heading'>10 minute Drive <br />From the upcoming <br />Noida International <br/><span><b>Airport At Jewar</b></span></h2>
                         <img src={IMAGES.ycmPage.YcmAroplane} className='img-fluid left-move' />
                     </div>
                     <div className='col-md-6'>

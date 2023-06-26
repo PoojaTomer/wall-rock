@@ -7,16 +7,16 @@ import { IMAGES } from '../../../constants/Image-Constant';
 function Gallery(props) {
     const images = [
         {
-          original:IMAGES.homepage.article1,
-          thumbnail:IMAGES.homepage.article1
+          original:IMAGES.aishwaryamPage.aishBanner1,
+          thumbnail:IMAGES.aishwaryamPage.aishBanner1,
         },
         {
-          original:IMAGES.homepage.article2,
-          thumbnail:IMAGES.homepage.article2
+          original:IMAGES.aishwaryamPage.aishBanner2,
+          thumbnail:IMAGES.aishwaryamPage.aishBanner2,
         },
         {
-          original:IMAGES.homepage.article3,
-          thumbnail: IMAGES.homepage.article3
+          original:IMAGES.aishwaryamPage.aishBanner3,
+          thumbnail:IMAGES.aishwaryamPage.aishBanner3,
         }
       ];
     return (

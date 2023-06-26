@@ -4,6 +4,7 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from 'axios';
+import BlueLogo from '../../assets/images/blue-logo.png';
 import Breadcrumb from '../../components/Breadcrumb';
 import { IMAGES } from '../../constants/Image-Constant';
 import REGX from '../../constants/Regx';
@@ -55,41 +56,41 @@ const submitHandler = (e) => {
 
     if (contactFormField.fullName === "") {
         errorFound = true;
-        contactFormField.fullNameError = "this field is required";
+        contactFormField.fullNameError = "This field is required";
     } else if (!REGX.FULLNAME.test(contactFormField.fullName)) {
         errorFound = true;
-        contactFormField.fullNameError = "alphabatic only";
+        contactFormField.fullNameError = "Alphabatic only";
     } else {
         contactFormField.fullNameError = "";
     }
     if (contactFormField.email === "") {
         errorFound = true;
-        contactFormField.emailError = "this field is required";
+        contactFormField.emailError = "This field is required";
     } else if (!REGX.EMAIL.test(contactFormField.email)) {
         errorFound = true;
-        contactFormField.emailError = "enter valid email";
+        contactFormField.emailError = "Enter valid email";
     } else {
         contactFormField.emailError = "";
     }
     if (contactFormField.mobile === "") {
         errorFound = true;
-        contactFormField.mobileError = "this field is required";
+        contactFormField.mobileError = "This field is required";
     } else if (!REGX.MOBILE_NUMBER.test(contactFormField.mobile)) {
         errorFound = true;
-        contactFormField.mobileError = "enter valid phone number";
+        contactFormField.mobileError = "Enter valid phone number";
     } else {
         contactFormField.mobileError = "";
     }
     if (contactFormField.company === "") {
         errorFound = true;
-        contactFormField.companyError = "this field is required";
+        contactFormField.companyError = "This field is required";
     } else {
         contactFormField.companyError = "";
     }
 
     if (contactFormField.message === "") {
         errorFound = true;
-        contactFormField.messageError = "this field is required";
+        contactFormField.messageError = "This field is required";
     } else {
         contactFormField.messageError = "";
     }
@@ -157,11 +158,11 @@ const submitHandler = (e) => {
                     <div className="row mt-5">
                         <div className='col-md-5 d-flex align-items-stretch'>
                             <div className='shadow-box'>
-                                <img src={IMAGES.headerImg.HeaderLogo} className="img-fluid" alt="wallrock logo" />
+                                <img src={BlueLogo} className="img-fluid" alt="wallrock logo" />
                                 <ul className='add-list'> 
-                                <li><FaPhoneAlt /> <a href="tel:+91-9310786845">+91-9310786845</a></li>
-                                <li><FaEnvelope /> <a href="mailto:info@yamunacitymall.co.in">info@yamunacitymall.co.in</a></li>
-                                <li><FaMapMarkerAlt /> C-14, Gaur Yamuna City, Yamuna Expressway</li>
+                                <li><FaPhoneAlt /> <a href="tel:7037039009">70370 39009</a></li>
+                                <li><FaEnvelope /> <a href="mailto:sales@wallrock.in">sales@wallrock.in</a></li>
+                                <li><FaMapMarkerAlt /> <a href="https://goo.gl/maps/zdPqVfX3tnB6fNL96" target='_blank'>B-33, Sector 63, Noida , Uttar Pradesh 201303</a></li>
                                 </ul>
                             </div>
                            
@@ -172,7 +173,7 @@ const submitHandler = (e) => {
                                 <div className="row">
                                     <div className="col-md-6">
                                     <div className="form-group">
-                                            <input type="text" className='form-control' placeholder="Name" name="fullName" value={contactForm.fullName} onChange={e => setContactForm({
+                                            <input type="text" className='form-control' placeholder="Name*" name="fullName" value={contactForm.fullName} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 fullName: e.target.value,
                                                 fullNameError: ""
@@ -184,7 +185,7 @@ const submitHandler = (e) => {
 
                                     <div className="col-md-6">
                                     <div className="form-group">
-                                            <input type="text" className='form-control' placeholder="Company" name="company" value={contactForm.company} onChange={e => setContactForm({
+                                            <input type="text" className='form-control' placeholder="Company*" name="company" value={contactForm.company} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 company: e.target.value,
                                                 companyError: ""
@@ -194,7 +195,7 @@ const submitHandler = (e) => {
                                     </div>
                                     <div className="col-md-6">
                                     <div className="form-group">
-                                            <input type="email" className='form-control' placeholder="Email" name="email" value={contactForm.email} onChange={e => setContactForm({
+                                            <input type="email" className='form-control' placeholder="Email*" name="email" value={contactForm.email} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 email: e.target.value,
                                                 emailError: ""
@@ -204,7 +205,7 @@ const submitHandler = (e) => {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className='form-control' placeholder="Contact no" name="mobile" value={contactForm.mobile} onChange={e => setContactForm({
+                                            <input type="number" className='form-control' placeholder="Contact no*" name="mobile" value={contactForm.mobile} onChange={e => setContactForm({
                                                 ...contactForm,
                                                 mobile: e.target.value.slice(0,10),
                                                 mobileError: ""
@@ -214,7 +215,7 @@ const submitHandler = (e) => {
                                     </div>
                               
                                 <div className="col-md-12">
-                                    <textarea className='form-control' rows="4" placeholder="Message" name="message" value={contactForm.message} onChange={e => setContactForm({
+                                    <textarea className='form-control' rows="4" placeholder="Message*" name="message" value={contactForm.message} onChange={e => setContactForm({
                                         ...contactForm,
                                         message: e.target.value,
                                         messageError: ""
@@ -243,7 +244,9 @@ const submitHandler = (e) => {
             
             <section className='contact-2'>
                 <div className='container-fluid'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6479632254045!2d77.21426897463434!3d28.6403111837289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd475271ed2d%3A0x8a41328b1b03db05!2sWall%20Rock%20Infratech%20Private%20Limited!5e0!3m2!1sen!2sin!4v1685034417985!5m2!1sen!2sin" width="100%" height="450" style={{border:0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.4015154224926!2d77.37901!3d28.617725999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM3JzAzLjgiTiA3N8KwMjInNDQuNCJF!5e0!3m2!1sen!2sin!4v1687764452126!5m2!1sen!2sin" width="100%" height="450" style={{border:0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+            </iframe>
+
                 </div>
             </section>
        

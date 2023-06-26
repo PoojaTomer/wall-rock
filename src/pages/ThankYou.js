@@ -30,15 +30,15 @@ export default function ThankYou (props) {
                                     <li>
                                         <a href={SOCIAL_LINK.FACEBOOK} target="_blank"><FaFacebookF /></a>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <a href={SOCIAL_LINK.TWITTER} target="_blank"><FaTwitter /></a>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <a href={SOCIAL_LINK.INSTAGRAM} target="_blank"><FaInstagram /></a>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <a href={SOCIAL_LINK.LINKEDIN} target="_blank"><FaLinkedinIn /></a>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <a href={SOCIAL_LINK.LINKEDIN} target="_blank"><FaYoutube /></a>
                                     </li>

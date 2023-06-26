@@ -54,8 +54,8 @@ const responsive = {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: false,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 1000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     pauseOnHover: true,
     centerPadding: "10px",
@@ -85,7 +85,8 @@ const responsive = {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          arrows:false,
         }
       }
     ]
@@ -112,7 +113,7 @@ const responsive = {
                                       return(
                                         <div className="review-con" key={index}>
                                                 <div className="review-details">
-                                                <div className="rev-thumb"><img src={value.Image} className="img-fluid" /></div>
+                                                {/* <div className="rev-thumb"><img src={value.Image} className="img-fluid" /></div> */}
                                                 <div className="rev-info">
                                                     <ul>
                                                         <li><FaStar/></li>
@@ -122,7 +123,7 @@ const responsive = {
                                                         <li><FaStar/></li>
                                                     </ul>
                                                     <p>{value.Description}</p>
-                                                    <h6><strong>{value.Name}</strong></h6>
+                                                    {/* <h6><strong>{value.Name}</strong></h6> */}
                                                 </div>
                                             </div>
                                         </div>

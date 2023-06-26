@@ -61,34 +61,34 @@ const navigate = useNavigate();
 
         if (GetAQuoteFormField.fullName === "") {
             errorFound = true;
-            GetAQuoteFormField.fullNameError = "this field is required";
+            GetAQuoteFormField.fullNameError = "This field is required";
         } else if (!REGX.FULLNAME.test(GetAQuoteFormField.fullName)) {
             errorFound = true;
-            GetAQuoteFormField.fullNameError = "alphabatic only";
+            GetAQuoteFormField.fullNameError = "Alphabatic only";
         } else {
             GetAQuoteFormField.fullNameError = "";
         }
         if (GetAQuoteFormField.email === "") {
             errorFound = true;
-            GetAQuoteFormField.emailError = "this field is required";
+            GetAQuoteFormField.emailError = "This field is required";
         } else if (!REGX.EMAIL.test(GetAQuoteFormField.email)) {
             errorFound = true;
-            GetAQuoteFormField.emailError = "enter valid email";
+            GetAQuoteFormField.emailError = "Enter valid email";
         } else {
             GetAQuoteFormField.emailError = "";
         }
         if (GetAQuoteFormField.mobile === "") {
             errorFound = true;
-            GetAQuoteFormField.mobileError = "this field is required";
+            GetAQuoteFormField.mobileError = "This field is required";
         } else if (!REGX.MOBILE_NUMBER.test(GetAQuoteFormField.mobile)) {
             errorFound = true;
-            GetAQuoteFormField.mobileError = "enter valid phone number";
+            GetAQuoteFormField.mobileError = "Enter valid phone number";
         } else {
             GetAQuoteFormField.mobileError = "";
         }
         if (GetAQuoteFormField.message === "") {
             errorFound = true;
-            GetAQuoteFormField.messageError = "this field is required";
+            GetAQuoteFormField.messageError = "This field is required";
         } else {
             GetAQuoteFormField.messageError = "";
         }
@@ -188,7 +188,7 @@ const navigate = useNavigate();
                             <span className='error'>{GetAQuoteForm.emailError}</span>
                        </li>
                      
-                       <li className="cnr-full">
+                       {/* <li className="cnr-full">
                            <textarea rows="4" className="form-control" name="message" placeholder="Message*" value={GetAQuoteForm.message} onChange={e => setGetAQuoteForm({
                             ...GetAQuoteForm,
                             message: e.target.value,
@@ -197,7 +197,7 @@ const navigate = useNavigate();
                             disabled={GetAQuoteForm.processing}
                         ></textarea>
                             <span className='error'>{GetAQuoteForm.messageError}</span>
-                       </li>
+                       </li> */}
                        <li>
                     <ReCAPTCHA
                         ref={captchaRef}

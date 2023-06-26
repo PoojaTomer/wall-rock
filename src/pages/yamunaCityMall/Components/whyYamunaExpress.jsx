@@ -3,6 +3,17 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IMAGES } from '../../../constants/Image-Constant';
+import WhyYamunaExpress1 from "../../../assets/images/approved-noida-international-airport.jpg";
+import WhyYamunaExpress2 from "../../../assets/images/approved-metro-connectivity.jpg";
+import WhyYamunaExpress3 from "../../../assets/images/eastern-peripheral-expressway.jpg";
+import WhyYamunaExpress4 from "../../../assets/images/proposed-Isbt.jpg";
+import WhyYamunaExpress5 from "../../../assets/images/delhi-mumbai-expressway.jpg";
+import WhyYamunaExpress6 from "../../../assets/images/buddh-international-circuit.jpg";
+import WhyYamunaExpress7 from "../../../assets/images/world-class-universities.jpg";
+import WhyYamunaExpress8 from "../../../assets/images/cricket-stadium.jpg";
+import WhyYamunaExpress9 from "../../../assets/images/hospitals.jpg";
+import WhyYamunaExpress10 from "../../../assets/images/mono-rail-india.jpg";
+
 
 var settings = {
     dots: false,
@@ -79,50 +90,46 @@ var settings = {
 
  const TopSlide =[
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
+        Image:WhyYamunaExpress1,
         Title:"Approved Noida International Airport",
     },
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
+        Image:WhyYamunaExpress2,
         Title:"Approved Metro Connectivity",
     },
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
+        Image:WhyYamunaExpress3,
         Title:"Eastern Peripheral Expressway",
     },
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
-        Title:"Proposed Isbt",
+        Image:WhyYamunaExpress4,
+        Title:"Proposed ISBT",
     },
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
+        Image:WhyYamunaExpress5,
         Title:"Delhi Mumbai Expressway",
     },
  ]
 
  const BottomSlide =[
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
-        Title:"Buddh InternationalCircuit",
+        Image:WhyYamunaExpress6,
+        Title:"Buddh International & Circuit",
     },
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
+        Image:WhyYamunaExpress7,
         Title:"World Class Universities",
     },
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
+        Image:WhyYamunaExpress8,
         Title:"Cricket Stadium",
     },
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
+        Image:WhyYamunaExpress9,
         Title:"Hospitals",
     },
     {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
-        Title:"Mono Rail",
-    },
-    {
-        Image:IMAGES.ycmPage.WhyYamunaExpressWay,
+        Image:WhyYamunaExpress10,
         Title:"Mono Rail",
     },
  ]

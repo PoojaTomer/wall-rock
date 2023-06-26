@@ -60,53 +60,7 @@ export default function ShoppingMall(props) {
         </div>
     </div>
     <div className='col-md-6 d-flex align-items-stretch'>
-      {/* <div className="slider-wrapper">
-
-        <Slider
-          {...settingsMain}
-          asNavFor={nav2}
-          ref={slider => (setSlider1(slider))}
-        >
-
-          {
-          imageSlider?.map((slide) =>{
-        return(
-          <div className="slick-slide">
-            
-          <img className="slick-slide-image"
-          src={slide} 
-          />
-
-        </div>
-        )
-        }  
-
-          )}
-
-        </Slider>
-        <div className="thumbnail-slider-wrap">
-          <Slider
-            {...settingsThumbs}
-            asNavFor={nav1}
-            ref={slider => (setSlider2(slider))}>
-
-            {imageSlider?.map((slide) =>{
-              return(
-                <div className="slick-slide">
-                <img className="slick-slide-image" 
-                src={slide} 
-                />
-              </div>
-              )
-            }
-
-            
-
-            )}
-
-          </Slider>
-        </div>
-        </div> */}
+    
         <div className="mall-img">
         <img src={IMAGES.homepage.yamunacityMall} className='img-fluid' alt="yamuna city mall"/>
         </div>
@@ -116,56 +70,12 @@ export default function ShoppingMall(props) {
     <div className="mall-img">
     <img src={IMAGES.homepage.aishwaryam} className='img-fluid' alt="Aishwaryam"/>
     </div>
-      {/* <div className="slider-wrapper">
-
-        <Slider
-          {...settingsMain}
-          asNavFor={nav2}
-          ref={slider => (setSlider1(slider))}
-        >
-
-          {
-          imageSlider?.map((slide) =>{
-        return(
-          <div className="slick-slide">
-            
-          <img className="slick-slide-image" src={slide}  />
-
-        </div>
-        )
-        }  
-
-          )}
-
-        </Slider>
-        <div className="thumbnail-slider-wrap">
-          <Slider
-            {...settingsThumbs}
-            asNavFor={nav1}
-            ref={slider => (setSlider2(slider))}>
-
-            {imageSlider?.map((slide) =>{
-              return(
-                <div className="slick-slide">
-                <img className="slick-slide-image" 
-                src={slide} 
-                />
-              </div>
-              )
-            }
-
-            
-
-            )}
-
-          </Slider>
-        </div>
-        </div> */}
+    
     </div>
     <div className='col-md-6 d-flex align-items-stretch'>
         <div className='mall-content'>
         <img src={IMAGES.homepage.aishwaryamLogo} className='img-fluid' alt="Aishwaryam logo" />
-        <h4>Completed & Delivered Before Time!</h4>
+        <h3 className='main-heading'>Completed & Delivered Before Time!</h3>
         <p>Aishwaryam - our flagship residential development, is a result of our dedication to providing residents with comfortable and convenient living that will be cherished for years to come. Located at Noida extensions, Aishwaryam is well connected to Delhi NCR, allowing residents to enjoy a wide range of amenities. This project is mainly designed by keeping Vaastu Shastra in mind consisting of 450 spacious apartments.</p>
         <Link to="/aishwaryam" className='btn btn-default'>Know More</Link>
         </div>

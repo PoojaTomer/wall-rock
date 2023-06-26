@@ -8,17 +8,17 @@ import SociallyResponsible from './Components/sociallyResponsible';
 
 const FoundationList = [
     {
-        Image:IMAGES.homepage.experienceIcon,
+        Image:IMAGES.aboutpage.ourValues,
         Title:"Our Values",
         Des:"Commitment, and communication are the core values that come from our work. We're proud to deliver exceptional results without compromising quality."
     },
     {
-        Image:IMAGES.homepage.growthIcon,
+        Image:IMAGES.aboutpage.ourMission,
         Title:"Our Mission",
         Des:"Our mission is to deliver the highest grade construction, gain customer trust, and stand tall on the timely delivery of projects. "
     },
     {
-        Image:IMAGES.homepage.developIcon,
+        Image:IMAGES.aboutpage.ourVision,
         Title:"Our Vision",
         Des:"To become an epitome of excellence in the real estate industry by shaping the future of development through quality construction, satisfaction of end users, and transparent dealing with all the stakeholders. "
     },

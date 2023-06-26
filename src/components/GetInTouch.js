@@ -49,37 +49,37 @@ export default function GetInTouch(props) {
 
         if (GetAQuoteFormField.fullName === "") {
             errorFound = true;
-            GetAQuoteFormField.fullNameError = "this field is required";
+            GetAQuoteFormField.fullNameError = "This field is required";
         } else if (!REGX.FULLNAME.test(GetAQuoteFormField.fullName)) {
             errorFound = true;
-            GetAQuoteFormField.fullNameError = "alphabatic only";
+            GetAQuoteFormField.fullNameError = "Alphabatic only";
         } else {
             GetAQuoteFormField.fullNameError = "";
         }
         if (GetAQuoteFormField.email === "") {
             errorFound = true;
-            GetAQuoteFormField.emailError = "this field is required";
+            GetAQuoteFormField.emailError = "This field is required";
         } else if (!REGX.EMAIL.test(GetAQuoteFormField.email)) {
             errorFound = true;
-            GetAQuoteFormField.emailError = "enter valid email";
+            GetAQuoteFormField.emailError = "Enter valid email";
         } else {
             GetAQuoteFormField.emailError = "";
         }
         if (GetAQuoteFormField.mobile === "") {
             errorFound = true;
-            GetAQuoteFormField.mobileError = "this field is required";
+            GetAQuoteFormField.mobileError = "This field is required";
         } else if (!REGX.MOBILE_NUMBER.test(GetAQuoteFormField.mobile)) {
             errorFound = true;
-            GetAQuoteFormField.mobileError = "enter valid phone number";
+            GetAQuoteFormField.mobileError = "Enter valid phone number";
         } else {
             GetAQuoteFormField.mobileError = "";
         }
-        if (GetAQuoteFormField.message === "") {
-            errorFound = true;
-            GetAQuoteFormField.messageError = "this field is required";
-        } else {
-            GetAQuoteFormField.messageError = "";
-        }
+        // if (GetAQuoteFormField.message === "") {
+        //     errorFound = true;
+        //     GetAQuoteFormField.messageError = "This field is required";
+        // } else {
+        //     GetAQuoteFormField.messageError = "";
+        // }
 
         if (errorFound) {
             setGetAQuoteForm({
@@ -92,7 +92,7 @@ export default function GetInTouch(props) {
             formData.append("fullName", GetAQuoteFormField.fullName);
             formData.append("email", GetAQuoteFormField.email);
             formData.append("mobile", GetAQuoteFormField.mobile);
-            formData.append("message", GetAQuoteFormField.message);
+            formData.append("message", (GetAQuoteFormField.message.length==0?props.message:GetAQuoteFormField.message));
 
             axios({
                 url: `https://site4clientdemo.com/wall-rock/mails/get_quote.php`,
@@ -186,7 +186,7 @@ export default function GetInTouch(props) {
                                
                               
                                  <li className="cnr-full" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
-                                    <textarea placeholder="Message*" className="form-control" rows="4" value={GetAQuoteForm.message} onChange={e => setGetAQuoteForm({
+                                    <textarea placeholder={props.message?props.message:"Message"} className="form-control" rows="4" value={GetAQuoteForm.message} onChange={e => setGetAQuoteForm({
                                             ...GetAQuoteForm,
                                             message: e.target.value,
                                             messageError: ""
