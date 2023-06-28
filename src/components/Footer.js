@@ -43,7 +43,7 @@ function Footer(props) {
                     <div className="col-md-3">
                         <div className="footer-logo">
                             <Link to="/">
-                                <img src={IMAGES.footerImg.FooterLogo} alt="header-logo" className="img-fluid" />
+                                <img src="logo.png" alt="header-logo" className="img-fluid" />
                             </Link>
                         </div>
                         <div className="footer-con">
@@ -61,7 +61,8 @@ function Footer(props) {
                             <li><Link to="/about">About Us</Link></li>
                             <li><Link to="/yamuna-city-mall">Yamuna City Mall</Link></li>
                             <li><Link to="/aishwaryam">Aishwaryam</Link></li>
-                            <li><Link to="/articels">Media</Link></li>
+                            <li><Link to="/blog">Blog</Link></li>
+                            <li><Link to="/articles">Articles</Link></li>
                             <li><Link to="/contact">Contact Us</Link></li>
                           
                         </ul>
@@ -106,7 +107,7 @@ function Footer(props) {
         </div>
         <div className="bottom-footer">
             <div className="container">
-                <p>© 2023 All rights reserved. Design and Developed by <a href=""><img src={IMAGES.footerImg.NvdLogo} className='img-fluid' alt="nvd logo" /></a></p>  
+                <p>© 2023 All rights reserved. Design and Developed by <a href="https://www.newvisiondigital.co/" target='_blank'><img src="/nvd-logo.png" className='img-fluid' alt="nvd logo" /></a></p>  
             </div>
         </div>  
     </footer>

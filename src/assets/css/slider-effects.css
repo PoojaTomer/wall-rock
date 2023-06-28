@@ -136,25 +136,36 @@
                 transform: translate3d(0, 0, 0);
       }
   }
+
+
+  
         .carousel-img img{
             width: 100%;
-            animation-name: zoom;
-            animation-duration: 20s;
+            animation: fadeOut 1.5s ease-in-out;;
+            animation-duration: 5s;
             animation-delay: -4s;
-            -webkit-transition: 10s ease;
-        }   
-        
-        .zoom-in-img{
-          width: 100%;
-          animation-name: zoom 0.5s linear infinite;
-          /* animation-duration: 20s;
-          animation-delay: -4s;
-          -webkit-transition: 10s ease; */
-      }   
-        @keyframes zoom {
+            transition: visibility 0s 5s, opacity 5s linear;
+        }     
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      } 
+      @keyframes fadeOut {
+        from {
+          opacity: 0.1;
+        }
+        to {
+          opacity: 1;
+        }
+    }
+        /* @keyframes zoom {
   0%   {transform: scale(1);
             }
   100% {transform: scale(1.5);
             }
+} */
+.banner .react-multi-carousel-item--active img{
+  -webkit-animation:fadeOut 5s;
+  animation: fadeOut 1.5s ease-in-out;;
+  /* transition: 3s ease-in-out; */
 }
-.banner .react-multi-carousel-item--active img{-webkit-animation:zoom 20s;animation:zoom 20s}

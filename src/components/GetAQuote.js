@@ -1,12 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Button, Dialog, DialogContent, DialogTitle, Slide } from '@mui/material';
-import TextField, { TextFieldProps } from '@mui/material/TextField';
-import FormControl from '@mui/material/FormControl';
-import {
-  InputLabel,
-  MenuItem,
-  Select,
-} from '@mui/material';
+import { Audio } from "react-loader-spinner";
 import CloseIcon from '@mui/icons-material/Close';
 import axios from 'axios';
 import REGX from '../constants/Regx';
@@ -20,6 +14,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const GetAQuote = (props) => {
 const navigate = useNavigate();
     const captchaRef = useRef(null)
+    const [ISLoading, setISLoading] = useState(false);
     const [GetAQuoteForm, setGetAQuoteForm] = useState({
         processing: false,
         fullName: "",
@@ -86,12 +81,7 @@ const navigate = useNavigate();
         } else {
             GetAQuoteFormField.mobileError = "";
         }
-        if (GetAQuoteFormField.message === "") {
-            errorFound = true;
-            GetAQuoteFormField.messageError = "This field is required";
-        } else {
-            GetAQuoteFormField.messageError = "";
-        }
+        setISLoading(true);
 
         if (errorFound) {
             setGetAQuoteForm({
@@ -104,10 +94,9 @@ const navigate = useNavigate();
             formData.append("fullName", GetAQuoteFormField.fullName);
             formData.append("email", GetAQuoteFormField.email);
             formData.append("mobile", GetAQuoteFormField.mobile);
-            formData.append("message", GetAQuoteFormField.message);
 
             axios({
-                url: `https://site4clientdemo.com/wall-rock/mails/get_quote.php`,
+                url: `https://wallrock.in/mails/get_quote.php`,
                 method: "post",
                 responseType: 'json',
                 data: formData,
@@ -131,11 +120,13 @@ const navigate = useNavigate();
                     navigate("/thank-you");
                 } else {
                     alert(response.data.message);
+                    setISLoading(false);
                 }
                 // alert("success");
             }, error => {
                 console.log("error", error);
                 alert("error");
+                setISLoading(false);
             });
         }
     }
@@ -148,17 +139,17 @@ const navigate = useNavigate();
         <Dialog
         className="custom-pop"
         open={props.isModalVisible}
-        onOk={() => props.handleOk()}
-        footer={null}
-        closable={false}
-        onClose={props.handleClose}
+        // onOk={() => props.handleOk()}
+        // footer={null}
+        // closable={false}
+        onClose={props.handleCancel}
         TransitionComponent={Transition}
         >
       <Button onClick={props.handleCancel} color="error" className='close-popup'>
           <CloseIcon />
         </Button>
         <DialogContent>
-          <DialogTitle id="alert-dialog-slide-title" className="popup-heading mb-3">{"Schedual A Visit"}</DialogTitle>
+          <DialogTitle id="alert-dialog-slide-title" className="popup-heading mb-3">{"Schedule A Visit"}</DialogTitle>
             <form onSubmit={(e) => submitHandler(e)}>
                        <input type="hidden" className="form-control" name="enquery-form" id="enquery-form3" value="enquery-form" placeholder="Enquery Form" />
                    <ul className="form-list">
@@ -205,9 +196,18 @@ const navigate = useNavigate();
                         size="invisible"
                         />
                     </li>
-                       <li className="cnr-full text-center mt-3">
-                           <input type="submit" value="Submit" className="btn btn-default" id="your_submit2" />
-                       </li>
+
+                    {ISLoading ? (
+          <li className="cnr-full text-center mt-3">
+                <Audio type="Oval" color="#00BFFF" height={40} width={40} />
+                &nbsp; <span className='text-white'>Please wait. We are proccessing your request..{" "}</span>
+              </li>
+            ) : (
+                <li className="cnr-full text-center mt-3">
+                <input type="submit" value="Submit" className="btn btn-default" id="your_submit2" />
+            </li>
+            )}
+                       
                    </ul>
                </form>
                

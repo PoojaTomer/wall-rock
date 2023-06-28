@@ -2,6 +2,7 @@ import React,{useEffect, useRef, useState} from 'react';
 import playVideo from '../../../assets/images/play-video.png';
 import { IMAGES } from '../../../constants/Image-Constant';
 import GetAQuoteButton from '../../../components/GetAQuoteButton';
+import ReactPlayer from 'react-player';
 
 export default function InvestmentExperties(props) {
     const [isPlaying, setIsPlaying] = useState(true);
@@ -18,7 +19,7 @@ export default function InvestmentExperties(props) {
                     <div className='col-md-10 offset-md-1 text-center'>
                         <h2 className='main-heading'>Experience. Investment. Expertise.</h2>
                         <h5>Enjoy A Luxury Experience</h5>
-                        <p>Spanning over 5000 square meters of land, this project is an impressive and spacious option that is both reasonably priced and purely elegant. Strategically facing the 60 meters wide Yamuna Expressway, the mall provides an ideal location for businesses looking to attract a large investor and consumer base.</p>
+                        <p>Spanning over 5000 square metres of land, this project is an impressive and spacious option that is both reasonably priced and purely elegant. Strategically facing the 60 meters wide Yamuna Expressway, the mall provides an ideal location for businesses looking to attract a large investor and consumer base.</p>
                         <p>The mall's modern façade provides ample branding space for potential retailers, ensuring maximum visibility and exposure. In addition, the Yamuna City Mall will feature the First Multiplex in the Yamuna City Region, making it a perfect investment destination for high returns.</p>
                   
                         <GetAQuoteButton Title="Book Now" />
@@ -50,16 +51,8 @@ export default function InvestmentExperties(props) {
                 </div>
                 <p className='float-text'>Values Of Smart Space</p>
                 </div>
-                <div className="embed-responsive embed-responsive-16by9">
-                    <video 
-                    ref={videoRef}
-                    onClick={(e) => e.target.play()}
-                    playsInline autoPlay={true} loop muted>
-                        <source src={IMAGES.ycmPage.Ycmvideo} type="video/mp4">
-                        </source>
-                    </video>
-                </div>
-                
+                <ReactPlayer url="https://www.youtube.com/embed/ugK-RX17P2E" controls showInfo={false} width="100%" />
+                 
             </section>
         </>
     );

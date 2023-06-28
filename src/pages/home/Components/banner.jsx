@@ -1,76 +1,118 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import '../../../assets/css/slider-effects.css';
 import { IMAGES } from '../../../constants/Image-Constant';
 
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    arrows:false,
-  }
+
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "#1f5aaa" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "#1f5aaa" }}
+      onClick={onClick}
+    />
+  );
+}
+var settings = {
+  draggable: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: true,
+  dots: true,
+  fade: true,
+  speed: 500,
+  infinite: true,
+  cssEase: 'linear',
+  touchThreshold: 100,
+  // nextArrow: <FaArrowRight />,
+  // prevArrow: <FaArrowLeft />,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows:false,
+      }
+    }
+  ]
 };
+
 
 function Banner(props){
     
         return (
           <section className="banner">
-         <Carousel responsive={responsive} infinite autoPlay> 
+         <Slider {...settings}>
       <div className='slider-content'>
+      <Link to="/about">
         {
           props.mobileScreen?
-          <img src={IMAGES.homepage.homeMonileBanner1} className="img-fluid" alt="Banner1" />
+          <img src="/mobilebanner-1.webp" className="img-fluid" alt="Banner1" />
           :
-          <img src={IMAGES.homepage.Banner1} className="img-fluid" alt="Banner1" />
-        }
-      
-        <div className="content">
-          <h5 className='sub-heading'>Building Upon A Tradition Of <strong>Trust And Excellence</strong></h5>
-          <h1 className="text-white">Wall Rock Developers</h1>
-          <Link to="/about" className="btn btn-secondary">Know More</Link>
-        </div>
+          <img src="/banner1.webp" className="img-fluid" alt="Banner1" /> 
+       } 
+        </Link>
       </div>
       <div className='slider-content'>
+      <Link to="/yamuna-city-mall">
       {
           props.mobileScreen?
-          <img src={IMAGES.homepage.homeMonileBanner2} className="img-fluid" alt="Banner2" />
-          :
-          <img src={IMAGES.homepage.Banner2} className="img-fluid" alt="Banner2" />
-        }
-        <div className="content">
-          <h5 className='sub-heading'>Small Investments, Big Returns</h5>
-          <h1 className="text-white">Yamuna City Mall</h1>
-          <Link to="/yamuna-city-mall" className="btn btn-secondary">Know More</Link>
-        </div>
+          <img src="/mobilebanner-2.webp" className="img-fluid" alt="Banner2" />
+          : 
+          
+          <img src="/banner2.webp" className="img-fluid" alt="Banner2" />
+         
+        } 
+         </Link>
       </div>
       <div className='slider-content'>
+      <Link to="/aishwaryam">
       {
           props.mobileScreen?
-          <img src={IMAGES.homepage.homeMonileBanner3} className="img-fluid" alt="Banner3" />
-          :
-          <img src={IMAGES.homepage.Banner3} className="img-fluid" alt="Banner3" />
-        }
-        <div className="content">
-          <h5 className='sub-heading'>Not Just A Home, But An Exceptional Living Experience </h5>
-          <h1 className="text-white">2bhk & 3bhk Apartments</h1>
-          <Link to="/aishwaryam" className="btn btn-secondary">Know More</Link>
-      </div>
+          <img src="/mobilebanner-3.webp" className="img-fluid" alt="Banner3" />
+          : 
+       
+            <img src="/banner3.webp" className="img-fluid" alt="Banner3" />
+        
+        } 
+          </Link>
     </div>
     {/* <div className='slider-content'>
     {
@@ -85,7 +127,7 @@ function Banner(props){
           <Link to="/contact" className="btn btn-secondary">Know More</Link>
       </div>
     </div> */}
-    </Carousel>
+    </Slider>
   </section>
       )
 };

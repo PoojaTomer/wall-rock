@@ -2,7 +2,6 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { IMAGES } from '../../../constants/Image-Constant';
 import WhyYamunaExpress1 from "../../../assets/images/approved-noida-international-airport.jpg";
 import WhyYamunaExpress2 from "../../../assets/images/approved-metro-connectivity.jpg";
 import WhyYamunaExpress3 from "../../../assets/images/eastern-peripheral-expressway.jpg";
@@ -107,7 +106,7 @@ var settings = {
     },
     {
         Image:WhyYamunaExpress5,
-        Title:"Delhi Mumbai Expressway",
+        Title:"Delhi-Mumbai Expressway",
     },
  ]
 
@@ -118,7 +117,7 @@ var settings = {
     },
     {
         Image:WhyYamunaExpress7,
-        Title:"World Class Universities",
+        Title:"World-Class Universities",
     },
     {
         Image:WhyYamunaExpress8,
@@ -140,14 +139,14 @@ export default function WhyYamunaExpress(props) {
         <section className='expressway-sec'>
             <div className='container'>
             <div className="col-md-10 offset-md-1 text-center">
-                    <h5 className='video-text'>This project is a testament to Wall Rock Developers<br />
+                    <h5 className='video-text'>This project is a testament to Wall Rock Developers'<br />
 commitment to creating innovative and world-class commercial spaces
-that meet the needs of today's customers</h5>
+that meet the needs of today's customers.</h5>
 
                 </div>
                 <h2 className='text-center'>Why Yamuna Expressway?</h2>
                 <p className='text-center'>
-                The Yamuna Expressway is a state-of-art expressway that has significantly improved connectivity between Greater Noida and Agra. It is a 166 KM long access-controlled expressway that reduces travel time between cities. With the approved Noida International Airport, people living in many cities of western UP will save approximately 2 hours of time travelling to Delhi Airport. Furthermore, the Airport will increase the area's density, making the place more advantageous for home buyers. Apart from this, the Airport will bring out many jobs, resulting in more employment to grow the market eventually.  </p>
+                The Yamuna Expressway is a state-of-the-art expressway that has significantly improved connectivity between Greater Noida and Agra. It is a 166 km long access-controlled expressway that reduces travel time between cities. With the approved Noida International Airport, people living in many cities of western UP will save approximately 2 hours of time travelling to Delhi Airport. Furthermore, the Airport will increase the area's density, making the place more advantageous for home buyers. Apart from this, the Airport will bring out many jobs, resulting in more employment to grow the market eventually.  </p>
 
 <Slider {...settings}>
 {

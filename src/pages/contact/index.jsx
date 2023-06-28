@@ -110,7 +110,7 @@ const submitHandler = (e) => {
         formData.append("message", contactFormField.message);
 
         axios({
-            url: `https://site4clientdemo.com/wall-rock/mails/contact.php`,
+            url: `https://wallrock.in/mails/contact.php`,
             method: "post",
             responseType: 'json',
             data: formData,
@@ -151,7 +151,7 @@ const submitHandler = (e) => {
                 {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
                 <meta name="keyword" content="Nvd usa" /> */}
             </Helmet>
-            <Breadcrumb Title="Contact Us" Image={IMAGES.aboutpage.ContactBanner} /> 
+            <Breadcrumb Title="Contact Us" Image="/contact-banner.webp" /> 
             <section className='contact-1'>
                 <div className='container'>
                 <h3 className='main-heading text-center'>Get In Touch With Us</h3>

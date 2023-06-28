@@ -16,7 +16,7 @@ const NotFound = () =>{
                 <meta name="keywords" content="Career"></meta>
                 <meta name="description" content="Career" />
             </Helmet>
-          <Breadcrumb Title="Not Found" Image={IMAGES.homepage.Banner} />
+          <Breadcrumb Title="Not Found" Image="/about-banner.webp" />
           {/* <!-- not-found start --> */}
             <div className="not-found-sec">
                 <div className="container">

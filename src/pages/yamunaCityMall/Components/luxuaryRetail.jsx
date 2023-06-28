@@ -17,11 +17,11 @@ export default function LuxuaryRetail(props) {
                 <div className='row'>
                     <div className='col-md-6'>
                         <h2 className='main-heading'>10 minute Drive <br />From the upcoming <br />Noida International <br/><span><b>Airport At Jewar</b></span></h2>
-                        <img src={IMAGES.ycmPage.YcmAroplane} className='img-fluid left-move' />
+                        <img src="/aroplane.webp" className='img-fluid left-move' />
                     </div>
                     <div className='col-md-6'>
                         <div className='hover-img'>
-                        <img src={IMAGES.ycmPage.YcmMinute} className='img-fluid border-round' />
+                        <img src="/minute.webp" className='img-fluid border-round' />
                         </div>
                     </div>
                 </div>
@@ -34,12 +34,12 @@ export default function LuxuaryRetail(props) {
               <div className='load-krishna'>
                 <div className='row'>
                     <div className='col-md-5'>
-                        <p>Yamuna Expressway is blessed with india’s tallest<br /> statue of loard shri krishna standing majestically<br/> at 108 feet height a top a grand temple<br/> <b>( Under Development )</b></p>
-                        <img src={IMAGES.ycmPage.YcmGlobalSchool} className='img-fluid border-round' />
-                        <h2 className='main-heading'>Near by<br /> global schools &<br /> university</h2>
+                        <p>Yamuna Expressway is going to be blessed with India's Tallest Statue of Lord Shri Krishna, standing majestically at a height of 108 feet at Gaur Yamuna City.</p>
+                        <img src="/global-school.webp" className='img-fluid border-round' />
+                        <h2 className='main-heading'>Nearby<br /> global schools &<br /> UNIVERSITIES</h2>
                     </div>
                     <div className='col-md-7'>
-                        <img src={IMAGES.ycmPage.YcmLoadKrishana} className='img-fluid zoom-in' />
+                        <img src="/load-krishna.webp" className='img-fluid zoom-in' />
                         <div className='load-info'>
                             <div className='row align-items-center'>
                                 <div className='col-md-6'>
@@ -57,7 +57,7 @@ export default function LuxuaryRetail(props) {
                 </div>
                 <div className='col-md-10'>
                 <ul>
-                    <li>SHarda University</li>
+                    <li>Sharda University</li>
                     <li>Noida International  University</li>
                     <li>Amity University</li>
                     <li>Gautam Buddha University</li>

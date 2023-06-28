@@ -30,11 +30,11 @@ export default function AwardWinning(props) {
                     }
                   
                 </div>
-                <div className='col-md-12 text-center'><a href={IMAGES.ycmPage.YcmBrochure} target='_blank' className='btn btn-default' >Download E-Brochure <FaDownload /></a></div>
+                <div className='col-md-12 text-center'><a href="/yamuna-city-mall-e-brochure.pdf" target='_blank' className='btn btn-default' >Download E-Brochure <FaDownload /></a></div>
                 <p className='float-text'>About  yamuna City Mall</p>
             </div>
            
-            <img src={IMAGES.ycmPage.ycmSecondBanner} className='img-fluid zoom-in-img' />
+            <img src="/ycm-sec-banner.webp" className='img-fluid zoom-in-img' />
             </section> 
         </>
     );

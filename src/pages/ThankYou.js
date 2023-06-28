@@ -15,7 +15,7 @@ export default function ThankYou (props) {
     <meta name="keyword" content="" />
 
 </Helmet>
-  <Breadcrumb Image={IMAGES.homepage.Banner} Title="Thank You" />
+  <Breadcrumb Image="/about-banner.webp" Title="Thank You" />
       
         <div className="thank-sec">
             <div className="container">

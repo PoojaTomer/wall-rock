@@ -7,23 +7,23 @@ import { IMAGES } from '../../../constants/Image-Constant';
 function Gallery(props) {
     const images = [
         {
-          original:IMAGES.aishwaryamPage.aishBanner1,
-          thumbnail:IMAGES.aishwaryamPage.aishBanner1,
+          original:"/ashi-banner-1.webp",
+          thumbnail:"/ashi-banner-1.webp",
         },
         {
-          original:IMAGES.aishwaryamPage.aishBanner2,
-          thumbnail:IMAGES.aishwaryamPage.aishBanner2,
+          original:"/ashi-banner-2.webp",
+          thumbnail:"/ashi-banner-2.webp",
         },
         {
-          original:IMAGES.aishwaryamPage.aishBanner3,
-          thumbnail:IMAGES.aishwaryamPage.aishBanner3,
+          original:"/ashi-banner-3.webp",
+          thumbnail:"/ashi-banner-3.webp",
         }
       ];
     return (
         <>
         <section className='aish-gallery'>
             <div className="container">
-            <img src={IMAGES.aishwaryamPage.SoldOut} className="img-fluid sold-out" alt='Sold Out' />
+            <img src="/sold-out.webp" className="img-fluid sold-out" alt='Sold Out' />
             <ImageGallery
         items={images}
         showPlayButton={false}
@@ -35,9 +35,7 @@ function Gallery(props) {
         //   alert("slideshow is now playing!");
         // }}
       />
-         <p>The building features state-of-the-art facilities, including a fully equipped fitness centre, a swimming pool, landscaped gardens, children's play areas, and a dedicated community clubhouse. In fact, the nearby neighbours boast a positive atmosphere with restaurants, malls, and parks just a stone's throw away. So, if you want to secure your future, contact us today!
-
-</p>  
+         <p>The building features state-of-the-art facilities, including a fully equipped fitness centre, a swimming pool, landscaped gardens, children's play areas, and a dedicated community clubhouse. In fact, the nearby areas boast a positive atmosphere, with restaurants, malls, and parks just a stone's throw away. So, if you want to secure your future, contact us today!</p>  
             </div>
         </section>
          

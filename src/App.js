@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CookieConsent, { Cookies } from "react-cookie-consent";
-import { ParallaxProvider } from "react-scroll-parallax";
 import "./assets/css/Preloader.css";
 import Preloader from "./components/preloader";
 import Header from "./components/Header";
@@ -36,7 +35,7 @@ function App() {
   //   });
   // }, []);
   return (
-    <BrowserRouter basename="/wall-rock">
+    <BrowserRouter basename="/">
       <Header />
 
       <Suspense fallback={Preloader()}>

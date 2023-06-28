@@ -8,8 +8,8 @@ export default function ProjectHighlights(props) {
                     <div className="row">
                         <div className="col-md-6 d-flex align-items-stretch">
                         <div className='hover-img'>
-                                <img src={IMAGES.aishwaryamPage.projectHighlight} className="img-fluid" alt='Project Highlight' />
-                                <img src={IMAGES.aishwaryamPage.SoldOut} className="img-fluid sold-out" alt='Sold Out' />
+                                <img src="/project-highlight.webp" className="img-fluid" alt='Project Highlight' />
+                                <img src="/sold-out.webp" className="img-fluid sold-out" alt='Sold Out' />
                             </div>
                         </div>
                         <div className="col-md-6 pt-5 d-flex align-items-stretch">

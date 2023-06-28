@@ -9,10 +9,10 @@ export default function Articles(props) {
         <>
              <Helmet>
                 <title>{props.title}</title>
-                {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
-                <meta name="keyword" content="Nvd usa" /> */}
+                {/* <meta name="description" content="" />
+                <meta name="keyword" content="wall Rock" /> */}
             </Helmet>
-            <Breadcrumb Title="Articles" Image={IMAGES.aboutpage.MediaBanner} /> 
+            <Breadcrumb Title="Articles" Image="/media-banner.webp" /> 
             <ArticleBox />
        
         </>

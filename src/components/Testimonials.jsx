@@ -1,11 +1,8 @@
 import React from 'react';
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import {FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { IMAGES } from '../constants/Image-Constant';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -28,25 +25,6 @@ function SampleNextArrow(props) {
       />
     );
   }
-const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 2
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 2
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
   var settings = {
     dots: true,
     arrows:true,
@@ -103,11 +81,7 @@ const responsive = {
                     <div className="case-study review-s" >
                         {/* <!--start-slide--> */}
                         <Slider {...settings}>
-                        {/* <Carousel responsive={responsive} infinite autoPlay speed= "2000"
-                                  autoplaySpeed= "2000"
-                                  cssEase= "linear"
-                                  dots= {true}
-                                  >  */}
+                       
                                   {
                                     props.TestiList?.map((value, index)=>{
                                       return(
@@ -123,7 +97,7 @@ const responsive = {
                                                         <li><FaStar/></li>
                                                     </ul>
                                                     <p>{value.Description}</p>
-                                                    {/* <h6><strong>{value.Name}</strong></h6> */}
+                                                    <h6><strong>{props.name === false ? "" : value.Name}</strong></h6>
                                                 </div>
                                             </div>
                                         </div>

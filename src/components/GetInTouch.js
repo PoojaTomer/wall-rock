@@ -95,7 +95,7 @@ export default function GetInTouch(props) {
             formData.append("message", (GetAQuoteFormField.message.length==0?props.message:GetAQuoteFormField.message));
 
             axios({
-                url: `https://site4clientdemo.com/wall-rock/mails/get_quote.php`,
+                url: `https://wallrock.in/mails/get_quote.php`,
                 method: "post",
                 responseType: 'json',
                 data: formData,

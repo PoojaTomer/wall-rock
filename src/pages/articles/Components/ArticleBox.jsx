@@ -15,7 +15,7 @@ export default function ArticleBox(props) {
                     <div className="col-md-6">
                     <div class="article-box">
                         <div class="hover-img">
-                            <img src={IMAGES.homepage.article1} class="img-fluid" />
+                            <img src="/ycm-articel1.webp" class="img-fluid" />
                         </div>
                         <div class="article-content">
                          <h4>Noida International Airport as a Game-Changer for Delhi-NCR's Infrastructure and Real Estate</h4>

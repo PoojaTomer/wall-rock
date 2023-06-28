@@ -12,7 +12,7 @@ export default function Blog(props) {
            {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
            <meta name="keyword" content="Nvd usa" /> */}
        </Helmet>
-       <Breadcrumb Title="Blog" Image={IMAGES.aboutpage.MediaBanner} /> 
+       <Breadcrumb Title="Blog" Image="/media-banner.webp" /> 
       <BlogBox />
   
    </>

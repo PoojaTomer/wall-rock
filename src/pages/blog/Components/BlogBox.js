@@ -15,7 +15,7 @@ export default function BlogBox(props) {
                  <div className="col-md-6">
                  <div class="article-box">
                      <div class="hover-img">
-                         <img src={IMAGES.homepage.article1} class="img-fluid" />
+                         <img src="/ycm-blog.webp" class="img-fluid" />
                      </div>
                      <div class="article-content">
                          <h4>What makes Yamuna Expressway the perfect location for your next investment?</h4>
