@@ -16,13 +16,13 @@ export default function MirajChinema(props) {
                 </div>
                 <div className="col-md-6 pl-0 d-flex align-items-stretch">
                     <div className="hover-img">
-                          <img src="/miraj.webp" className='img-fluid' alt="Miraj Chinema" />
+                          <img src="/images/miraj.webp" className='img-fluid' alt="Miraj Chinema" />
 
                     </div>
                     <div className="amppulse1"></div>
                     <div className="amppulse1"></div>
                     <div className="amppulse1"></div>
-                    <img src="/miraj-chinema-logo.webp" className='img-fluid miraj-logo amppulse1' alt="Miraj Chinema " />
+                    <img src="/images/miraj-chinema-logo.webp" className='img-fluid miraj-logo amppulse1' alt="Miraj Chinema " />
                 </div>
                 </div>
             </section> 

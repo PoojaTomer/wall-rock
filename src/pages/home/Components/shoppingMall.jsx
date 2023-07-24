@@ -23,19 +23,19 @@ export default function ShoppingMall(props) {
     <div className='col-md-6 d-flex align-items-stretch'>
     
         <div className="mall-img">
-        <img src="/yamunacity-mall.webp" className='img-fluid' alt="yamuna city mall"/>
+        <img src="/images/yamunacity-mall.webp" className='img-fluid' alt="yamuna city mall"/>
         </div>
         
     </div>
     <div className='col-md-6 d-flex align-items-stretch'>
     <div className="mall-img">
-    <img src="/aishwaryam.webp" className='img-fluid' alt="Aishwaryam"/>
+    <img src="/images/aishwaryam.webp" className='img-fluid' alt="Aishwaryam"/>
     </div>
     
     </div>
     <div className='col-md-6 d-flex align-items-stretch'>
         <div className='mall-content'>
-        <img src="/ashiwaryam-logo.webp" className='img-fluid' alt="Aishwaryam logo" />
+        <img src="/images/ashiwaryam-logo.webp" className='img-fluid' alt="Aishwaryam logo" />
         <h3 className='main-heading'>Completed & Delivered Before Time!</h3>
         <p>Aishwaryam - our flagship residential development, is a result of our dedication to providing residents with comfortable and convenient living that will be cherished for years to come. Located at Noida Extension, Aishwaryam is well connected to Delhi NCR, allowing residents to enjoy a wide range of amenities. This project is mainly designed by keeping Vaastu Shastra in mind consisting of 450 spacious apartments.</p>
         <Link to="/aishwaryam" className='btn btn-default'>Know More</Link>

@@ -1,5 +1,4 @@
-import React,{useEffect, useRef, useState} from 'react';
-import playVideo from '../../../assets/images/play-video.png';
+import React, { useEffect, useRef, useState } from 'react';
 import { IMAGES } from '../../../constants/Image-Constant';
 import GetAQuoteButton from '../../../components/GetAQuoteButton';
 import ReactPlayer from 'react-player';
@@ -10,8 +9,8 @@ export default function InvestmentExperties(props) {
     const togglePlaying = () => {
         setIsPlaying(!isPlaying);
         isPlaying ? videoRef.current.pause() : videoRef.current.play();
-      };
- 
+    };
+
     return (
         <>
             <section className='investment-sec'>
@@ -21,15 +20,15 @@ export default function InvestmentExperties(props) {
                         <h5>Enjoy A Luxury Experience</h5>
                         <p>Spanning over 5000 square metres of land, this project is an impressive and spacious option that is both reasonably priced and purely elegant. Strategically facing the 60 meters wide Yamuna Expressway, the mall provides an ideal location for businesses looking to attract a large investor and consumer base.</p>
                         <p>The mall's modern façade provides ample branding space for potential retailers, ensuring maximum visibility and exposure. In addition, the Yamuna City Mall will feature the First Multiplex in the Yamuna City Region, making it a perfect investment destination for high returns.</p>
-                  
-                        <GetAQuoteButton Title="Book Now" />
+
+                        <GetAQuoteButton Title="Book Now" subject="YCM Book Now Query" />
                     </div>
                 </div>
                 <div className='container'>
                     <div className="row">
-                    <div className='col-md-8'></div>
-                   <div className='col-md-4'>
-                   {/* <div className='videoplay-button'>
+                        <div className='col-md-8'></div>
+                        <div className='col-md-4'>
+                            {/* <div className='videoplay-button'>
                     <span  onClick={togglePlaying}>
                     {
                         isPlaying ? (
@@ -47,12 +46,12 @@ export default function InvestmentExperties(props) {
                     }
                    </span>
                   </div> */}
-                </div>
-                </div>
-                <p className='float-text'>Values Of Smart Space</p>
+                        </div>
+                    </div>
+                    <p className='float-text'>Values Of Smart Space</p>
                 </div>
                 <ReactPlayer url="https://www.youtube.com/embed/ugK-RX17P2E" controls showInfo={false} width="100%" />
-                 
+
             </section>
         </>
     );

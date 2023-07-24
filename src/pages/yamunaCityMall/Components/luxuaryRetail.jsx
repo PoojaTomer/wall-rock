@@ -17,11 +17,11 @@ export default function LuxuaryRetail(props) {
                 <div className='row'>
                     <div className='col-md-6'>
                         <h2 className='main-heading'>10 minute Drive <br />From the upcoming <br />Noida International <br/><span><b>Airport At Jewar</b></span></h2>
-                        <img src="/aroplane.webp" className='img-fluid left-move' />
+                        <img src="/images/aroplane.webp" className='img-fluid left-move' />
                     </div>
                     <div className='col-md-6'>
                         <div className='hover-img'>
-                        <img src="/minute.webp" className='img-fluid border-round' />
+                        <img src="/images/minute.webp" className='img-fluid border-round' />
                         </div>
                     </div>
                 </div>
@@ -35,11 +35,11 @@ export default function LuxuaryRetail(props) {
                 <div className='row'>
                     <div className='col-md-5'>
                         <p>Yamuna Expressway is going to be blessed with India's Tallest Statue of Lord Shri Krishna, standing majestically at a height of 108 feet at Gaur Yamuna City.</p>
-                        <img src="/global-school.webp" className='img-fluid border-round' />
+                        <img src="/images/global-school.webp" className='img-fluid border-round' />
                         <h2 className='main-heading'>Nearby<br /> global schools &<br /> UNIVERSITIES</h2>
                     </div>
                     <div className='col-md-7'>
-                        <img src="/load-krishna.webp" className='img-fluid zoom-in' />
+                        <img src="/images/load-krishna.webp" className='img-fluid zoom-in' />
                         <div className='load-info'>
                             <div className='row align-items-center'>
                                 <div className='col-md-6'>

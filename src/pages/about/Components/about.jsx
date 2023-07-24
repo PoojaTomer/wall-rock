@@ -9,7 +9,7 @@ export default function AboutSec(props) {
                     <div className="row">
                         <div className='col-md-6'>
                             <div className='hover-img'>
-                                <img src="aishwaryam.webp" className="img-fluid" />
+                                <img src="/images/aishwaryam.webp" className="img-fluid" />
                             </div>
                             <div className='our-story'>
                             <h3 className='main-heading mt-5'>Our Philosophy</h3>

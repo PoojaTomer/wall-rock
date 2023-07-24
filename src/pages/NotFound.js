@@ -6,17 +6,13 @@ import { IMAGES } from "../constants/Image-Constant";
 import { FaFrown } from "react-icons/fa";
 
 
-const NotFound = () =>{
+const NotFound = (props) =>{
     return(
         <div className="serchengne01">
             <Helmet>
-                <meta charSet="utf-8" />
-                <title>Not Found</title>
-                <link rel="canonical" href="#" />
-                <meta name="keywords" content="Career"></meta>
-                <meta name="description" content="Career" />
+                <title>{props.title || "Wall Rock"}</title>                
             </Helmet>
-          <Breadcrumb Title="Not Found" Image="/about-banner.webp" />
+          <Breadcrumb Title="Not Found" Image="/images/about-banner.webp" />
           {/* <!-- not-found start --> */}
             <div className="not-found-sec">
                 <div className="container">

@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
-import Breadcrumb from "../../components/Breadcrumb";
-import { IMAGES } from "../../constants/Image-Constant";
 import Gallery from "./Components/Gallery";
 import TestimonialSlider from "../../components/Testimonials";
 import GetInTouch from "../../components/GetInTouch";
@@ -18,7 +16,7 @@ const ProjectHighlightsList = [
 
 const testiList = [
   {
-    Image:"/client-icon-1.webp",
+    Image:"/images/client-icon-1.webp",
     Name: "Pankaj Goel",
     Description:
       "I'm delighted to call Aishwaryam home! The building was finished and delivered earlier than expected, and the construction quality is indeed excellent. My apartment's rooms are laid out harmoniously, according to Vastu Shastra.",
@@ -49,18 +47,20 @@ const testiList = [
   },
 ];
 export default function Aishwaryam(props) {
-  const [notVisible, setNotVisible] = useState(false);
   console.log("props.mobileScreen",props.mobileScreen);
   return (
     <>
       <Helmet>
-        <title>{props.title}</title>
+      <title>Flat in Noida Extension | 2 BHK / 3 BHK in Noida - Wall Rock Developers</title>
+      <meta name="description" content="Find your perfect 2 BHK / 3 BHK in Noida at Aishwaryam. Contact Wall Rock Developers now to book your dream flat in Noida Extension!" />
+      <link rel="canonical" href="https://wallrock.in/aishwaryam" />
+      {/* <meta name="keyword" content="Wall Rock" /> */}
         
       </Helmet>
       {props.mobileScreen ? (
         <section className="aish-mobilebanner">
           <img
-            src="ashi-mobile-banner.webp"
+            src="/images/ashi-mobile-banner.webp"
             className="img-fluid"
             alt="Ashiwaryam Mobile Banner"
             loading="lazy"
@@ -71,7 +71,7 @@ export default function Aishwaryam(props) {
           <div className="container">
             <div className="col-md-6">
               <img
-                src="aishraryam-banner-left.webp"
+                src="/images/aishraryam-banner-left.webp"
                 className="img-fluid"
                 alt=""
                 loading="lazy"
@@ -104,7 +104,7 @@ export default function Aishwaryam(props) {
         <TestimonialSlider TestiList={testiList} />
       </section>
 
-      <GetInTouch Title="Experience the pinnacle of luxury, quality, and comfort at an affordable price !!" />
+      <GetInTouch subject="Query For Aishwaryam" Title="Experience the pinnacle of luxury, quality, and comfort at an affordable price !!" />
     </>
   );
 }

@@ -34,7 +34,7 @@ export default function AwardWinning(props) {
                 <p className='float-text'>About  yamuna City Mall</p>
             </div>
            
-            <img src="/ycm-sec-banner.webp" className='img-fluid zoom-in-img' />
+            <img src="/images/ycm-sec-banner.webp" className='img-fluid zoom-in-img' />
             </section> 
         </>
     );

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Breadcrumb from '../../components/Breadcrumb';
-import { IMAGES } from '../../constants/Image-Constant';
 import Banner from './Components/banner';
 import AwardWinning from './Components/awardWinning';
 import GetInTouch from '../../components/GetInTouch';
@@ -18,34 +16,34 @@ const AwardWinningContent =[
         Title:"35000+",
         SubTitle:"Surrounded Population",
         Des:"The upcoming commercial hub at Gaur Yamuna City,  Yamuna Expressway, will cater to all commercial needs of more than 35,000+ people. Yamuna City Mall is the most awaited Commercial Project, with the first Multiplex at Gaur Yamuna City, Yamuna Expressway. ",
-        Image:"/award-population.webp",
+        Image:"/images/award-population.webp",
     },
     {
         Title:"2 Lac",
         SubTitle:"Sq. Ft of Retail & Entertainment Space",
         Des:"Yamuna City Mall is a hub for business and entertainment, bringing a world of indulgence for visitors.",
-        Image:"/award-developed.webp",
+        Image:"/images/award-developed.webp",
     },
     {
         Title:"250 Acres",
         SubTitle:"Part of Gaur Yamuna City",
         Des:"An integral part of 250 acre Gaur Yamuna City has a huge catchment area with incredible market potential. Yamuna City Mall is a landmark of new opportunities for investors to get strong returns due to the upcoming Noida International Airport & Film City.",
-        Image:"/award-gaur.webp",
+        Image:"/images/award-gaur.webp",
     },
 ]
 
 const YcmArticleSlides =[
     {
         Title:"Entertainment Zone",
-        Image:"/ycm-articel1.webp",
+        Image:"/images/ycm-articel1.webp",
     },
     {
         Title:"Super Market",
-        Image:"/ycm-articel2.webp",
+        Image:"/images/ycm-articel2.webp",
     },
     {
         Title:"Food Court",
-        Image:"/ycm-articel3.webp",
+        Image:"/images/ycm-articel3.webp",
     },
 ]
 
@@ -71,12 +69,13 @@ export default function YamunaCityMall(props) {
     return (
         <>
           <Helmet>
-                <title>{props.title}</title>
-                {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
-                <meta name="keyword" content="Nvd usa" /> */}
+                <title>Best Commercial Projects in Noida | Shops in Gaur Yamuna City - Wall Rock Developers</title>
+                <meta name="description" content="Secure Yamuna Expressway commercial shops at our ongoing project Yamuna City Mall. It is one of our best commercial projects in Noida. Contact us today!" />
+                <link rel="canonical" href="https://wallrock.in/yamuna-city-mall" />
+                {/* <meta name="keyword" content="Wall Rock" /> */}
             </Helmet>
             
-            <Banner  Title="Yamuna City Mall" Image="/ycm-banner-1.webp"/>
+            <Banner  Title="Yamuna City Mall" Image="/images/ycm-banner-1.jpg"/>
             <AwardWinning awardWinningContent={AwardWinningContent}  />
             <YcmGallery />
 
@@ -89,14 +88,15 @@ export default function YamunaCityMall(props) {
             <WhyYamunaExpress />
 
             <YcmArticle YcmArticleSlider={YcmArticleSlides} />
+            
             <MirajChinema 
             Title="Miraj Cinema"
             SubTitle="Multiplex"
             SubTitle2="at Yamuna City Mall"
             Des="A well-known name in the entertainment sector, Miraj Cinemas, has unveiled its new multiplex, providing moviegoers with a cutting-edge cinematic experience. The newest multiplex from Miraj Cinemas has the latest amenities and technology to guarantee a fantastic experience. As you enter the theatre, you are welcomed by a contemporary and stylish environment, which sets the scene for an immersive movie experience. The multiplex also hosts exclusive screenings, premieres, and special events, providing a platform for film enthusiasts to come together and celebrate the magic of cinema. Every movie lover will have an unmatched audiovisual experience because of the theatre's comfortable seats, large auditoriums, and cutting-edge sound equipment.
-            "
-             />
-            <GetInTouch message="I request Wall Rock Developers to contact me for sales enquiry and share all the relevent details" />
+            "/>
+            
+            <GetInTouch subject="Query For Yamuna City Mall" message="I request Wall Rock Developers to contact me for sales enquiry and share all the relevent details" />
             
         </>
     );

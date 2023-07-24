@@ -9,7 +9,7 @@ export default function SociallyResponsible(props) {
                     <div className="row align-items-center">
                     <div className='col-md-6'>
                         <div className='hover-img'>
-                        <img src="/about-msg.webp" className='img-fluid' alt="" />
+                        <img src="/images/about-msg.webp" className='img-fluid' alt="" />
                         </div>
                         </div>
                         <div className='col-md-6'>

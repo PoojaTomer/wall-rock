@@ -24,7 +24,7 @@ function App() {
   //   });
   // }, []);
   return (
-   <BrowserRouter basename="/wall-rock">
+   <BrowserRouter basename="">
     <Suspense fallback={Preloader()}>
     {/* <ParallaxProvider scrollAxis="horizontal"> */}
       {/* <Scroll /> */}

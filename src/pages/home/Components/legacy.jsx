@@ -16,28 +16,28 @@ export default function Legacy(props) {
                  
                         <div className='col-md-3 experience'>
                         <div className='count-box'>
-                            <img src="/experience.webp" className='img-fluid' alt="" />
+                            <img src="/images/experience.webp" className='img-fluid' alt="" />
                             <h4><CountUp end={9} />+ </h4>
                             <p>Years Of Experience</p>
                         </div>
                         </div>
                         <div className='col-md-3 legacy-box'>
                         <div className='count-box'>
-                            <img src="/building.webp" className='img-fluid' alt="" />
+                            <img src="/images/building.webp" className='img-fluid' alt="" />
                             <h4><CountUp end={6.5} /> Lacs </h4>
                             <p>Sq. Ft of Area Developed & Delivered</p>
                         </div>
                     </div>
                     <div className='col-md-3 legacy-box1'>
                         <div className='count-box'>
-                            <img src="/growth.webp" className='img-fluid' alt="" />
+                            <img src="/images/growth.webp" className='img-fluid' alt="" />
                             <h4><CountUp end={1.5} /> Lac</h4>
                             <p> Sq. Ft of Area Under Development</p>
                         </div>
                     </div>
                     <div className='col-md-3 happy-customer'>
                         <div className='count-box'>
-                            <img src="/customers.webp" className='img-fluid' alt="" />
+                            <img src="/images/customers.webp" className='img-fluid' alt="" />
                             <h4><CountUp end={5000} />+ </h4>
                             <p>Happy Customers</p>
                         </div>

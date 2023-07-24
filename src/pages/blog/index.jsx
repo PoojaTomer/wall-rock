@@ -1,18 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../components/Breadcrumb';
-import { IMAGES } from '../../constants/Image-Constant';
 import BlogBox from './Components/BlogBox';
 
 export default function Blog(props) {
     return (
         <>
         <Helmet>
-           <title>{props.title}</title>
-           {/* <meta name="description" content="Find end-to-end digital marketing strategy for our clients to drive better sales. Connect with the best digital marketing company in Dubai. Enquire Now!" />
-           <meta name="keyword" content="Nvd usa" /> */}
+        <title>{props.title || "Wall Rock"}</title>
+        <link rel="canonical" href="https://wallrock.in/blog" />
        </Helmet>
-       <Breadcrumb Title="Blog" Image="/media-banner.webp" /> 
+       <Breadcrumb Title="Blog" Image="/images/media-banner.webp" /> 
       <BlogBox />
   
    </>

@@ -5,15 +5,15 @@ import CloseIcon from '@mui/icons-material/Close';
 import axios from 'axios';
 import REGX from '../constants/Regx';
 import { useNavigate } from 'react-router-dom';
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
-  });
-  
+});
+
 const GetAQuote = (props) => {
-const navigate = useNavigate();
-    const captchaRef = useRef(null)
+    const navigate = useNavigate();
+    // const captchaRef = useRef(null)
     const [ISLoading, setISLoading] = useState(false);
     const [GetAQuoteForm, setGetAQuoteForm] = useState({
         processing: false,
@@ -43,8 +43,7 @@ const navigate = useNavigate();
 
     const submitHandler = (e) => {
         e.preventDefault();
-        const token = captchaRef.current.getValue();
-        captchaRef.current.reset();
+        
         let errorFound = false;
 
         setGetAQuoteForm({
@@ -81,7 +80,7 @@ const navigate = useNavigate();
         } else {
             GetAQuoteFormField.mobileError = "";
         }
-        setISLoading(true);
+        
 
         if (errorFound) {
             setGetAQuoteForm({
@@ -94,6 +93,7 @@ const navigate = useNavigate();
             formData.append("fullName", GetAQuoteFormField.fullName);
             formData.append("email", GetAQuoteFormField.email);
             formData.append("mobile", GetAQuoteFormField.mobile);
+            formData.append("subject", props.subject);
 
             axios({
                 url: `https://wallrock.in/mails/get_quote.php`,
@@ -119,14 +119,22 @@ const navigate = useNavigate();
                     props.handleCancel();
                     navigate("/thank-you");
                 } else {
+                    setGetAQuoteForm({
+                        ...GetAQuoteFormField,
+                        processing: false
+                    });
                     alert(response.data.message);
-                    setISLoading(false);
+                    
                 }
                 // alert("success");
             }, error => {
                 console.log("error", error);
+                setGetAQuoteForm({
+                    ...GetAQuoteFormField,
+                    processing: false
+                });
                 alert("error");
-                setISLoading(false);
+                
             });
         }
     }
@@ -137,49 +145,49 @@ const navigate = useNavigate();
     };
     return (
         <Dialog
-        className="custom-pop"
-        open={props.isModalVisible}
-        // onOk={() => props.handleOk()}
-        // footer={null}
-        // closable={false}
-        onClose={props.handleCancel}
-        TransitionComponent={Transition}
+            className="custom-pop"
+            open={props.isModalVisible}
+            // onOk={() => props.handleOk()}
+            // footer={null}
+            // closable={false}
+            onClose={props.handleCancel}
+            TransitionComponent={Transition}
         >
-      <Button onClick={props.handleCancel} color="error" className='close-popup'>
-          <CloseIcon />
-        </Button>
-        <DialogContent>
-          <DialogTitle id="alert-dialog-slide-title" className="popup-heading mb-3">{"Schedule A Visit"}</DialogTitle>
-            <form onSubmit={(e) => submitHandler(e)}>
-                       <input type="hidden" className="form-control" name="enquery-form" id="enquery-form3" value="enquery-form" placeholder="Enquery Form" />
-                   <ul className="form-list">
-                       <li>
-                           <input type="text" name="fullName" className="form-control" placeholder="Full Name*" value={GetAQuoteForm.fullName} onChange={e => setGetAQuoteForm({
-                            ...GetAQuoteForm,
-                            fullName: e.target.value,
-                            fullNameError: ""
-                        })}
-                            disabled={GetAQuoteForm.processing} />
-                            <span className='error'>{GetAQuoteForm.fullNameError}</span>
-                       </li>
-                       <li>
-                           <input type="number" name="mobile" onKeyPress={preventMinus} className="form-control" placeholder="Phone Number*" value={GetAQuoteForm.mobile} onChange={e => setGetAQuoteForm({
+            <Button onClick={props.handleCancel} color="error" className='close-popup'>
+                <CloseIcon />
+            </Button>
+            <DialogContent>
+                <DialogTitle id="alert-dialog-slide-title" className="popup-heading mb-3">{"Schedule A Visit"}</DialogTitle>
+                <form onSubmit={(e) => submitHandler(e)}>
+                    <input type="hidden" className="form-control" name="enquery-form" id="enquery-form3" value="enquery-form" placeholder="Enquery Form" />
+                    <ul className="form-list">
+                        <li>
+                            <input type="text" name="fullName" className="form-control" placeholder="Full Name*" value={GetAQuoteForm.fullName} onChange={e => setGetAQuoteForm({
                                 ...GetAQuoteForm,
-                                mobile: e.target.value.slice(0,10),
+                                fullName: e.target.value,
+                                fullNameError: ""
+                            })}
+                                disabled={GetAQuoteForm.processing} />
+                            <span className='error'>{GetAQuoteForm.fullNameError}</span>
+                        </li>
+                        <li>
+                            <input type="number" name="mobile" onKeyPress={preventMinus} className="form-control" placeholder="Phone Number*" value={GetAQuoteForm.mobile} onChange={e => setGetAQuoteForm({
+                                ...GetAQuoteForm,
+                                mobile: e.target.value.slice(0, 10),
                                 mobileError: ""
                             })} disabled={GetAQuoteForm.processing} />
-                                <span className='error'>{GetAQuoteForm.mobileError}</span>
-                       </li>
-                       <li  className="cnr-full">
-                       <input type="email" name="email" className="form-control" placeholder="Email Address*" value={GetAQuoteForm.email} onChange={e => setGetAQuoteForm({
-                            ...GetAQuoteForm,
-                            email: e.target.value,
-                            emailError: ""
-                        })} disabled={GetAQuoteForm.processing} />
+                            <span className='error'>{GetAQuoteForm.mobileError}</span>
+                        </li>
+                        <li className="cnr-full">
+                            <input type="email" name="email" className="form-control" placeholder="Email Address*" value={GetAQuoteForm.email} onChange={e => setGetAQuoteForm({
+                                ...GetAQuoteForm,
+                                email: e.target.value,
+                                emailError: ""
+                            })} disabled={GetAQuoteForm.processing} />
                             <span className='error'>{GetAQuoteForm.emailError}</span>
-                       </li>
-                     
-                       {/* <li className="cnr-full">
+                        </li>
+
+                        {/* <li className="cnr-full">
                            <textarea rows="4" className="form-control" name="message" placeholder="Message*" value={GetAQuoteForm.message} onChange={e => setGetAQuoteForm({
                             ...GetAQuoteForm,
                             message: e.target.value,
@@ -189,28 +197,22 @@ const navigate = useNavigate();
                         ></textarea>
                             <span className='error'>{GetAQuoteForm.messageError}</span>
                        </li> */}
-                       <li>
-                    <ReCAPTCHA
-                        ref={captchaRef}
-                        sitekey="6LccULUmAAAAAL50RQKodEjS5sP6v9bExd9eHYBY"
-                        size="invisible"
-                        />
-                    </li>
+                        {/* <li>
+                            <ReCAPTCHA
+                                ref={captchaRef}
+                                sitekey="6LccULUmAAAAAL50RQKodEjS5sP6v9bExd9eHYBY"
+                                size="invisible"
+                            />
+                        </li> */}
 
-                    {ISLoading ? (
-          <li className="cnr-full text-center mt-3">
-                <Audio type="Oval" color="#00BFFF" height={40} width={40} />
-                &nbsp; <span className='text-white'>Please wait. We are proccessing your request..{" "}</span>
-              </li>
-            ) : (
-                <li className="cnr-full text-center mt-3">
-                <input type="submit" value="Submit" className="btn btn-default" id="your_submit2" />
-            </li>
-            )}
-                       
-                   </ul>
-               </form>
-               
+
+                        <li className="cnr-full text-center mt-3">
+                            <input type="submit" value={`${GetAQuoteForm.processing ? "Processing..." : "Submit"}`} disabled={GetAQuoteForm.processing} className="btn btn-default" id="your_submit2" />
+                        </li>
+
+                    </ul>
+                </form>
+
             </DialogContent>
         </Dialog>
     )

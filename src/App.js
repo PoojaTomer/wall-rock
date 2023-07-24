@@ -43,41 +43,56 @@ function App() {
           <Route
             exact
             path="/"
-            element={<Homepage mobileScreen={mobileScreen} title="Home page" />}
+            element={<Homepage mobileScreen={mobileScreen} title="Wall Rock" />}
           />
-          <Route exact path="/about" element={<About title="about page" />} />
+          <Route exact path="/about" element={<About title="About | Wall Rock" />} />
           <Route
             exact
             path="/contact"
-            element={<Contact title="contact page" />}
+            element={<Contact title="Contact | Wall Rock" />}
           />
           <Route
             exact
             path="/articles"
-            element={<Articles title="articel page" />}
+            element={<Articles title="Articel | Wall Rock" />}
+          />
+          <Route
+            exact
+            path="/article/noida-internation-airport-as-a-game-changer-for-delhi-ncr-infrastructure-and-real-estate"
+            element={<Articles title="Articel | Wall Rock" />}
           />
           <Route
             exact
             path="/yamuna-city-mall"
-            element={<YamunaCityMall title="Yamuna City Mall page" />}
+            element={<YamunaCityMall title="Yamuna City Mall | Wall Rock" />}
           />
           <Route
             exact
             path="/aishwaryam"
             element={
-              <Aishwaryam mobileScreen={mobileScreen} title="Aishwaryam page" />
+              <Aishwaryam mobileScreen={mobileScreen} title="Aishwaryam | Wall Rock" />
             }
           />
           <Route
             exact
             path="/thank-you"
-            element={<ThankYou title="Thank You page" />}
+            element={<ThankYou title="Thank You | Wall Rock" />}
           />
-          <Route exact path="/blog" element={<Blog title="Blog page" />} />
-          <Route path="*" element={<NotFound title="no record found" />} />
+          <Route
+           exact
+            path="/blog"
+            element={<Blog title="Blog | Wall Rock" />}
+          />
+          <Route
+           exact
+            path="/blog/what-makes-yamuna-expressway-the-perfect-location-for-your-next-investment"
+            element={<Blog title="Blog | Wall Rock" />}
+          />
+
+          <Route path="*" element={<NotFound title="404 | Wall Rock" />} />
         </Routes>
       </Suspense>
-      <CookieConsent
+      {/* <CookieConsent
         enableDeclineButton
         flipButtons
         location="bottom"
@@ -93,7 +108,7 @@ function App() {
         We use Cookies for a number of reasons such as keeping NVD sites
         reliable and secure, personalising content and ads, providing social
         media features and to analyse how our sites are used.
-      </CookieConsent>
+      </CookieConsent> */}
       <Footer />
     </BrowserRouter>
   );

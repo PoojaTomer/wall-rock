@@ -67,7 +67,7 @@ function Header(props) {
                 </div>
                 <div className="navbar-collapse collapse navbar-container">
                       <div className="nav navbar-nav navbar-left">
-                        <Link className="navbar-brand" to="/"><img src="/logo.png" alt="logo"  data-aos="zoom-in" data-aos-delay="100" data-aos-offset="0" className="img-fluid" /></Link>
+                        <Link className="navbar-brand" to="/"><img src="/images/logo.png" alt="logo"  data-aos="zoom-in" data-aos-delay="100" data-aos-offset="0" className="img-fluid" /></Link>
                       </div>  
                     <ul className={click ? "nav-menu active navbar-nav" : "nav-menu navbar-nav navbar-right"}>
                         <li className="nav-item">
@@ -126,7 +126,7 @@ function Header(props) {
 </header>
 
 
-<GetAQuote isModalVisible={isModalVisible} handleOk={handleOk} handleCancel={handleCancel} {...props} />
+<GetAQuote subject="Schedule A Visit" isModalVisible={isModalVisible} handleOk={handleOk} handleCancel={handleCancel} {...props} />
 </>
     );
 }

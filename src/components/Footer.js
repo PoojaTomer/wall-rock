@@ -107,7 +107,7 @@ function Footer(props) {
         </div>
         <div className="bottom-footer">
             <div className="container">
-                <p>© 2023 All rights reserved. Design and Developed by <a href="https://www.newvisiondigital.co/" target='_blank'><img src="/nvd-logo.png" className='img-fluid' alt="nvd logo" /></a></p>  
+                <p>© 2023 All rights reserved. Design and Developed by <a href="https://www.newvisiondigital.co/" target='_blank'><img src="/images/nvd-logo.png" className='img-fluid' alt="nvd logo" /></a></p>  
             </div>
         </div>  
     </footer>

@@ -84,9 +84,9 @@ function Banner(props){
       <Link to="/about">
         {
           props.mobileScreen?
-          <img src="/mobilebanner-1.webp" className="img-fluid" alt="Banner1" />
+          <img src="/images/mobilebanner-1.webp" className="img-fluid" alt="Banner1" />
           :
-          <img src="/banner1.webp" className="img-fluid" alt="Banner1" /> 
+          <img src="/images/banner1.webp" className="img-fluid" alt="Banner1" /> 
        } 
         </Link>
       </div>
@@ -94,10 +94,10 @@ function Banner(props){
       <Link to="/yamuna-city-mall">
       {
           props.mobileScreen?
-          <img src="/mobilebanner-2.webp" className="img-fluid" alt="Banner2" />
+          <img src="/images/mobilebanner-2.webp" className="img-fluid" alt="Banner2" />
           : 
           
-          <img src="/banner2.webp" className="img-fluid" alt="Banner2" />
+          <img src="/images/banner2.jpg" className="img-fluid" alt="Banner2" />
          
         } 
          </Link>
@@ -106,10 +106,10 @@ function Banner(props){
       <Link to="/aishwaryam">
       {
           props.mobileScreen?
-          <img src="/mobilebanner-3.webp" className="img-fluid" alt="Banner3" />
+          <img src="/images/mobilebanner-3.webp" className="img-fluid" alt="Banner3" />
           : 
        
-            <img src="/banner3.webp" className="img-fluid" alt="Banner3" />
+            <img src="/images/banner3.webp" className="img-fluid" alt="Banner3" />
         
         } 
           </Link>
