@@ -9,7 +9,7 @@ export default function Banner(props) {
                 <div className="col-md-12">
                     <div className="banner-heading">
                     <p>Find Your Luxury space </p>
-                        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">{props.Title}</h1>
+                        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">{props.Title}</h2>
                      
                     </div>
                 </div>

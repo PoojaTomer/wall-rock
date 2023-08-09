@@ -51,9 +51,13 @@ export default function Aishwaryam(props) {
   return (
     <>
       <Helmet>
+      <meta name="robots" content="index, follow" />
       <title>Flat in Noida Extension | 2 BHK / 3 BHK in Noida - Wall Rock Developers</title>
+      <meta name="title" content="Flat in Noida Extension | 2 BHK / 3 BHK in Noida - Wall Rock Developers"/>
       <meta name="description" content="Find your perfect 2 BHK / 3 BHK in Noida at Aishwaryam. Contact Wall Rock Developers now to book your dream flat in Noida Extension!" />
+
       <link rel="canonical" href="https://wallrock.in/aishwaryam" />
+
       {/* <meta name="keyword" content="Wall Rock" /> */}
         
       </Helmet>
@@ -83,10 +87,8 @@ export default function Aishwaryam(props) {
       )}
 
       <About
-        title="Redefining The Standards Of Modern Living - Aishwaryam"
+        title="Aishwaryam: Discover The Finest Flats in Noida Extension!"
         subTitle="Completed & Delivered"
-        des1="Welcome to Aishwaryam, the luxurious and affordable residential project developed by Wall Rock Developers. Nested in a prime location like Noida Extension, this residential project is well connected to Delhi NCR, allowing residents to enjoy a wide range of facilities. Aishwaryam offers 2BHK and 3BHK apartments with exceptional amenities. This project has 450 apartments, and all are sold out. One of the best things about Aishwaryam is its construction quality. Wall Rock Developers prides itself in delivering projects before time with no compromise in quality. "
-        des2="Furthermore, homeowners will have peace of mind because Aishwaryam apartments embrace the principle of Vastu Shastra. The layout of every room is well-designed, each equipped with modern amenities and functions that cater to modern needs. Indeed, this project showcases our dedication to fulfilling the expectations of our customers."
       />
 
       <Gallery />

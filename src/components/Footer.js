@@ -43,7 +43,7 @@ function Footer(props) {
                     <div className="col-md-3">
                         <div className="footer-logo">
                             <Link to="/">
-                                <img src="logo.png" alt="header-logo" className="img-fluid" />
+                                <img src="/images/logo.png" alt="header-logo" className="img-fluid" />
                             </Link>
                         </div>
                         <div className="footer-con">
@@ -92,7 +92,7 @@ function Footer(props) {
                     </div>
                     </div>
                     <div className="col-md-3">
-                        <h5>Contact  Imformation</h5>
+                        <h5>Contact  Information</h5>
                         <div className="reach-us">
                             <ul> 
                                 <li><FaPhoneAlt /> <a href="tel:7037039009">70370 39009</a></li>

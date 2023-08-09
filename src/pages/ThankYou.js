@@ -10,6 +10,7 @@ export default function ThankYou(props) {
     return (
         <>
             <Helmet>
+                <meta name="robots" content="index, follow" />
                 <title>{props.title || "Wall Rock"}</title>
 
             </Helmet>

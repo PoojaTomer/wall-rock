@@ -7,7 +7,7 @@ export default function LuxuaryRetail(props) {
         <>
         <section className='luxiary-retail'>
             <div className='container'>
-                <h2 className='main-heading text-center'>It’s Time To Embrace Your Perfect <br/><span>Luxury Retail Space</span></h2>
+                <h3 className='main-heading text-center'>It’s Time To Embrace Your Perfect <br/><span>Luxury Retail Space</span></h3>
                 <div className='col-md-10 offset-md-1 text-center'>
                 <p className='subtitle'>{props.subTitle}</p>
                 </div>
@@ -36,7 +36,7 @@ export default function LuxuaryRetail(props) {
                     <div className='col-md-5'>
                         <p>Yamuna Expressway is going to be blessed with India's Tallest Statue of Lord Shri Krishna, standing majestically at a height of 108 feet at Gaur Yamuna City.</p>
                         <img src="/images/global-school.webp" className='img-fluid border-round' />
-                        <h2 className='main-heading'>Nearby<br /> global schools &<br /> UNIVERSITIES</h2>
+                        <h3 className='main-heading'>Nearby<br /> global schools &<br /> UNIVERSITIES</h3>
                     </div>
                     <div className='col-md-7'>
                         <img src="/images/load-krishna.webp" className='img-fluid zoom-in' />

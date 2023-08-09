@@ -9,7 +9,7 @@ export default function MirajChinema(props) {
                 <div className="col-md-6 d-flex align-items-stretch">
                     <div className='miraj-content'>
                         <h4 data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">{props.SubTitle}</h4>
-                        <h2 data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">{props.Title}</h2>
+                        <h3 data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">{props.Title}</h3>
                         <h4 data-aos="fade-up" data-aos-delay="500" data-aos-offset="0">{props.SubTitle2}</h4>
                        <p>{props.Des}</p>
                       </div>

@@ -69,8 +69,11 @@ export default function YamunaCityMall(props) {
     return (
         <>
           <Helmet>
+                <meta name="robots" content="index, follow" />
                 <title>Best Commercial Projects in Noida | Shops in Gaur Yamuna City - Wall Rock Developers</title>
+                <meta name="title" content="Best Commercial Projects in Noida | Shops in Gaur Yamuna City - Wall Rock Developers"/>
                 <meta name="description" content="Secure Yamuna Expressway commercial shops at our ongoing project Yamuna City Mall. It is one of our best commercial projects in Noida. Contact us today!" />
+               
                 <link rel="canonical" href="https://wallrock.in/yamuna-city-mall" />
                 {/* <meta name="keyword" content="Wall Rock" /> */}
             </Helmet>
@@ -80,7 +83,8 @@ export default function YamunaCityMall(props) {
             <YcmGallery />
 
             <LuxuaryRetail
-            subTitle="Yamuna City Mall is an ongoing commercial project by Wall Rock Developers which is under construction. This mall is set to be a hub for businesses and entertainment. it will be one of the best investments for anyone looking to safeguard their future assets."
+            subTitle="Yamuna City Mall is an ongoing commercial project by Wall Rock Developers which is under construction. This mall is set to be a hub for businesses and entertainment. It can be the best commercial investment in Noida
+            for anyone looking to safeguard their future assets."
             LuxuaryListing={luxuaryListing}
              />
             <Brands />

@@ -10,6 +10,7 @@ const NotFound = (props) =>{
     return(
         <div className="serchengne01">
             <Helmet>
+            <meta name="robots" content="index, follow" />
                 <title>{props.title || "Wall Rock"}</title>                
             </Helmet>
           <Breadcrumb Title="Not Found" Image="/images/about-banner.webp" />

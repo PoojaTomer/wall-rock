@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { IMAGES } from '../../../constants/Image-Constant';
 import GetAQuoteButton from '../../../components/GetAQuoteButton';
 import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 
 export default function InvestmentExperties(props) {
     const [isPlaying, setIsPlaying] = useState(true);
@@ -18,8 +19,8 @@ export default function InvestmentExperties(props) {
                     <div className='col-md-10 offset-md-1 text-center'>
                         <h2 className='main-heading'>Experience. Investment. Expertise.</h2>
                         <h5>Enjoy A Luxury Experience</h5>
-                        <p>Spanning over 5000 square metres of land, this project is an impressive and spacious option that is both reasonably priced and purely elegant. Strategically facing the 60 meters wide Yamuna Expressway, the mall provides an ideal location for businesses looking to attract a large investor and consumer base.</p>
-                        <p>The mall's modern façade provides ample branding space for potential retailers, ensuring maximum visibility and exposure. In addition, the Yamuna City Mall will feature the First Multiplex in the Yamuna City Region, making it a perfect investment destination for high returns.</p>
+                        <p>Spanning over 5000 square metres of land, this will be one of the most prosperous commercial projects in Noida. It is an impressive and spacious estate that is both reasonably priced and purely elegant. Strategically facing the 60 meters wide Yamuna Expressway, the mall provides an ideal location for businesses looking to attract a large investor and consumer base.</p>
+                        <p>The modern facade of this <Link to="/"><strong className='text-ylw'>commercial property in Noida</strong></Link> provides an ample branding space for potential retailers, ensuring maximum visibility and exposure. In addition, the Yamuna City Mall will feature the First Multiplex in the Yamuna City Region, making it a perfect investment destination for high returns.</p>
 
                         <GetAQuoteButton Title="Book Now" subject="YCM Book Now Query" />
                     </div>

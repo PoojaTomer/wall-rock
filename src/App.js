@@ -58,8 +58,13 @@ function App() {
           />
           <Route
             exact
-            path="/article/noida-internation-airport-as-a-game-changer-for-delhi-ncr-infrastructure-and-real-estate"
+            path="/articles/noida-internation-airport-as-a-game-changer-for-delhi-ncr-infrastructure-and-real-estate"
             element={<Articles title="Articel | Wall Rock" />}
+          />
+           <Route
+            exact
+            path="/articles/100-bed-speciality-hospital-and-trauma-centre-to-be-constructed-in-jewar-up"
+            element={<Articles title="100-Bed Speciality Hospital and Trauma Centre To Be Constructed in Jewar, UP" />}
           />
           <Route
             exact
@@ -87,6 +92,11 @@ function App() {
            exact
             path="/blog/what-makes-yamuna-expressway-the-perfect-location-for-your-next-investment"
             element={<Blog title="Blog | Wall Rock" />}
+          />
+          <Route
+           exact
+            path="/blog/why-invest-in-a-Commercial-space-near-upcoming-noida-international-airport-film-city"
+            element={<Blog title="Why Invest in A Commercial Space Near Upcoming Noida International Airport & Film City" />}
           />
 
           <Route path="*" element={<NotFound title="404 | Wall Rock" />} />

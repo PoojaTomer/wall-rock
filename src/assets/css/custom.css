@@ -65,8 +65,10 @@ html {
 
 a {
   text-decoration: none !important;
+  color: inherit;
 }
 
+a:hover{color:inherit}
 h1,
 h2,
 h3,
@@ -104,6 +106,7 @@ h2 span {
   font-family: 'Raleway', sans-serif;
 }
 
+.text-ylw{color:var(--mainsec)}
 .left-move {
   animation: 1.6s cubic-bezier(.445, .05, .55, .95) infinite bounce
 }
@@ -1088,8 +1091,9 @@ footer h5 {
 }
 
 .shapping-sec .mall-content img {
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+  width: 75%;
 }
 
 .shapping-sec .mall-content p {
@@ -1667,7 +1671,7 @@ textarea.form-control {
   line-height: 1.5;
 }
 
-.form-left h2 {
+.form-left h3 {
   color: var(--mainsec);
   font-size: 2.5rem;
   font-weight: 700;
@@ -1829,7 +1833,7 @@ textarea.form-control {
   margin-bottom: 0.5rem;
 }
 
-.banner-heading h1 {
+.banner-heading h2 {
   color: #fff;
   text-align: center;
   margin-bottom: 30px;
@@ -1995,7 +1999,7 @@ textarea.form-control {
   text-transform: uppercase;
 }
 
-.miraj-content h2 {
+.miraj-content h3 {
   color: var(--mainsec);
   font-size: 2.5rem;
   font-weight: 700;
@@ -2167,17 +2171,19 @@ textarea.form-control {
   position: relative;
 }
 
-.ycm-gallery h2 {
+.ycm-gallery h1 {
   color: var(--mainsec);
   font-size: 4rem;
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 1px;
   text-align: center;
   font-family: 'Algerian';
+  line-height: 50px;
 }
 
+.ycm-gallery h1 span{ font-size: 3rem;}
 .ycm-gallery .hover-img {
   margin-bottom: 1.5rem;
   border-radius: 0.5rem;
@@ -2193,11 +2199,11 @@ textarea.form-control {
   background-size: cover;
 }
 
-.luxiary-retail h2 {
+.luxiary-retail h3 {
   color: #fff;
 }
 
-.luxiary-retail h2 span {
+.luxiary-retail h3 span {
   color: var(--mainsec);
   font-size: 2.5rem;
   font-weight: 500;
@@ -2364,7 +2370,7 @@ textarea.form-control {
   margin-top: 4rem;
 }
 
-.load-krishna h2 {
+.load-krishna .col-md-5 h3 {
   position: absolute;
   bottom: -3rem;
   right: -3rem;
@@ -2976,7 +2982,7 @@ input::-webkit-input-placeholder {
     width: 47.5%;
   }
 
-  .load-krishna h2 {
+  .load-krishna .col-md-5 h3 {
     position: absolute;
     bottom: -4rem;
     right: 1rem;
@@ -3214,7 +3220,7 @@ input::-webkit-input-placeholder {
     margin: 0rem;
   }
 
-  .banner-heading h1 {
+  .banner-heading h2 {
     font-size: 2.5rem;
   }
 

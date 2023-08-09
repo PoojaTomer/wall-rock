@@ -147,7 +147,7 @@ export default function WhyYamunaExpress(props) {
           </div>
           <h2 className='text-center'>Why Yamuna Expressway?</h2>
           <p className='text-center'>
-            The Yamuna Expressway is a state-of-the-art expressway that has significantly improved connectivity between Greater Noida and Agra. It is a 166 km long access-controlled expressway that reduces travel time between cities. With the approved Noida International Airport, people living in many cities of western UP will save approximately 2 hours of time travelling to Delhi Airport. Furthermore, the Airport will increase the area's density, making the place more advantageous for home buyers. Apart from this, the Airport will bring out many jobs, resulting in more employment to grow the market eventually.  </p>
+            The Yamuna Expressway is a state-of-the-art expressway that has significantly improved connectivity between Greater Noida and Agra. It is a 166 km long access-controlled expressway that reduces travel time between cities. With the approved Noida International Airport, people living in many cities of western UP will save approximately 2 hours of time travelling to Delhi Airport. Also, purchasing a commercial property near Jewar Airport is highly beneficial for investors. Furthermore, the Airport will increase the area's density, making the place more advantageous for home buyers. Apart from this, the Airport will bring out many jobs, resulting in more employment to grow the market eventually.  </p>
 
           <Slider {...settings}>
             {

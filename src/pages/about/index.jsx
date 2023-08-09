@@ -28,7 +28,9 @@ export default function About(props) {
     return (
         <>
              <Helmet>
+             <meta name="robots" content="index, follow" />
              <title>{props.title || "Wall Rock"}</title>
+             <meta name="title" content={props.title || "Wall Rock"} />
              <link rel="canonical" href="https://wallrock.in/about" />
             </Helmet>
             <Breadcrumb Title="About Us" Image="/images/about-banner.webp" /> 

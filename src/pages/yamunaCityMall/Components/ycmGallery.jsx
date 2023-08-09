@@ -11,7 +11,7 @@ export default function YcmGallery(props) {
         <>
             <section className='ycm-gallery'>
                 <div className='container'>
-                    <h2>Yamuna city mall</h2>
+                    <h1>Yamuna city mall<br /><span>Your Best Commercial Investment in Noida!</span></h1>
                     <div className='row'>
                         {
                             gallery.map((value, index) => {

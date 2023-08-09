@@ -152,6 +152,7 @@ export default function Contact(props) {
     return (
         <>
             <Helmet>
+            <meta name="robots" content="index, follow" />
                 <title>{props.title || "Wall Rock"}</title>
                 <link rel="canonical" href="https://wallrock.in/contact" />
             </Helmet>

@@ -14,7 +14,7 @@ export default function ProjectHighlights(props) {
                         </div>
                         <div className="col-md-6 pt-5 d-flex align-items-stretch">
                             <div className='pro-hightlight'>
-                                <h3 className='main-heading mb-5'>PROJECT HIGHLIGHTS</h3> 
+                                <h2 className='main-heading mb-5'>PROJECT HIGHLIGHTS</h2> 
                                <ul>
                                 {
                                     props.projectHighlightsList.map((items,index)=>{

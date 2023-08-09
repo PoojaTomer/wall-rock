@@ -36,7 +36,7 @@ function Gallery(props) {
           //   alert("slideshow is now playing!");
           // }}
           />
-          <p>The building features state-of-the-art facilities, including a fully equipped fitness centre, a swimming pool, landscaped gardens, children's play areas, and a dedicated community clubhouse. In fact, the nearby areas boast a positive atmosphere, with restaurants, malls, and parks just a stone's throw away. So, if you want to secure your future, contact us today!</p>
+          <p>The building features state-of-the-art facilities, including a fully equipped fitness centre, a swimming pool, landscaped gardens, children's play areas, and a dedicated community clubhouse. In fact, the nearby areas of the <b>flat in Noida Extension</b> boast a positive atmosphere, with restaurants, malls, and parks just a stone's throw away. So, if you want to secure your future, contact us today!</p>
         </div>
       </section>
 

@@ -77,7 +77,9 @@ export default function Home(props) {
     return (
         <>
              <Helmet>
+             <meta name="robots" content="index, follow" />
              <title>Wall Rock Developers - Best Real Estate Company in Noida</title>
+             <meta name="title" content="Wall Rock Developers - Best Real Estate Company in Noida" />
             <meta name="description" content="Looking for a reliable real estate developer in Noida? Contact Wall Rock Developers, your trusted residential property developer in Noida, today!" />
             <link rel="canonical" href="https://wallrock.in/" />
             </Helmet>

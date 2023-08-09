@@ -154,9 +154,9 @@ export default function GetInTouch(props) {
                                 ) :
                                     <>
                                         <h4 data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">GET IN TOUCH</h4>
-                                        <h2 data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">Make your <br />
+                                        <h3 data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">Make your <br />
                                             dreams come <br />
-                                            true!</h2>
+                                            true!</h3>
                                     </>
                             }
 

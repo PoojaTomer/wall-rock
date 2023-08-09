@@ -9,8 +9,8 @@ export default function Legacy(props) {
             <div className='container text-center'>
                 
                 <h5 className='sub-heading'>Wall Rock Developers</h5>
-                <h3 className='main-heading'>Shaping Today’s Real Estate Landscape</h3>
-                <p>We at Wall Rock Developers pride ourselves in creating exceptional residential and commercial space that redefines luxury and affordability in the real estate world. With our commitment to delivering the highest standard of construction quality in every project, we have earned a reputation to be one of the most trustworthy real estate developers. So, are you ready to embark on a journey towards exceptional living or business success? Get in touch with our team today!
+                <h1 className='main-heading'>Your Trusted Real Estate Developer in Noida</h1>
+                <p>We at Wall Rock Developers pride ourselves in creating exceptional residential and commercial space that redefines luxury and affordability in the real estate world. With our commitment to delivering the highest standard of construction quality in every project, we have earned a reputation to be one of the most trustworthy <b>real estate developers in Noida</b>. So, are you ready to embark on a journey towards exceptional living or business success? Get in touch with our team today!
                 </p>
                 <div className='row mt-5'>
                  
